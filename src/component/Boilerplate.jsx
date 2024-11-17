@@ -5,26 +5,7 @@ export function Boilerplate() {
   return (
     <Footer bgDark>
       <div className="w-full">
-        <div className="grid w-full grid-cols-2 gap-8 px-6 py-8 md:grid-cols-4">
-          <div>
-            <Footer.Brand
-              href="#"
-              name="Brama"
-            />
-          </div>
-          <div>
-            <Footer.Title title="Konten" />
-            <Footer.LinkGroup col>
-              <Footer.Link href="#home">Home</Footer.Link>
-              <Footer.Link href="#skills">skill</Footer.Link>
-              <Footer.Link href="#language">Language</Footer.Link>
-              <Footer.Link href="#academic">Academic</Footer.Link>
-              <Footer.Link href="#work">Work</Footer.Link>
-              <Footer.Link href="#">Project</Footer.Link>
-              <Footer.Link href="#sertifikat">Sertifikat</Footer.Link>
-              <Footer.Link href="#contact">Contact</Footer.Link>
-            </Footer.LinkGroup>
-          </div>
+        <div className="grid w-full grid-cols-2 gap-8 px-6 py-8 md:grid-cols-4">         
           <div>
             <Footer.Title title="Contact" />
             <Footer.LinkGroup col>

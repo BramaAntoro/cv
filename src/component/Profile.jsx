@@ -2,7 +2,7 @@ import picture from '../assets/img/Profile.png';
 
 export function Profile() {
   return (
-    <section id="home" className="home container px-14 mt-2 md:mt-5">
+    <section id="home" className="home container px-14 mt-14 md:mt-5">
       <div className="flex items-center flex-col-reverse md:flex-row">
         <div className="w-full md:w-2/3 order-2 md:order-1">
           <h3 className="font-semibold text-5xl">Hi! I am</h3>
