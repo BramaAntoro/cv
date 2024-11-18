@@ -1,28 +1,34 @@
 import React from "react";
 import { WrenchScrewdriverIcon } from "@heroicons/react/20/solid";
 
+import absensi from '../assets/img/project/absensi.png';
+import library from '../assets/img/project/library.png';
+import minimarket from '../assets/img/project/minimarket.png';
 
 const images = [
+  absensi,
+  library,
+  minimarket
 ];
 
 const services = [
   {
     step: "01",
-    name: "Diagnostics",
+    name: "absensi",
     imageUrl: images[0],
-    description: "State-of-the-art diagnostics to accurately identify vehicle issues.",
+    description: "This attendance web project is the result of team work, where I act as Tech Leader. In this project, I was responsible as a back-end developer, but still actively helped with UI/UX and front-end development to ensure an optimal user experience. This team collaboration aims to facilitate the recording and management of extracurricular activities in an efficient and structured manner.",
   },
   {
     step: "01",
-    name: "Diagnostics",
-    imageUrl: images[0],
-    description: "State-of-the-art diagnostics to accurately identify vehicle issues.",
+    name: "library",
+    imageUrl: images[1],
+    description: "This book lending library website is a personal project I am working on as part of a school assignment. Although this project was an academic assignment, I applied the experience I had in web development to create a practical book borrowing and management system, including easy-to-use search, borrow, and return features.",
   },
   {
     step: "01",
-    name: "Diagnostics",
-    imageUrl: images[0],
-    description: "State-of-the-art diagnostics to accurately identify vehicle issues.",
+    name: "minimarket",
+    imageUrl: images[2],
+    description: "I developed this minimarket website to help manage sales and stock at my family's minimarket. With this platform, the process of recording transactions, managing stock and monitoring sales becomes more practical and efficient, making it easier for us to manage our daily business in a more structured manner.",
   },
 
 ];

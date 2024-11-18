@@ -2,7 +2,7 @@ import { Dropdown, Navbar } from "flowbite-react";
 
 export function Header() {
   return (
-    <Navbar fluid className="dark:bg-white shadow-[0_0_0_4px_rgba(0,0,0,0.25)] fixed top-0 left-0 right-0 z-10 ">
+    <Navbar fluid className="dark:bg-white shadow-[0_0_0_4px_rgba(0,0,0,0.25)] fixed top-0 left-0 right-0 z-10" >
       <Navbar.Brand href="#" className="ml-12">
         <span className="self-center whitespace-nowrap text-2xl font-bold dark:text-black">Brama</span>
       </Navbar.Brand>

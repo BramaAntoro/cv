@@ -10,6 +10,7 @@ import { Skill } from './component/Skill'
 import { Work } from './component/Work'
 import './index.css'
 
+import AOS from 'aos';
 
 const app = function App() {
   return (

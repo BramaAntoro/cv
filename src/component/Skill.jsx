@@ -1,4 +1,4 @@
-import { FaHtml5, FaCss3Alt, FaJsSquare, FaBootstrap, FaReact, FaPhp, FaDatabase, FaLaravel, FaGit, FaGithub } from "react-icons/fa";
+import { FaHtml5, FaCss3Alt, FaJsSquare, FaBootstrap, FaReact, FaPhp, FaDatabase, FaLaravel, FaGit, FaGithub, FaProjectDiagram } from "react-icons/fa";
 
 export function Skill() {
     return (
@@ -14,7 +14,10 @@ export function Skill() {
                     </div>
                 </div>
 
+
+
                 <div className="flex flex-wrap -mx-4">
+
                     {/* HTML */}
                     <div className="p-4 md:w-1/3">
                         <div className="bg-gray-800 rounded-lg p-6">
@@ -128,6 +131,19 @@ export function Skill() {
                             <h2 className="text-xl font-medium mb-3">MySQL</h2>
                             <p className="text-sm leading-relaxed text-justify">
                                 I use MySQL to store and manage data in web applications, enabling fast and efficient database queries.
+                            </p>
+                        </div>
+                    </div>
+
+                    {/* UML */}
+                    <div className="p-4 md:w-1/3">
+                        <div className="bg-gray-800 rounded-lg p-6">
+                            <div className="flex items-center justify-center w-10 h-10 rounded-full bg-orange-100 text-orange-500 mb-5">
+                                <FaProjectDiagram size={24} />
+                            </div>
+                            <h2 className="text-xl font-medium mb-3">UML</h2>
+                            <p className="text-sm leading-relaxed text-justify">
+                                I use UML (Unified Modeling Language) to design and visualize the structure and behavior of web applications, ensuring clear communication and efficient development.
                             </p>
                         </div>
                     </div>
