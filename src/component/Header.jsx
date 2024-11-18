@@ -23,7 +23,7 @@ export function Header() {
         <Navbar.Link href="#work">
           <h1 className="text-gray hover:text-black">Work</h1>
         </Navbar.Link>
-        <Navbar.Link href="#">
+        <Navbar.Link href="#project">
           <h1 className="text-gray hover:text-black" >Project</h1>
         </Navbar.Link>
         <Navbar.Link href="#sertifikat">

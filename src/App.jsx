@@ -20,7 +20,7 @@ const app = function App() {
     <Language/>
     <Academic/>
     <Work/>
-    {/* <Project/> */}
+    <Project/>
     <Sertifikat/>
     <Form/>
     <Boilerplate/>

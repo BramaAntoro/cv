@@ -2,7 +2,7 @@ import { FaHtml5, FaCss3Alt, FaJsSquare, FaBootstrap, FaReact, FaPhp, FaDatabase
 
 export function Skill() {
     return (
-        <section className="dark:bg-white bg-gray-900 text-gray-200 py-24" id="skills">
+        <section className="dark:bg-white text-gray-200 py-24" id="skills">
             <div className="max-w-6xl mx-auto px-5">
                 <div className="text-center mb-20">
                     <h1 className="text-black text-4xl sm:text-5xl md:text-6xl font-bold mb-4">Skills</h1>
