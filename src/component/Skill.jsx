@@ -5,8 +5,8 @@ export function Skill() {
         <section className="dark:bg-white text-gray-200 py-24" id="skills">
             <div className="max-w-6xl mx-auto px-5">
                 <div className="text-center mb-20">
-                    <h1 data-aos="zoom-in-down" className="text-black text-4xl sm:text-5xl md:text-6xl font-bold mb-4">Skills</h1>
-                    <p  data-aos="fade-up" className="text-black text-base leading-relaxed xl:w-2/4 lg:w-3/4 mx-auto">
+                    <h1 className="text-black text-4xl sm:text-5xl md:text-6xl font-bold mb-4">Skills</h1>
+                    <p className="text-black text-base leading-relaxed xl:w-2/4 lg:w-3/4 mx-auto">
                         I have skills in using various technologies that support web development effectively and efficiently, from design to database management and dynamic web application development.
                     </p>
                     <div className="flex justify-center mt-6">
@@ -19,7 +19,7 @@ export function Skill() {
                 <div className="flex flex-wrap -mx-4">
 
                     {/* HTML */}
-                    <div  data-aos="fade-right" className="p-4 md:w-1/3">
+                    <div className="p-4 md:w-1/3">
                         <div className="bg-gray-800 rounded-lg p-6">
                             <div className="flex items-center justify-center w-10 h-10 rounded-full bg-orange-100 text-orange-500 mb-5">
                                 <FaHtml5 size={24} />
@@ -32,7 +32,7 @@ export function Skill() {
                     </div>
 
                     {/* CSS */}
-                    <div  data-aos="fade-left" className="p-4 md:w-1/3">
+                    <div className="p-4 md:w-1/3">
                         <div className="bg-gray-800 rounded-lg p-6">
                             <div className="flex items-center justify-center w-10 h-10 rounded-full bg-blue-100 text-blue-500 mb-5">
                                 <FaCss3Alt size={24} />
@@ -45,7 +45,7 @@ export function Skill() {
                     </div>
 
                     {/* JavaScript */}
-                    <div  data-aos="fade-right" className="p-4 md:w-1/3">
+                    <div className="p-4 md:w-1/3">
                         <div className="bg-gray-800 rounded-lg p-6">
                             <div className="flex items-center justify-center w-10 h-10 rounded-full bg-yellow-100 text-yellow-500 mb-5">
                                 <FaJsSquare size={24} />
@@ -58,7 +58,7 @@ export function Skill() {
                     </div>
 
                     {/* Bootstrap */}
-                    <div  data-aos="fade-left" className="p-4 md:w-1/3">
+                    <div className="p-4 md:w-1/3">
                         <div className="bg-gray-800 rounded-lg p-6">
                             <div className="flex items-center justify-center w-10 h-10 rounded-full bg-purple-100 text-purple-500 mb-5">
                                 <FaBootstrap size={24} />
@@ -71,7 +71,7 @@ export function Skill() {
                     </div>
 
                     {/* Tailwind CSS */}
-                    <div  data-aos="fade-right" className="p-4 md:w-1/3">
+                    <div className="p-4 md:w-1/3">
                         <div className="bg-gray-800 rounded-lg p-6">
                             <div className="flex items-center justify-center w-10 h-10 rounded-full bg-blue-100 text-blue-500 mb-5">
                                 <FaCss3Alt size={24} />
@@ -84,7 +84,7 @@ export function Skill() {
                     </div>
 
                     {/* React */}
-                    <div  data-aos="fade-left" className="p-4 md:w-1/3">
+                    <div className="p-4 md:w-1/3">
                         <div className="bg-gray-800 rounded-lg p-6">
                             <div className="flex items-center justify-center w-10 h-10 rounded-full bg-blue-100 text-blue-500 mb-5">
                                 <FaReact size={24} />
@@ -97,7 +97,7 @@ export function Skill() {
                     </div>
 
                     {/* PHP */}
-                    <div  data-aos="fade-right" className="p-4 md:w-1/3">
+                    <div className="p-4 md:w-1/3">
                         <div className="bg-gray-800 rounded-lg p-6">
                             <div className="flex items-center justify-center w-10 h-10 rounded-full bg-indigo-100 text-indigo-500 mb-5">
                                 <FaPhp size={24} />
@@ -110,7 +110,7 @@ export function Skill() {
                     </div>
 
                     {/* Laravel */}
-                    <div  data-aos="fade-left" className="p-4 md:w-1/3">
+                    <div className="p-4 md:w-1/3">
                         <div className="bg-gray-800 rounded-lg p-6">
                             <div className="flex items-center justify-center w-10 h-10 rounded-full bg-red-100 text-red-500 mb-5">
                                 <FaLaravel size={24} />
@@ -123,7 +123,7 @@ export function Skill() {
                     </div>
 
                     {/* MySQL */}
-                    <div  data-aos="fade-right" className="p-4 md:w-1/3">
+                    <div className="p-4 md:w-1/3">
                         <div className="bg-gray-800 rounded-lg p-6">
                             <div className="flex items-center justify-center w-10 h-10 rounded-full bg-orange-100 text-orange-500 mb-5">
                                 <FaDatabase size={24} />
@@ -136,7 +136,7 @@ export function Skill() {
                     </div>
 
                     {/* UML */}
-                    <div  data-aos="fade-left" className="p-4 md:w-1/3">
+                    <div className="p-4 md:w-1/3">
                         <div className="bg-gray-800 rounded-lg p-6">
                             <div className="flex items-center justify-center w-10 h-10 rounded-full bg-orange-100 text-orange-500 mb-5">
                                 <FaProjectDiagram size={24} />
@@ -149,7 +149,7 @@ export function Skill() {
                     </div>
 
                     {/* Git */}
-                    <div  data-aos="fade-right" className="p-4 md:w-1/3">
+                    <div className="p-4 md:w-1/3">
                         <div className="bg-gray-800 rounded-lg p-6">
                             <div className="flex items-center justify-center w-10 h-10 rounded-full bg-green-100 text-green-500 mb-5">
                                 <FaGit size={24} />
@@ -162,7 +162,7 @@ export function Skill() {
                     </div>
 
                     {/* GitHub */}
-                    <div  data-aos="fade-left" className="p-4 md:w-1/3">
+                    <div className="p-4 md:w-1/3">
                         <div className="bg-gray-800 rounded-lg p-6">
                             <div className="flex items-center justify-center w-10 h-10 rounded-full bg-black-100 text-black-500 mb-5">
                                 <FaGithub size={24} />

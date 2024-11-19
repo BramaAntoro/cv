@@ -1,9 +1,9 @@
 export const Language = () => {
     return (
         <section className="language section" id="language">
-            <h2 className="section-title text-3xl font-bold text-center my-8" data-aos="fade-up">Language</h2>
+            <h2 className="section-title text-3xl font-bold text-center my-8">Language</h2>
 
-            <div className="container mx-auto px-4" data-aos="fade-up">
+            <div className="container mx-auto px-4">
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
 
                     {/* Indonesia */}

@@ -93,7 +93,7 @@ export const Sertifikat = () => {
 
     const tampilSertifikat = () => {
         return data.map((item, index) => (
-            <div key={index} className="col-md-4" data-aos="fade-up">
+            <div key={index} className="col-md-4">
                 <article className="cta">
                     <img className="img-sertifikat" src={item.img} alt="Sertifikat" />
                     <div className="cta__text-column">
@@ -110,7 +110,7 @@ export const Sertifikat = () => {
 
     return (
         <section className="container-sertifikat" id="sertifikat">
-            <h1 className="text-4xl font-bold mb-6 judul-sertifikat" data-aos="fade-up">Sertifikat</h1>
+            <h1 className="text-4xl font-bold mb-6 judul-sertifikat">Sertifikat</h1>
             <div className="row">
                 {tampilSertifikat()}
             </div>
