@@ -11,7 +11,7 @@ export const Language = () => {
                         <h1 className="name-language text-xl font-semibold mb-4">Indonesia</h1>
                         <div className="mb-4">
                             <div className="flex justify-between mb-2">
-                                <span className="text-sm">58%</span>
+                                <span className="text-sm">85%</span>
                             </div>
                             <div className="w-full bg-gray-200 rounded-full h-2.5">
                                 <div className="bg-blue-600 h-2.5 rounded-full" style={{ width: '85%' }}></div>
