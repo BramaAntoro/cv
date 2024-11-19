@@ -3,7 +3,7 @@ import { BsFacebook, BsGithub, BsInstagram, BsYoutube, BsLinkedin } from "react-
 
 export function Boilerplate() {
   return (
-    <Footer bgDark>
+    <Footer data-aos="fade-up" bgDark>
       <div className="w-full">
         <div className="grid w-full grid-cols-2 gap-8 px-6 py-8 md:grid-cols-4">         
           <div>

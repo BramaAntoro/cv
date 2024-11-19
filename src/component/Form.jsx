@@ -24,40 +24,36 @@ export function Form() {
             <h1
                 className="judul-contact text-center text-3xl font-bold"
                 data-aos="fade-up"
-                data-aos-anchor-placement="top-bottom"
-                data-aos-duration="1500"
             >
                 Contact
             </h1>
 
             <div
                 className="flex justify-center items-center"
-                data-aos="fade-up"
-                data-aos-duration="3000"
             >
                 <form id="whatsappForm" className="container-form w-full max-w-md p-4 space-y-4">
-                    <div>
+                    <div data-aos="fade-right">
                         <div className="mb-2 block">
                             <Label htmlFor="base" className="dark:text-black" value="From" />
                         </div>
                         <TextInput id="forInput" type="text" sizing="md" />
                     </div>
 
-                    <div>
+                    <div data-aos="fade-left">
                         <div className="mb-2 block">
                             <Label htmlFor="base" className="dark:text-black" value="Email address" />
                         </div>
                         <TextInput id="emailInput" type="email" sizing="md" />
                     </div>
 
-                    <div className="max-w-md">
+                    <div data-aos="fade-right" className="max-w-md">
                         <div className="mb-2 block">
                             <Label htmlFor="comment" className="dark:text-black" value="Message" />
                         </div>
                         <Textarea id="textareaInput" required rows={4} />
                     </div>
 
-                    <Button type="button" className="mt-4" onClick={sendToWhatsApp}>
+                    <Button data-aos="zoom-in-down" type="button" className="mt-4" onClick={sendToWhatsApp}>
                         Kirim
                     </Button>
 

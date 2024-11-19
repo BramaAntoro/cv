@@ -4,10 +4,10 @@ import { Button } from "flowbite-react";
 export const Work = () => {
     return (
         <div className="container-work mx-auto my-12" id='work'>
-            <h1 className="text-center text-4xl font-bold mb-6" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="1500">
+            <h1 className="text-center text-4xl font-bold mb-6" data-aos="fade-up">
                 Work
             </h1>
-            <div className="flex justify-center" data-aos="fade-up" data-aos-duration="3000">
+            <div className="flex justify-center" data-aos="fade-up">
                 <div className="w-full">
                     <ul className="timeline space-y-6">
                         <li className="relative">

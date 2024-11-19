@@ -10,21 +10,28 @@ import { Skill } from './component/Skill'
 import { Work } from './component/Work'
 import './index.css'
 
-import AOS from 'aos';
+import { useEffect } from 'react';
+import Aos from 'aos';
+import "aos/dist/aos.css"
 
 const app = function App() {
+  useEffect(() => {
+    Aos.init({
+      duration: 1000,
+    })
+  }, [])
   return (
     <>
-    <Header/>
-    <Profile/>
-    <Skill/>
-    <Language/>
-    <Academic/>
-    <Work/>
-    <Project/>
-    <Sertifikat/>
-    <Form/>
-    <Boilerplate/>
+      <Header />
+      <Profile />
+      <Skill />
+      <Language />
+      <Academic />
+      <Work />
+      <Project />
+      <Sertifikat />
+      <Form />
+      <Boilerplate />
     </>
   )
 }
