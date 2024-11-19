@@ -10,7 +10,7 @@ export function Profile() {
           <h1 className="font-bold text-5xl">
             {" "}
             <ReactTyped
-              strings={["Muhammad Brama Antoro", "Web Developer in Indonesia"]}
+              strings={["Muhammad Brama Antoro", "Junior Full-Stack Web Developer"]}
               typeSpeed={100}
               loop
               backSpeed={20}

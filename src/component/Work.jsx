@@ -4,11 +4,10 @@ import { Button } from "flowbite-react";
 export const Work = () => {
     const [channelData, setChannelData] = useState(null);
     const [loading, setLoading] = useState(true);
-    const API_KEY = "AIzaSyBDRig9BoSmYgs3a-xwDAqeGi4X0yH8QFw"; // Ganti dengan API Key Anda
-    const CHANNEL_ID = "UC8oLIwownHoOyyAR5c3XvBg"; // ID Channel Anda
+    const API_KEY = "AIzaSyBDRig9BoSmYgs3a-xwDAqeGi4X0yH8QFw"; 
+    const CHANNEL_ID = "UC8oLIwownHoOyyAR5c3XvBg"; 
 
     useEffect(() => {
-        // Fetch data dari YouTube API
         const fetchChannelData = async () => {
             try {
                 const response = await fetch(
