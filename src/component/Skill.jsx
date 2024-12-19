@@ -1,4 +1,5 @@
 import { FaHtml5, FaCss3Alt, FaJsSquare, FaBootstrap, FaReact, FaPhp, FaDatabase, FaLaravel, FaGit, FaGithub, FaProjectDiagram } from "react-icons/fa";
+import { SiTailwindcss, SiJquery } from "react-icons/si";
 
 export function Skill() {
     return (
@@ -14,10 +15,7 @@ export function Skill() {
                     </div>
                 </div>
 
-
-
                 <div className="flex flex-wrap -mx-4">
-
                     {/* HTML */}
                     <div className="p-4 md:w-1/3">
                         <div className="bg-gray-800 rounded-lg p-6">
@@ -57,6 +55,19 @@ export function Skill() {
                         </div>
                     </div>
 
+                    {/* jQuery */}
+                    <div className="p-4 md:w-1/3">
+                        <div className="bg-gray-800 rounded-lg p-6">
+                            <div className="flex items-center justify-center w-10 h-10 rounded-full bg-blue-100 text-blue-500 mb-5">
+                                <SiJquery size={24} />
+                            </div>
+                            <h2 className="text-xl font-medium mb-3">jQuery</h2>
+                            <p className="text-sm leading-relaxed text-justify">
+                                I use jQuery to simplify JavaScript interactions with HTML elements and events, enhancing the development of dynamic web applications.
+                            </p>
+                        </div>
+                    </div>
+
                     {/* Bootstrap */}
                     <div className="p-4 md:w-1/3">
                         <div className="bg-gray-800 rounded-lg p-6">
@@ -73,8 +84,8 @@ export function Skill() {
                     {/* Tailwind CSS */}
                     <div className="p-4 md:w-1/3">
                         <div className="bg-gray-800 rounded-lg p-6">
-                            <div className="flex items-center justify-center w-10 h-10 rounded-full bg-blue-100 text-blue-500 mb-5">
-                                <FaCss3Alt size={24} />
+                            <div className="flex items-center justify-center w-10 h-10 rounded-full bg-cyan-100 text-cyan-500 mb-5">
+                                <SiTailwindcss size={24} />
                             </div>
                             <h2 className="text-xl font-medium mb-3">Tailwind CSS</h2>
                             <p className="text-sm leading-relaxed text-justify">
@@ -151,12 +162,12 @@ export function Skill() {
                     {/* Git */}
                     <div className="p-4 md:w-1/3">
                         <div className="bg-gray-800 rounded-lg p-6">
-                            <div className="flex items-center justify-center w-10 h-10 rounded-full bg-green-100 text-green-500 mb-5">
+                            <div className="flex items-center justify-center w-10 h-10 rounded-full bg-orange-100 text-orange-500 mb-5">
                                 <FaGit size={24} />
                             </div>
                             <h2 className="text-xl font-medium mb-3">Git</h2>
                             <p className="text-sm leading-relaxed text-justify">
-                                I use Git to efficiently manage code versions, allowing me to collaborate with teams and track code changes in real-time.
+                                I use Git for version control, tracking changes, and collaborating on web development projects efficiently.
                             </p>
                         </div>
                     </div>
@@ -164,12 +175,12 @@ export function Skill() {
                     {/* GitHub */}
                     <div className="p-4 md:w-1/3">
                         <div className="bg-gray-800 rounded-lg p-6">
-                            <div className="flex items-center justify-center w-10 h-10 rounded-full bg-black-100 text-black-500 mb-5">
+                            <div className="flex items-center justify-center w-10 h-10 rounded-full bg-orange-100 text-orange-500 mb-5">
                                 <FaGithub size={24} />
                             </div>
                             <h2 className="text-xl font-medium mb-3">GitHub</h2>
                             <p className="text-sm leading-relaxed text-justify">
-                                I utilize GitHub to share code with development teams and store open or private project code repositories.
+                                I use GitHub to host and manage my projects, share code, and collaborate with other developers on open-source and private repositories.
                             </p>
                         </div>
                     </div>

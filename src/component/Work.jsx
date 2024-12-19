@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Button } from "flowbite-react";
+import $ from 'jquery';  
 
 export const Work = () => {
     const [channelData, setChannelData] = useState(null);
@@ -8,22 +9,24 @@ export const Work = () => {
     const CHANNEL_ID = "UC8oLIwownHoOyyAR5c3XvBg"; 
 
     useEffect(() => {
-        const fetchChannelData = async () => {
-            try {
-                const response = await fetch(
-                    `https://www.googleapis.com/youtube/v3/channels?part=snippet,statistics&id=${CHANNEL_ID}&key=${API_KEY}`
-                );
-                const data = await response.json();
-                if (data.items.length > 0) {
-                    setChannelData(data.items[0]);
-                } else {
-                    console.error("Channel not found!");
+        const fetchChannelData = () => {
+            $.ajax({
+                url: `https://www.googleapis.com/youtube/v3/channels?part=snippet,statistics&id=${CHANNEL_ID}&key=${API_KEY}`,
+                method: 'GET',
+                success: (data) => {
+                    if (data.items.length > 0) {
+                        setChannelData(data.items[0]);
+                    } else {
+                        console.error("Channel not found!");
+                    }
+                },
+                error: (error) => {
+                    console.error("Error fetching data from YouTube API:", error);
+                },
+                complete: () => {
+                    setLoading(false);
                 }
-            } catch (error) {
-                console.error("Error fetching data from YouTube API:", error);
-            } finally {
-                setLoading(false);
-            }
+            });
         };
 
         fetchChannelData();

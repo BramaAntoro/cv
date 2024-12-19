@@ -10,16 +10,8 @@ import { Skill } from './component/Skill'
 import { Work } from './component/Work'
 import './index.css'
 
-import { useEffect } from 'react';
-import Aos from 'aos';
-import "aos/dist/aos.css"
 
 const app = function App() {
-  useEffect(() => {
-    Aos.init({
-      duration: 1000,
-    })
-  }, [])
   return (
     <>
       <Header />
