@@ -9,6 +9,7 @@ import sertifikatCodingStudio2 from '../assets/img/sertifikat/Certificate-of-com
 import sertifikatAcademySekolahanBootstrap from '../assets/img/sertifikat/Certificate-of-completion-Muhammad-Brama-Antoro-Menggunakan-Bootstrap-Framework-289829.jpg';
 import sertifikatAcademySekolahanJavaScript from '../assets/img/sertifikat/Certificate-of-completion-Muhammad-Brama-Antoro-Belajar-JavaScript-Dasar-493685.jpg';
 import sertifikatAcademySekolahanHTMLCSS from '../assets/img/sertifikat/Certificate-of-completion-Muhammad-Brama-Antoro-Belajar-JavaScript-Dasar-493685.jpg';
+import sertifikatUdemyBootstrap from '../assets/img/sertifikat/Sertifikat-penyelesaian-Bootstrap-Udemy.jpg';
 
 
 export const Sertifikat = () => {
@@ -27,6 +28,13 @@ export const Sertifikat = () => {
             sertifikat: "Sertifikat Kominfo",
             penjelasan: "Sertifikat partisipasi dalam acara Makin Cakap Digital 2022 - Pendidikan Jawa Barat - Pemanfaatan Internet Untuk Menyebarkan Konten Positif. Bertema Pemanfaatan Internet Untuk Menyebarkan Konten Positif. Yang diselenggarakan oleh Kominfo, Siberkreasi, Yayasan Pendidikan Dasar dan Menengah Pasundan.",
             kredesial: "https://drive.google.com/file/d/1464RpXwsbZhNnCTGu-jIPPGzRPrqbH3r/view?usp=drive_link"
+        },
+        // Udemy
+        {
+            img: sertifikatUdemyBootstrap,
+            sertifikat: "Sertifikat Udemy Bootstrap",
+            penjelasan: "Sertifikat penyelesaian Bootstrap CSS : Pemula sampai Mahir 29 Des 2024, instruktur Programmer Zaman Now",
+            kredesial: "https://www.udemy.com/certificate/UC-fd2886c7-0796-4fed-8e69-cb0f4d53ae1f/"
         },
         // MySkill
         {
