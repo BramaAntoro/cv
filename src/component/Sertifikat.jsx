@@ -1,14 +1,10 @@
 import sertifikatDicoding from '../assets/img/sertifikat/sertifikat-kompetensi-DiCoding-JAVASCRIPT_page-0001.jpg';
 import sertifikatKominfo from '../assets/img/sertifikat/Sertifikat-partisipasi-Kominfo-Muhammad-Brama-Antoro.jpg';
-import sertifikatMySkillHTML from '../assets/img/sertifikat/Certificate-of-Skill-Specialization-MySkill-FRONTEND-HTML-Muhammad-Brama-Antoro.jpg';
 import sertifikatMySkillCSS from '../assets/img/sertifikat/Certificate-of-Skill-Specialization-MySkill-FRONTEND-CSS-Muhammad-Brama-Antoro.jpg';
-import sertifikatMySkillWebFundamental from '../assets/img/sertifikat/Certificate-of-Skill-Specialization-MySkill-Web-Development-Fundamental-Muhammad-Brama-Antoro.jpg';
 import sertifikatMySkillJavaScript from '../assets/img/sertifikat/Certificate-of-Skill-Specialization-MySkill-FRONTEND-JavaScript-Muhammad-Brama-Antoro.jpg';
 import sertifikatCodingStudio1 from '../assets/img/sertifikat/Certificate-of-completion_Fundamental-Front-End-Web-Development-I_Muhammad-Brama-Antoro.jpg';
 import sertifikatCodingStudio2 from '../assets/img/sertifikat/Certificate-of-completion_Fundamental-Front-End-Web-Development-II_Muhammad-Brama-Antoro.jpg';
 import sertifikatAcademySekolahanBootstrap from '../assets/img/sertifikat/Certificate-of-completion-Muhammad-Brama-Antoro-Menggunakan-Bootstrap-Framework-289829.jpg';
-import sertifikatAcademySekolahanJavaScript from '../assets/img/sertifikat/Certificate-of-completion-Muhammad-Brama-Antoro-Belajar-JavaScript-Dasar-493685.jpg';
-import sertifikatAcademySekolahanHTMLCSS from '../assets/img/sertifikat/Certificate-of-completion-Muhammad-Brama-Antoro-Belajar-JavaScript-Dasar-493685.jpg';
 import sertifikatUdemyBootstrap from '../assets/img/sertifikat/Sertifikat-penyelesaian-Bootstrap-Udemy.jpg';
 
 
@@ -38,21 +34,9 @@ export const Sertifikat = () => {
         },
         // MySkill
         {
-            img: sertifikatMySkillHTML,
-            sertifikat: "Sertifikat MySkill HTML",
-            penjelasan: "Certificate of Skill Specialization E-Learning - MySkill Learning Path: Website Development Completed a Full Topic with Specialization in: FRONTEND - HTML March 16, 2024 yang diselenggarakan oleh MySkill E-Learning.",
-            kredesial: "https://storage.googleapis.com/myskill-v2-certificates/topic-DQ4WDIr2jXa70FUI477S/UWddfZoysfU2JRAf2qjYmVhRtUy2-dv4HLu2Zd5JDxU1YyKba.pdf"
-        },
-        {
             img: sertifikatMySkillCSS,
             sertifikat: "Sertifikat MySkill CSS",
             penjelasan: "Certificate of Skill Specialization E-Learning - MySkill Learning Path: Website Development Completed a Full Topic with Specialization in: FRONTEND - CSS March 23, 2024 yang diselenggarakan oleh MySkill E-Learning.",
-            kredesial: "https://storage.googleapis.com/myskill-v2-certificates/topic-DQ4WDIr2jXa70FUI477S/UWddfZoysfU2JRAf2qjYmVhRtUy2-dv4HLu2Zd5JDxU1YyKba.pdf"
-        },
-        {
-            img: sertifikatMySkillWebFundamental,
-            sertifikat: "Sertifikat MySkill Web Development Fundamental",
-            penjelasan: "Certificate of Skill Specialization E-Learning - MySkill Learning Path: Website Development Completed a Full Topic with Specialization in: Web Development Fundamental March 29, 2024 yang diselenggarakan oleh MySkill E-Learning.",
             kredesial: "https://storage.googleapis.com/myskill-v2-certificates/topic-DQ4WDIr2jXa70FUI477S/UWddfZoysfU2JRAf2qjYmVhRtUy2-dv4HLu2Zd5JDxU1YyKba.pdf"
         },
         {
@@ -81,18 +65,6 @@ export const Sertifikat = () => {
             penjelasan: "Certificate of COMPLETION atas kelulusannya pada kelas Belajar Menggunakan Bootstrap Framework di Academy Sekolahan, Tanggal: 2024-03-09.",
             kredesial: "https://academy.sekolahan.id/verify-certificate/289829"
         },
-        {
-            img: sertifikatAcademySekolahanJavaScript,
-            sertifikat: "Sertifikat Academy Sekolahan JAVASCRIPT",
-            penjelasan: "Certificate of COMPLETION atas kelulusannya pada kelas Belajar JavaScript Dasar di Academy Sekolahan, Tanggal: 2024-03-09.",
-            kredesial: "https://academy.sekolahan.id/verify-certificate/493685"
-        },
-        {
-            img: sertifikatAcademySekolahanHTMLCSS,
-            sertifikat: "Sertifikat Academy Sekolahan HTML Dan CSS Dasar",
-            penjelasan: "Certificate of COMPLETION atas kelulusannya pada kelas Belajar HTML dan CSS Dasar di Academy Sekolahan, Tanggal: 2024-03-30.",
-            kredesial: "https://academy.sekolahan.id/verify-certificate/146629"
-        }
     ];
 
 
@@ -118,6 +90,18 @@ export const Sertifikat = () => {
             <h1 className="text-4xl font-bold mb-6 judul-sertifikat">Sertifikat</h1>
             <div className="row">
                 {tampilSertifikat()}
+            </div>
+            <div className="text-center mt-6">
+                <span className="text-xl font-semibold ">
+                    See full
+                </span>
+                <a
+                    href="https://drive.google.com/drive/folders/1t8jimFZROLVnlWbXQAq7crUQ4AvU7FeE?usp=drive_link"
+                    target="_blank"
+                    className="text-2xl font-bold text-blue-600 hover:text-blue-800 hover:underline transition-all duration-300"
+                >
+                    certificate
+                </a>
             </div>
         </section>
     );
