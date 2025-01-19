@@ -1,8 +1,8 @@
-import { Label, Button, TextInput, Textarea } from "flowbite-react";
+import { Label, Button, TextInput, Textarea, FloatingLabel } from "flowbite-react";
 
 export function Form() {
 
-    var phoneNumber = '6282120164306'; 
+    var phoneNumber = '6282120164306';
 
     const sendToWhatsApp = () => {
         const forInput = document.getElementById('forInput').value;
@@ -32,24 +32,15 @@ export function Form() {
             >
                 <form id="whatsappForm" className="container-form w-full max-w-md p-4 space-y-4">
                     <div>
-                        <div className="mb-2 block">
-                            <Label htmlFor="base" className="dark:text-black" value="From" />
-                        </div>
-                        <TextInput id="forInput" type="text" sizing="md" />
+                        <FloatingLabel className="dark:text-black dark:bg-white" variant="outlined" label="From" id="forInput" type="text" sizing="md" />
                     </div>
 
                     <div>
-                        <div className="mb-2 block">
-                            <Label htmlFor="base" className="dark:text-black" value="Email address" />
-                        </div>
-                        <TextInput id="emailInput" type="email" sizing="md" />
+                        <FloatingLabel className="dark:text-black dark:bg-white" variant="outlined" label="Email" id="emailInput" type="email" sizing="md" />
                     </div>
 
                     <div className="max-w-md">
-                        <div className="mb-2 block">
-                            <Label htmlFor="comment" className="dark:text-black" value="Message" />
-                        </div>
-                        <Textarea id="textareaInput" required rows={4} />
+                        <FloatingLabel className="dark:text-black dark:bg-white" variant="outlined" label="Message" id="textareaInput" required rows={4} />
                     </div>
 
                     <Button type="button" className="mt-4" onClick={sendToWhatsApp}>
