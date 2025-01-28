@@ -1,15 +1,20 @@
+// dicoding
 import sertifikatDicodingJavascript from '../assets/img/sertifikat/sertifikat-kompetensi-DiCoding-JAVASCRIPT_page-0001.jpg';
 import sertifikatDicodingFrontEndWeb from '../assets/img/sertifikat/Belajar-Membuat-Front-End-Web-untuk-Pemula_page-0001.jpg';
+
+// udemy
 import sertifikatUdemyBootstrap from '../assets/img/sertifikat/Sertifikat-Bootstrap-Udemy.jpg';
+
+// myskill
 import sertifikatMySkillJavaScript from '../assets/img/sertifikat/Certificate-JavaScript-MySkill.jpg';
+import sertifikatMySkillReactJS from '../assets/img/sertifikat/Certificate-React.JS-MySkill.jpg';
+
+// coding studio
 import sertifikatCodingStudio1 from '../assets/img/sertifikat/Certificate-Fundamental-Front-End-Web-Development-I-Coding-Studio.jpg';
 import sertifikatCodingStudio2 from '../assets/img/sertifikat/Certificate-Fundamental-Front-End-Web-Development-II-Coding-Studio.jpg';
+
+// kominfo
 import sertifikatKominfo from '../assets/img/sertifikat/Sertifikat-partisipasi-Kominfo-Muhammad-Brama-Antoro.jpg';
-// import sertifikatMySkillCSS from '../assets/img/sertifikat/Certificate-of-Skill-Specialization-MySkill-FRONTEND-CSS-Muhammad-Brama-Antoro.jpg';
-// import sertifikatAcademySekolahanBootstrap from '../assets/img/sertifikat/Certificate-of-completion-Muhammad-Brama-Antoro-Menggunakan-Bootstrap-Framework-289829.jpg';
-
-
-
 
 export const Sertifikat = () => {
     // data sertifikat
@@ -38,7 +43,13 @@ export const Sertifikat = () => {
         {
             img: sertifikatMySkillJavaScript,
             sertifikat: "Sertifikat MySkill JavaScript",
-            penjelasan: "Certificate skill specialization javascript in myskill, 18 Agustus 204",
+            penjelasan: "Certificate skill specialization javascript in myskill, 18 Agustus 2024",
+            kredesial: "https://storage.googleapis.com/myskill-v2-certificates/topic-sTLaN1dknfdCpAbUm5O2/UWddfZoysfU2JRAf2qjYmVhRtUy2-cYr7yu1y48WG4z5wksvJ.pdf"
+        },
+        {
+            img: sertifikatMySkillReactJS,
+            sertifikat: "Sertifikat MySkill Reac.JS",
+            penjelasan: "Certificate skill specialization React.JS in myskill, 28 Januari 2025",
             kredesial: "https://storage.googleapis.com/myskill-v2-certificates/topic-pTLX6J38RGSQ4dfEO6yQ/UWddfZoysfU2JRAf2qjYmVhRtUy2-PsfN0OuiRFgPWoayOxy8.pdf"
         },
         // CodingStudio
