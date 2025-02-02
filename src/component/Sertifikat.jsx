@@ -1,78 +1,88 @@
 // dicoding
-import sertifikatDicodingJavascript from '../assets/img/sertifikat/sertifikat-kompetensi-DiCoding-JAVASCRIPT_page-0001.jpg';
-import sertifikatDicodingFrontEndWeb from '../assets/img/sertifikat/Belajar-Membuat-Front-End-Web-untuk-Pemula_page-0001.jpg';
+import sertifikatDicodingJavascript from '../assets/img/sertifikat/dicoding/sertifikat-kompetensi-DiCoding-JAVASCRIPT_page-0001.jpg';
+import sertifikatDicodingFrontEndWeb from '../assets/img/sertifikat/dicoding/Belajar-Membuat-Front-End-Web-untuk-Pemula_page-0001.jpg';
 
 // udemy
-import sertifikatUdemyBootstrap from '../assets/img/sertifikat/Sertifikat-Bootstrap-Udemy.jpg';
+import sertifikatUdemyBootstrap from '../assets/img/sertifikat/udemy/Sertifikat-Bootstrap-Udemy.jpg';
 
 // myskill
-import sertifikatMySkillJavaScript from '../assets/img/sertifikat/Certificate-JavaScript-MySkill.jpg';
-import sertifikatMySkillReactJS from '../assets/img/sertifikat/Certificate-React.JS-MySkill.jpg';
+import sertifikatMySkillJavaScript from '../assets/img/sertifikat/myskill/Certificate-JavaScript-MySkill.jpg';
+import sertifikatMySkillReactJS from '../assets/img/sertifikat/myskill/Certificate-React.JS-MySkill.jpg';
+
+// academy sekolahan
+import sertifikatAcademySekolahanMysql from '../assets/img/sertifikat/academysekolahan/Certificate-Mysql-Sid.jpg'
 
 // coding studio
-import sertifikatCodingStudio1 from '../assets/img/sertifikat/Certificate-Fundamental-Front-End-Web-Development-I-Coding-Studio.jpg';
-import sertifikatCodingStudio2 from '../assets/img/sertifikat/Certificate-Fundamental-Front-End-Web-Development-II-Coding-Studio.jpg';
+import sertifikatCodingStudio1 from '../assets/img/sertifikat/codingstudio/Certificate-Fundamental-Front-End-Web-Development-I-Coding-Studio.jpg';
+import sertifikatCodingStudio2 from '../assets/img/sertifikat/codingstudio/Certificate-Fundamental-Front-End-Web-Development-II-Coding-Studio.jpg';
 
 // kominfo
-import sertifikatKominfo from '../assets/img/sertifikat/Sertifikat-partisipasi-Kominfo-Muhammad-Brama-Antoro.jpg';
+import sertifikatKominfo from '../assets/img/sertifikat/kominfo/Sertifikat-partisipasi-Kominfo-Muhammad-Brama-Antoro.jpg';
 
 export const Sertifikat = () => {
     // data sertifikat
     var data = [
-        // dicoding
+        // Dicoding
         {
             img: sertifikatDicodingJavascript,
-            sertifikat: "Sertifikat DiCoding Javascript",
-            penjelasan: "Sertifikat kompetensi kelulusan dicoding pada kelas Belajar Dasar Pemograman JavaScript, Berlaku hingga tanggal 18 Desember 2027",
+            sertifikat: "Dicoding JavaScript Certificate",
+            penjelasan: "Competency certificate for completing Dicoding's Basic JavaScript Programming class. Valid until December 18, 2027",
             kredesial: "https://www.dicoding.com/certificates/KEXLYRE4RZG2"
         },
         {
             img: sertifikatDicodingFrontEndWeb,
-            sertifikat: "Sertifikat DiCoding Membuat Front End web",
-            penjelasan: "certificate ini membuktikan penguasaan saya terhadap pembuatan Fron-end web. Berlaku hingga 11 Januari 2028",
+            sertifikat: "Dicoding Front-End Web Development Certificate",
+            penjelasan: "This certificate proves my proficiency in front-end web development. Valid until January 11, 2028",
             kredesial: "https://www.dicoding.com/certificates/GRX53LNVKZ0M"
         },
         // Udemy
         {
             img: sertifikatUdemyBootstrap,
-            sertifikat: "Sertifikat Udemy Bootstrap CSS : Pemula sampai Mahir",
-            penjelasan: "Sertifikat penyelesaian Bootstrap CSS : Pemula sampai Mahir 29 Des 2024, instruktur Programmer Zaman Now",
+            sertifikat: "Udemy Bootstrap CSS Certificate: Beginner to Advanced",
+            penjelasan: "Certificate of completion for Bootstrap CSS: Beginner to Advanced, December 29, 2024. Instructor: Programmer Zaman Now",
             kredesial: "https://www.udemy.com/certificate/UC-fd2886c7-0796-4fed-8e69-cb0f4d53ae1f/"
         },
         // MySkill
         {
             img: sertifikatMySkillJavaScript,
-            sertifikat: "Sertifikat MySkill JavaScript",
-            penjelasan: "Certificate skill specialization javascript in myskill, 18 Agustus 2024",
+            sertifikat: "MySkill JavaScript Certificate",
+            penjelasan: "Certificate of JavaScript skill specialization in MySkill, August 18, 2024",
             kredesial: "https://storage.googleapis.com/myskill-v2-certificates/topic-sTLaN1dknfdCpAbUm5O2/UWddfZoysfU2JRAf2qjYmVhRtUy2-cYr7yu1y48WG4z5wksvJ.pdf"
         },
         {
             img: sertifikatMySkillReactJS,
-            sertifikat: "Sertifikat MySkill Reac.JS",
-            penjelasan: "Certificate skill specialization React.JS in myskill, 28 Januari 2025",
-            kredesial: "https://storage.googleapis.com/myskill-v2-certificates/topic-pTLX6J38RGSQ4dfEO6yQ/UWddfZoysfU2JRAf2qjYmVhRtUy2-PsfN0OuiRFgPWoayOxy8.pdf"
+            sertifikat: "MySkill React.JS Certificate",
+            penjelasan: "Certificate of React.JS skill specialization in MySkill, January 28, 2025",
+            kredesial: "https://storage.googleapis.com/myskill-v2-certificates/topic-sTLaN1dknfdCpAbUm5O2/UWddfZoysfU2JRAf2qjYmVhRtUy2-cYr7yu1y48WG4z5wksvJ.pdf"
+        },  
+        // Academy Sekolahan
+        {
+            img: sertifikatAcademySekolahanMysql,
+            sertifikat: "Academy Sekolahan MySQL Certificate",
+            penjelasan: "Certificate of completion for MySQL at Academy Sekolahan, December 26, 2024",
+            kredesial: "https://academy.sekolahan.id/verify-certificate/362775"
         },
         // CodingStudio
         {
             img: sertifikatCodingStudio1,
-            sertifikat: "Sertifikat Coding Studio FUNDAMENTAL FRONT-END WEB DEVELOPMENT 1",
-            penjelasan: "certificate completion course flexy Fundamental Front-End Web Development I, 19 JUNI 2024",
+            sertifikat: "Coding Studio Fundamental Front-End Web Development 1 Certificate",
+            penjelasan: "Certificate of completion for Flexy Fundamental Front-End Web Development I, June 19, 2024",
             kredesial: "https://member.codingstudio.id/certificate/77EBA40B94-77DFB8E69C-77DFB89A6F"
         },
         {
             img: sertifikatCodingStudio2,
-            sertifikat: "Sertifikat Coding Studio FUNDAMENTAL FRONT-END WEB DEVELOPMENT 2",
-            penjelasan: "certificate completion course flexy Fundamental Front-End Web Development II, 19 JUNI 2024",
+            sertifikat: "Coding Studio Fundamental Front-End Web Development 2 Certificate",
+            penjelasan: "Certificate of completion for Flexy Fundamental Front-End Web Development II, June 19, 2024",
             kredesial: "https://member.codingstudio.id/certificate/77EBA40B94-77FDB43C25-77DFB89A6F"
         },
-        // kominfo
+        // Kominfo
         {
             img: sertifikatKominfo,
-            sertifikat: "sertifikat partisipasi Makin Cakap Digital 2022",
-            penjelasan: "Sertifikat partisipasi dalam acara Makin Cakap Digital 2022 - Pendidikan Jawa Barat - Pemanfaatan Internet Untuk Menyebarkan Konten Positif. Bertema Pemanfaatan Internet Untuk Menyebarkan Konten Positif. Yang diselenggarakan oleh Kominfo, Siberkreasi, Yayasan Pendidikan Dasar dan Menengah Pasundan.",
-            kredesial: "https://drive.google.com/file/d/1464RpXwsbZhNnCTGu-jIPPGzRPrqbH3r/view?usp=drive_link"
+            sertifikat: "Kominfo Participation Certificate: Makin Cakap Digital 2022",
+            penjelasan: "Participation certificate in the Makin Cakap Digital 2022 event - West Java Education - Utilizing the Internet to Spread Positive Content. Organized by Kominfo, Siberkreasi, and Yayasan Pendidikan Dasar dan Menengah Pasundan.",
+            kredesial: "https://drive.google.com/file/d/12d45gfs93iAdY6Z0ISgnuc7GtkuSfRac/view?usp=sharing"
         },
-    ];
+    ];    
 
 
     const tampilSertifikat = () => {

@@ -3,12 +3,12 @@ import { WrenchScrewdriverIcon } from "@heroicons/react/20/solid";
 
 import absensi from '../assets/img/project/absensi.png';
 import library from '../assets/img/project/library.png';
-import minimarket from '../assets/img/project/minimarket.png';
+import marketplace from '../assets/img/project/marketplace.png';
 
 const images = [
   absensi,
   library,
-  minimarket
+  marketplace
 ];
 
 const services = [
@@ -26,9 +26,9 @@ const services = [
   },
   {
     step: "01",
-    name: "minimarket",
+    name: "marketplace",
     imageUrl: images[2],
-    description: "I developed this minimarket website to help manage sales and stock at my family's minimarket. With this platform, the process of recording transactions, managing stock and monitoring sales becomes more practical and efficient, making it easier for us to manage our daily business in a more structured manner.",
+    description: "This project is a full-stack marketplace web application. The front-end is built with HTML, CSS, JavaScript, and React to interact with the API. The back-end was developed using Laravel and MySQL for data management and API provision. Postman is used for API testing. This project aims to improve capabilities in full-stack web application development and client-server communications",
   },
 
 ];
@@ -67,12 +67,6 @@ export const Project = () => {
                       <p className="text-lg text-pretty text-center mb-4">
                         {service.description}
                       </p>
-                      {/* <a href="tel:555-555-5555" className="inline-flex">
-                        <button className="my-2 bg-yellow-800 hover:bg-yellow-700 text-white font-bold py-2 px-4 w-auto rounded-full inline-flex items-center">
-                          <span>Schedule Service</span>
-                          <WrenchScrewdriverIcon className="h-6 w-6 ml-2" />
-                        </button>
-                      </a> */}
                     </div>
                   </div>
                 </div>

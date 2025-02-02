@@ -27,7 +27,7 @@ export function Header() {
           <h1 className="text-gray hover:text-black" >Project</h1>
         </Navbar.Link>
         <Navbar.Link href="#sertifikat">
-          <h1 className="text-gray hover:text-black">Sertifikat</h1>
+          <h1 className="text-gray hover:text-black">Certificate</h1>
         </Navbar.Link>
         <Navbar.Link href="#contact">
           <h1 className="text-gray hover:text-black">Contact</h1>
