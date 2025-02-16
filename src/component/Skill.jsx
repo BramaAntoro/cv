@@ -1,6 +1,6 @@
-import { FaHtml5, FaCss3Alt, FaJsSquare, FaBootstrap, FaReact, FaPhp, FaDatabase, FaLaravel, FaGit, FaGithub, FaProjectDiagram } from "react-icons/fa";
-import { SiTailwindcss, SiJquery } from "react-icons/si";
-import { MdSchema } from "react-icons/md";
+import { FaHtml5, FaCss3Alt, FaJsSquare, FaBootstrap, FaReact, FaPhp, FaLaravel, FaGit, FaGithub } from "react-icons/fa";
+import { SiTailwindcss, SiJquery, SiPostgresql, SiMysql, SiUml } from "react-icons/si";
+import { TbRelationManyToMany } from "react-icons/tb";
 
 export function Skill() {
     return (
@@ -150,11 +150,24 @@ export function Skill() {
                         <div className="p-4 md:w-1/3">
                             <div className="bg-gray-800 rounded-lg p-6">
                                 <div className="flex items-center justify-center w-10 h-10 rounded-full bg-orange-100 text-orange-500 mb-5">
-                                    <FaDatabase size={24} />
+                                    <SiMysql size={24} />
                                 </div>
                                 <h2 className="text-xl font-medium mb-3">MySQL</h2>
                                 <p className="text-sm leading-relaxed text-justify">
                                     I use MySQL to store and manage data in web applications, enabling fast and efficient database queries.
+                                </p>
+                            </div>
+                        </div>
+
+                        {/* PostgreSQL */}
+                        <div className="p-4 md:w-1/3">
+                            <div className="bg-gray-800 rounded-lg p-6">
+                                <div className="flex items-center justify-center w-10 h-10 rounded-full bg-blue-100 text-blue-500 mb-5">
+                                    <SiPostgresql size={24} />
+                                </div>
+                                <h2 className="text-xl font-medium mb-3">PostgreSQL</h2>
+                                <p className="text-sm leading-relaxed text-justify">
+                                    I use PostgreSQL as a robust and advanced relational database system, leveraging its powerful features for complex queries, transactions, and data integrity in web applications.
                                 </p>
                             </div>
                         </div>
@@ -199,7 +212,7 @@ export function Skill() {
                         <div className="p-4 md:w-1/3">
                             <div className="bg-gray-800 rounded-lg p-6">
                                 <div className="flex items-center justify-center w-10 h-10 rounded-full bg-orange-100 text-orange-500 mb-5">
-                                    <FaProjectDiagram size={24} />
+                                    <SiUml size={24} />
                                 </div>
                                 <h2 className="text-xl font-medium mb-3">UML</h2>
                                 <p className="text-sm leading-relaxed text-justify">
@@ -212,7 +225,7 @@ export function Skill() {
                         <div className="p-4 md:w-1/3">
                             <div className="bg-gray-800 rounded-lg p-6">
                                 <div className="flex items-center justify-center w-10 h-10 rounded-full bg-blue-100 text-blue-500 mb-5">
-                                    <MdSchema size={24} />
+                                    <TbRelationManyToMany size={24} />
                                 </div>
                                 <h2 className="text-xl font-medium mb-3">ERD</h2>
                                 <p className="text-sm leading-relaxed text-justify">

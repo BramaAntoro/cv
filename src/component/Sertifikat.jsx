@@ -11,6 +11,7 @@ import sertifikatMySkillReactJS from '../assets/img/sertifikat/myskill/Certifica
 
 // academy sekolahan
 import sertifikatAcademySekolahanMysql from '../assets/img/sertifikat/academysekolahan/Certificate-Mysql-Sid.jpg'
+import sertifikatAcademySekolahanPHP from '../assets/img/sertifikat/academysekolahan/Certificate-Javascript-Pemula-Sampai-Mahir-Sid.jpg'
 
 // coding studio
 import sertifikatCodingStudio1 from '../assets/img/sertifikat/codingstudio/Certificate-Fundamental-Front-End-Web-Development-I-Coding-Studio.jpg';
@@ -61,6 +62,12 @@ export const Sertifikat = () => {
             sertifikat: "Academy Sekolahan MySQL Certificate",
             penjelasan: "Certificate of completion for MySQL at Academy Sekolahan, December 26, 2024",
             kredesial: "https://academy.sekolahan.id/verify-certificate/362775"
+        },
+        {
+            img: sertifikatAcademySekolahanPHP,
+            sertifikat: "Academy Sekolahan MySQL Certificate",
+            penjelasan: "Certificate of completion for PHP at Academy Sekolahan, February 16, 2025",
+            kredesial: "https://academy.sekolahan.id/verify-certificate/464017"
         },
         // CodingStudio
         {
