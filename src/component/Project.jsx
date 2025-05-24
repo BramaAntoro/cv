@@ -16,21 +16,26 @@ const services = [
     step: "01",
     name: "absensi",
     imageUrl: images[0],
-    description: "This attendance web project is the result of team work, where I act as Tech Leader. In this project, I was responsible as a back-end developer, but still actively helped with UI/UX and front-end development to ensure an optimal user experience. This team collaboration aims to facilitate the recording and management of extracurricular activities in an efficient and structured manner.",
+    type: "Team Project (ongoing project)",
+    description: "A comprehensive attendance management system that simplifies tracking and monitoring extracurricular absences. Features include student attendance, attendance reports, extracurricular creation/request, and more.",
+    technologies: "Laravel, MySQL, React.JS, Tailwind"
   },
   {
-    step: "01",
+    step: "02",
     name: "library",
     imageUrl: images[1],
-    description: "This book lending library website is a personal project I am working on as part of a school assignment. Although this project was an academic assignment, I applied the experience I had in web development to create a practical book borrowing and management system, including easy-to-use search, borrow, and return features.",
+    type: "School Learning Project",
+    description: "A digital library management system that facilitates the process of borrowing and returning books. Includes features such as book search, borrowing history tracking, due date notifications, and inventory management for librarians.",
+    technologies: "PHP, MySQL, JavaScript, Bootstrap"
   },
   {
-    step: "01",
+    step: "03",
     name: "marketplace",
     imageUrl: images[2],
-    description: "This project is a full-stack marketplace web application. The front-end is built with HTML, CSS, JavaScript, and React to interact with the API. The back-end was developed using Laravel and MySQL for data management and API provision. Postman is used for API testing. This project aims to improve capabilities in full-stack web application development and client-server communications",
+    type: "Personal Project",
+    description: "A complete e-commerce marketplace platform that allows users to buy and sell products online. Features include product listing, payment integration, user authentication, order management, and a seller dashboard with analytics.",
+    technologies: "Laravel, MySQL, React, Tailwind"
   },
-
 ];
 
 export const Project = () => {
@@ -61,12 +66,21 @@ export const Project = () => {
                     </button>
                   </div>
                   {/* Back Face */}
-                  <div className="absolute inset-0 h-full w-full rounded-xl bg-black/80 px-12 text-center text-slate-200 [transform:rotateY(180deg)] [backface-visibility:hidden]">
-                    <div className="flex min-h-full flex-col items-center justify-center">
-                      <h2 className="text-2xl font-bold mb-4">{service.name}</h2>
-                      <p className="text-lg text-pretty text-center mb-4">
+                  <div className="absolute inset-0 h-full w-full rounded-xl bg-black/80 px-8 text-center text-slate-200 [transform:rotateY(180deg)] [backface-visibility:hidden]">
+                    <div className="flex min-h-full flex-col items-center justify-center gap-3">
+                      <h2 className="text-xl font-bold">{service.name}</h2>
+                      <span className="text-sm font-semibold bg-blue-600 px-3 py-1 rounded-full">
+                        {service.type}
+                      </span>
+                      <p className="text-sm text-pretty text-center leading-relaxed">
                         {service.description}
                       </p>
+                      <div className="mt-2">
+                        <p className="text-xs font-semibold text-yellow-300 mb-1">Technologies:</p>
+                        <p className="text-xs text-gray-300 leading-relaxed">
+                          {service.technologies}
+                        </p>
+                      </div>
                     </div>
                   </div>
                 </div>

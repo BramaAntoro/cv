@@ -65,7 +65,7 @@ export const Sertifikat = () => {
         },
         {
             img: sertifikatAcademySekolahanPHP,
-            sertifikat: "Academy Sekolahan MySQL Certificate",
+            sertifikat: "Academy Sekolahan PHP Certificate",
             penjelasan: "Certificate of completion for PHP at Academy Sekolahan, February 16, 2025",
             kredesial: "https://academy.sekolahan.id/verify-certificate/464017"
         },
@@ -91,30 +91,49 @@ export const Sertifikat = () => {
         },
     ];    
 
-
     const tampilSertifikat = () => {
         return data.map((item, index) => (
-            <div key={index} className="col-md-4">
-                <article className="cta">
-                    <img className="img-sertifikat" src={item.img} alt="Sertifikat" />
-                    <div className="cta__text-column">
-                        <h2 className="sertifikat-Judul">{item.sertifikat}</h2>
-                        <p>{item.penjelasan}</p>
-                        <a href={item.kredesial} target="_blank" rel="noopener noreferrer">
-                            <button className="button-54" role="button">Kredensial</button>
-                        </a>
+            <div key={index} className="flex-none">
+                <div className="group [perspective:1000px]">
+                    <div className="relative rounded-xl shadow-xl transition-all duration-500 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
+                        {/* Front Face - Image Only */}
+                        <div className="rounded-xl [backface-visibility:hidden]">
+                            <img 
+                                className="h-auto w-auto rounded-xl cursor-pointer max-h-96" 
+                                src={item.img} 
+                                alt={item.sertifikat}
+                            />
+                        </div>
+                        {/* Back Face - Description and Credential Button */}
+                        <div className="absolute inset-0 rounded-xl bg-gradient-to-br from-blue-900 to-purple-900 px-6 text-center text-white [transform:rotateY(180deg)] [backface-visibility:hidden] overflow-hidden">
+                            <div className="flex h-full flex-col items-center justify-center gap-4">
+                                <h2 className="text-base font-bold leading-tight line-clamp-2">{item.sertifikat}</h2>
+                                <p className="text-xs text-gray-200 text-center leading-relaxed line-clamp-6 overflow-hidden">
+                                    {item.penjelasan}
+                                </p>
+                                <a href={item.kredesial} target="_blank" rel="noopener noreferrer">
+                                    <button className="bg-yellow-600 hover:bg-yellow-500 text-white font-bold py-2 px-4 rounded-full transition-colors duration-300 text-xs">
+                                        Lihat Kredensial
+                                    </button>
+                                </a>
+                            </div>
+                        </div>
                     </div>
-                </article>
+                </div>
             </div>
         ));
     }
 
     return (
-        <section className="container-sertifikat" id="sertifikat">
+        <section className="container-sertifikat p-5" id="sertifikat">
             <h1 className="text-4xl font-bold mb-6 judul-sertifikat">Sertifikat</h1>
-            <div className="row">
-                {tampilSertifikat()}
+            
+            <div className="overflow-x-auto overflow-y-hidden whitespace-nowrap py-5 scrollbar-thin scrollbar-thumb-gray-500 scrollbar-track-gray-200 hover:scrollbar-thumb-gray-600">
+                <div className="inline-flex gap-5 pb-2">
+                    {tampilSertifikat()}
+                </div>
             </div>
+            
             <div className="text-center mt-6">
                 <span className="text-xl font-semibold ">
                     See full
