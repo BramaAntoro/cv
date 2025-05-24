@@ -55,7 +55,7 @@ export const Sertifikat = () => {
             sertifikat: "MySkill React.JS Certificate",
             penjelasan: "Certificate of React.JS skill specialization in MySkill, January 28, 2025",
             kredesial: "https://storage.googleapis.com/myskill-v2-certificates/topic-sTLaN1dknfdCpAbUm5O2/UWddfZoysfU2JRAf2qjYmVhRtUy2-cYr7yu1y48WG4z5wksvJ.pdf"
-        },  
+        },
         // Academy Sekolahan
         {
             img: sertifikatAcademySekolahanMysql,
@@ -89,7 +89,7 @@ export const Sertifikat = () => {
             penjelasan: "Participation certificate in the Makin Cakap Digital 2022 event - West Java Education - Utilizing the Internet to Spread Positive Content. Organized by Kominfo, Siberkreasi, and Yayasan Pendidikan Dasar dan Menengah Pasundan.",
             kredesial: "https://drive.google.com/file/d/12d45gfs93iAdY6Z0ISgnuc7GtkuSfRac/view?usp=sharing"
         },
-    ];    
+    ];
 
     const tampilSertifikat = () => {
         return data.map((item, index) => (
@@ -98,9 +98,9 @@ export const Sertifikat = () => {
                     <div className="relative rounded-xl shadow-xl transition-all duration-500 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
                         {/* Front Face - Image Only */}
                         <div className="rounded-xl [backface-visibility:hidden]">
-                            <img 
-                                className="h-auto w-auto rounded-xl cursor-pointer max-h-96" 
-                                src={item.img} 
+                            <img
+                                className="w-full max-w-sm sm:max-w-md md:max-w-lg lg:max-w-xl xl:max-w-2xl h-auto rounded-xl cursor-pointer"
+                                src={item.img}
                                 alt={item.sertifikat}
                             />
                         </div>
@@ -127,13 +127,13 @@ export const Sertifikat = () => {
     return (
         <section className="container-sertifikat p-5" id="sertifikat">
             <h1 className="text-4xl font-bold mb-6 judul-sertifikat">Sertifikat</h1>
-            
+
             <div className="overflow-x-auto overflow-y-hidden whitespace-nowrap py-5 scrollbar-thin scrollbar-thumb-gray-500 scrollbar-track-gray-200 hover:scrollbar-thumb-gray-600">
                 <div className="inline-flex gap-5 pb-2">
                     {tampilSertifikat()}
                 </div>
             </div>
-            
+
             <div className="text-center mt-6">
                 <span className="text-xl font-semibold ">
                     See full
