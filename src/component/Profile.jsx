@@ -1,4 +1,4 @@
-import picture from '../assets/img/Profile.png';
+import picture from '../assets/img/brama.png';
 import { ReactTyped } from "react-typed";
 
 export function Profile() {
@@ -10,7 +10,7 @@ export function Profile() {
           <h1 className="font-bold text-5xl">
             {" "}
             <ReactTyped
-              strings={["Muhammad Brama Antoro", "Junior Full-Stack Web Developer"]}
+              strings={["Muhammad Brama Antoro", "Back-end Developer"]}
               typeSpeed={100}
               loop
               backSpeed={20}

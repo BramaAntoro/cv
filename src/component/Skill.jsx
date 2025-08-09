@@ -1,8 +1,58 @@
-import { FaHtml5, FaCss3Alt, FaJsSquare, FaBootstrap, FaReact, FaPhp, FaLaravel, FaGit, FaGithub } from "react-icons/fa";
-import { SiTailwindcss, SiJquery, SiPostgresql, SiMysql, SiUml } from "react-icons/si";
+import React from 'react';
+import { FaHtml5, FaCss3Alt, FaJsSquare, FaBootstrap, FaReact, FaPhp, FaLaravel, FaGit, FaGithub, FaPython } from "react-icons/fa";
+import { SiTailwindcss, SiPostgresql, SiMysql, SiUml, SiNodedotjs } from "react-icons/si";
 import { TbRelationManyToMany } from "react-icons/tb";
 
+// Custom keyframes for Tailwind
+const customScrollKeyframes = `
+@keyframes scrollRightToLeft {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-33.33%); }
+}
+`;
+
+// Inject keyframes into document head
+if (typeof document !== 'undefined') {
+  const style = document.createElement('style');
+  style.textContent = customScrollKeyframes;
+  if (!document.head.querySelector('style[data-scroll-animation]')) {
+    style.setAttribute('data-scroll-animation', 'true');
+    document.head.appendChild(style);
+  }
+}
+
 export function Skill() {
+    const frontendSkills = [
+        { icon: FaHtml5, color: "text-orange-500" },
+        { icon: FaCss3Alt, color: "text-blue-500" },
+        { icon: FaJsSquare, color: "text-yellow-500" },
+        { icon: FaBootstrap, color: "text-purple-500" },
+        { icon: SiTailwindcss, color: "text-cyan-500" },
+        { icon: FaReact, color: "text-blue-500" }
+    ];
+
+    const backendSkills = [
+        { icon: FaPhp, color: "text-indigo-500" },
+        { icon: FaLaravel, color: "text-red-500" },
+        { icon: SiNodedotjs, color: "text-green-500" },
+        { icon: SiMysql, color: "text-orange-500" },
+        { icon: SiPostgresql, color: "text-blue-500" }
+    ];
+
+    const versionControlSkills = [
+        { icon: FaGit, color: "text-orange-500" },
+        { icon: FaGithub, color: "text-gray-800" }
+    ];
+
+    const modelingSkills = [
+        { icon: SiUml, color: "text-orange-500" },
+        { icon: TbRelationManyToMany, color: "text-blue-500" }
+    ];
+
+    const otherSkills = [
+        { icon: FaPython, color: "text-green-500" }
+    ];
+
     return (
         <section className="dark:bg-white text-gray-200 py-24" id="skills">
             <div className="max-w-6xl mx-auto px-5">
@@ -16,226 +66,136 @@ export function Skill() {
                     </div>
                 </div>
 
-                <div className="mb-16">
-                    <h2 className="text-black text-3xl font-bold mb-8">Frontend Development</h2>
-                    <div className="flex flex-wrap -mx-4">
-                        {/* HTML */}
-                        <div className="p-4 md:w-1/3">
-                            <div className="bg-gray-800 rounded-lg p-6">
-                                <div className="flex items-center justify-center w-10 h-10 rounded-full bg-orange-100 text-orange-500 mb-5">
-                                    <FaHtml5 size={24} />
+                <div className="space-y-16">
+                    {/* Frontend & Backend Row */}
+                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                        {/* Frontend Section */}
+                        <div>
+                            <h2 className="text-black text-2xl font-bold mb-6 text-center">Frontend Development</h2>
+                            <div className="relative overflow-hidden h-24 flex items-center">
+                                <div 
+                                    className="flex space-x-8 animate-[scrollRightToLeft_12s_linear_infinite]"
+                                >
+                                    {/* Render skills multiple times for seamless loop */}
+                                    {[...frontendSkills, ...frontendSkills, ...frontendSkills].map((skill, index) => {
+                                        const IconComponent = skill.icon;
+                                        return (
+                                            <div 
+                                                key={index}
+                                                className="flex-shrink-0 transition-transform hover:scale-110"
+                                            >
+                                                <IconComponent 
+                                                    size={60} 
+                                                    className={skill.color}
+                                                />
+                                            </div>
+                                        );
+                                    })}
                                 </div>
-                                <h2 className="text-xl font-medium mb-3">HTML</h2>
-                                <p className="text-sm leading-relaxed text-justify">
-                                    I am proficient in HTML to build well-structured and accessible web pages, supporting the development of responsive web applications.
-                                </p>
                             </div>
                         </div>
 
-                        {/* CSS */}
-                        <div className="p-4 md:w-1/3">
-                            <div className="bg-gray-800 rounded-lg p-6">
-                                <div className="flex items-center justify-center w-10 h-10 rounded-full bg-blue-100 text-blue-500 mb-5">
-                                    <FaCss3Alt size={24} />
+                        {/* Backend Section */}
+                        <div>
+                            <h2 className="text-black text-2xl font-bold mb-6 text-center">Backend Development</h2>
+                            <div className="relative overflow-hidden h-24 flex items-center">
+                                <div 
+                                    className="flex space-x-8 animate-[scrollRightToLeft_10s_linear_infinite]"
+                                >
+                                    {/* Render skills multiple times for seamless loop */}
+                                    {[...backendSkills, ...backendSkills, ...backendSkills].map((skill, index) => {
+                                        const IconComponent = skill.icon;
+                                        return (
+                                            <div 
+                                                key={index}
+                                                className="flex-shrink-0 transition-transform hover:scale-110"
+                                            >
+                                                <IconComponent 
+                                                    size={60} 
+                                                    className={skill.color}
+                                                />
+                                            </div>
+                                        );
+                                    })}
                                 </div>
-                                <h2 className="text-xl font-medium mb-3">CSS</h2>
-                                <p className="text-sm leading-relaxed text-justify">
-                                    With CSS, I can create visually appealing and responsive web layouts, providing an optimal user experience.
-                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    {/* Version Control & Modeling Row */}
+                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                        {/* Version Control Section */}
+                        <div>
+                            <h2 className="text-black text-2xl font-bold mb-6 text-center">Version Control System</h2>
+                            <div className="relative h-24 flex items-center justify-center">
+                                <div className="flex space-x-8">
+                                    {versionControlSkills.map((skill, index) => {
+                                        const IconComponent = skill.icon;
+                                        return (
+                                            <div 
+                                                key={index}
+                                                className="flex-shrink-0 transition-transform hover:scale-110"
+                                            >
+                                                <IconComponent 
+                                                    size={60} 
+                                                    className={skill.color}
+                                                />
+                                            </div>
+                                        );
+                                    })}
+                                </div>
                             </div>
                         </div>
 
-                        {/* JavaScript */}
-                        <div className="p-4 md:w-1/3">
-                            <div className="bg-gray-800 rounded-lg p-6">
-                                <div className="flex items-center justify-center w-10 h-10 rounded-full bg-yellow-100 text-yellow-500 mb-5">
-                                    <FaJsSquare size={24} />
+                        {/* System Modeling Section */}
+                        <div>
+                            <h2 className="text-black text-2xl font-bold mb-6 text-center">System Modeling and Database Design</h2>
+                            <div className="relative h-24 flex items-center justify-center">
+                                <div className="flex space-x-8">
+                                    {modelingSkills.map((skill, index) => {
+                                        const IconComponent = skill.icon;
+                                        return (
+                                            <div 
+                                                key={index}
+                                                className="flex-shrink-0 transition-transform hover:scale-110"
+                                            >
+                                                <IconComponent 
+                                                    size={60} 
+                                                    className={skill.color}
+                                                />
+                                            </div>
+                                        );
+                                    })}
                                 </div>
-                                <h2 className="text-xl font-medium mb-3">JavaScript</h2>
-                                <p className="text-sm leading-relaxed text-justify">
-                                    I use JavaScript to add interactivity and dynamic functionality to web pages, enabling the creation of more interactive web applications.
-                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    {/* Other Skills Row */}
+                    <div className="flex justify-center">
+                        <div className="w-full max-w-md">
+                            <h2 className="text-black text-2xl font-bold mb-6 text-center">Other Skills</h2>
+                            <div className="relative h-24 flex items-center justify-center">
+                                <div className="flex space-x-8">
+                                    {otherSkills.map((skill, index) => {
+                                        const IconComponent = skill.icon;
+                                        return (
+                                            <div 
+                                                key={index}
+                                                className="flex-shrink-0 transition-transform hover:scale-110"
+                                            >
+                                                <IconComponent 
+                                                    size={60} 
+                                                    className={skill.color}
+                                                />
+                                            </div>
+                                        );
+                                    })}
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-
-                <div className="mb-16">
-                    <h2 className="text-black text-3xl font-bold mb-8">Frontend Framework & Library</h2>
-                    <div className="flex flex-wrap -mx-4">
-                        {/* jQuery */}
-                        <div className="p-4 md:w-1/3">
-                            <div className="bg-gray-800 rounded-lg p-6">
-                                <div className="flex items-center justify-center w-10 h-10 rounded-full bg-blue-100 text-blue-500 mb-5">
-                                    <SiJquery size={24} />
-                                </div>
-                                <h2 className="text-xl font-medium mb-3">jQuery</h2>
-                                <p className="text-sm leading-relaxed text-justify">
-                                    I use jQuery to simplify JavaScript interactions with HTML elements and events, enhancing the development of dynamic web applications.
-                                </p>
-                            </div>
-                        </div>
-
-                        {/* Bootstrap */}
-                        <div className="p-4 md:w-1/3">
-                            <div className="bg-gray-800 rounded-lg p-6">
-                                <div className="flex items-center justify-center w-10 h-10 rounded-full bg-purple-100 text-purple-500 mb-5">
-                                    <FaBootstrap size={24} />
-                                </div>
-                                <h2 className="text-xl font-medium mb-3">Bootstrap</h2>
-                                <p className="text-sm leading-relaxed text-justify">
-                                    I use Bootstrap to speed up the development of responsive and modern web designs, with ready-to-use components.
-                                </p>
-                            </div>
-                        </div>
-
-                        {/* Tailwind CSS */}
-                        <div className="p-4 md:w-1/3">
-                            <div className="bg-gray-800 rounded-lg p-6">
-                                <div className="flex items-center justify-center w-10 h-10 rounded-full bg-cyan-100 text-cyan-500 mb-5">
-                                    <SiTailwindcss size={24} />
-                                </div>
-                                <h2 className="text-xl font-medium mb-3">Tailwind CSS</h2>
-                                <p className="text-sm leading-relaxed text-justify">
-                                    I am proficient in using Tailwind CSS to quickly create flexible and customizable user interfaces, reducing development time and improving productivity.
-                                </p>
-                            </div>
-                        </div>
-
-                        {/* React */}
-                        <div className="p-4 md:w-1/3">
-                            <div className="bg-gray-800 rounded-lg p-6">
-                                <div className="flex items-center justify-center w-10 h-10 rounded-full bg-blue-100 text-blue-500 mb-5">
-                                    <FaReact size={24} />
-                                </div>
-                                <h2 className="text-xl font-medium mb-3">React</h2>
-                                <p className="text-sm leading-relaxed text-justify">
-                                    I use React to build efficient, maintainable, component-based web applications with fast state management and rendering.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div className="mb-16">
-                    <h2 className="text-black text-3xl font-bold mb-8">Backend Development</h2>
-                    <div className="flex flex-wrap -mx-4">
-                        {/* PHP */}
-                        <div className="p-4 md:w-1/3">
-                            <div className="bg-gray-800 rounded-lg p-6">
-                                <div className="flex items-center justify-center w-10 h-10 rounded-full bg-indigo-100 text-indigo-500 mb-5">
-                                    <FaPhp size={24} />
-                                </div>
-                                <h2 className="text-xl font-medium mb-3">PHP</h2>
-                                <p className="text-sm leading-relaxed text-justify">
-                                    I use PHP to build dynamic web applications on the server-side, manage data, and generate responsive web pages based on user input in real-time.
-                                </p>
-                            </div>
-                        </div>
-
-                        {/* Laravel */}
-                        <div className="p-4 md:w-1/3">
-                            <div className="bg-gray-800 rounded-lg p-6">
-                                <div className="flex items-center justify-center w-10 h-10 rounded-full bg-red-100 text-red-500 mb-5">
-                                    <FaLaravel size={24} />
-                                </div>
-                                <h2 className="text-xl font-medium mb-3">Laravel</h2>
-                                <p className="text-sm leading-relaxed text-justify">
-                                    I use Laravel to build secure, structured, and efficient web applications with built-in features such as routing, authentication, and database management.
-                                </p>
-                            </div>
-                        </div>
-
-                        {/* MySQL */}
-                        <div className="p-4 md:w-1/3">
-                            <div className="bg-gray-800 rounded-lg p-6">
-                                <div className="flex items-center justify-center w-10 h-10 rounded-full bg-orange-100 text-orange-500 mb-5">
-                                    <SiMysql size={24} />
-                                </div>
-                                <h2 className="text-xl font-medium mb-3">MySQL</h2>
-                                <p className="text-sm leading-relaxed text-justify">
-                                    I use MySQL to store and manage data in web applications, enabling fast and efficient database queries.
-                                </p>
-                            </div>
-                        </div>
-
-                        {/* PostgreSQL */}
-                        <div className="p-4 md:w-1/3">
-                            <div className="bg-gray-800 rounded-lg p-6">
-                                <div className="flex items-center justify-center w-10 h-10 rounded-full bg-blue-100 text-blue-500 mb-5">
-                                    <SiPostgresql size={24} />
-                                </div>
-                                <h2 className="text-xl font-medium mb-3">PostgreSQL</h2>
-                                <p className="text-sm leading-relaxed text-justify">
-                                    I use PostgreSQL as a robust and advanced relational database system, leveraging its powerful features for complex queries, transactions, and data integrity in web applications.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div className="mb-16">
-                    <h2 className="text-black text-3xl font-bold mb-8">Version control system</h2>
-                    <div className="flex flex-wrap -mx-4">
-                        {/* Git */}
-                        <div className="p-4 md:w-1/3">
-                            <div className="bg-gray-800 rounded-lg p-6">
-                                <div className="flex items-center justify-center w-10 h-10 rounded-full bg-orange-100 text-orange-500 mb-5">
-                                    <FaGit size={24} />
-                                </div>
-                                <h2 className="text-xl font-medium mb-3">Git</h2>
-                                <p className="text-sm leading-relaxed text-justify">
-                                    I use Git for version control, tracking changes, and collaborating on web development projects efficiently.
-                                </p>
-                            </div>
-                        </div>
-
-                        {/* GitHub */}
-                        <div className="p-4 md:w-1/3">
-                            <div className="bg-gray-800 rounded-lg p-6">
-                                <div className="flex items-center justify-center w-10 h-10 rounded-full bg-orange-100 text-orange-500 mb-5">
-                                    <FaGithub size={24} />
-                                </div>
-                                <h2 className="text-xl font-medium mb-3">GitHub</h2>
-                                <p className="text-sm leading-relaxed text-justify">
-                                    I use GitHub to host and manage my projects, share code, and collaborate with other developers on open-source and private repositories.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div className="mb-16">
-                    <h2 className="text-black text-3xl font-bold mb-8">system modeling and database design</h2>
-                    <div className="flex flex-wrap -mx-4">
-                        {/* UML */}
-                        <div className="p-4 md:w-1/3">
-                            <div className="bg-gray-800 rounded-lg p-6">
-                                <div className="flex items-center justify-center w-10 h-10 rounded-full bg-orange-100 text-orange-500 mb-5">
-                                    <SiUml size={24} />
-                                </div>
-                                <h2 className="text-xl font-medium mb-3">UML</h2>
-                                <p className="text-sm leading-relaxed text-justify">
-                                    I use UML (Unified Modeling Language) to design and visualize the structure and behavior of web applications, ensuring clear communication and efficient development.
-                                </p>
-                            </div>
-                        </div>
-
-                        {/* ERD */}
-                        <div className="p-4 md:w-1/3">
-                            <div className="bg-gray-800 rounded-lg p-6">
-                                <div className="flex items-center justify-center w-10 h-10 rounded-full bg-blue-100 text-blue-500 mb-5">
-                                    <TbRelationManyToMany size={24} />
-                                </div>
-                                <h2 className="text-xl font-medium mb-3">ERD</h2>
-                                <p className="text-sm leading-relaxed text-justify">
-                                    I use ERD (Entity Relationship Diagram) for database modeling and design, helping to visualize relationships between entities and create efficient database structures for web applications.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
             </div>
         </section>
     );

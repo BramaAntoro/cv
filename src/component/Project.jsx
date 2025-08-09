@@ -1,41 +1,26 @@
-import React from "react";
 import { WrenchScrewdriverIcon } from "@heroicons/react/20/solid";
-
-import absensi from '../assets/img/project/absensi.png';
-import library from '../assets/img/project/library.png';
-import marketplace from '../assets/img/project/marketplace.png';
-
-const images = [
-  absensi,
-  library,
-  marketplace
-];
+import managementLibrary from '../assets/projects/managementLibrary.png';
+import publicComplaint from '../assets/projects/publicComplaint.png';
 
 const services = [
   {
     step: "01",
-    name: "absensi",
-    imageUrl: images[0],
-    type: "Team Project (ongoing project)",
-    description: "A comprehensive attendance management system that simplifies tracking and monitoring extracurricular absences. Features include student attendance, attendance reports, extracurricular creation/request, and more.",
-    technologies: "Laravel, MySQL, React.JS, Tailwind"
+    name: "Management Library",
+    imageUrl: managementLibrary,
+    role: "Full-stack Developer",
+    peran: "Building the back-end features, creating the front-end interface, and integrating the two.",
+    teknologi: "PHP, Laravel, Livewire, MySQL",
+    github: "https://github.com/BramaAntoro/management-library"
   },
   {
     step: "02",
-    name: "library",
-    imageUrl: images[1],
-    type: "School Learning Project",
-    description: "A digital library management system that facilitates the process of borrowing and returning books. Includes features such as book search, borrowing history tracking, due date notifications, and inventory management for librarians.",
-    technologies: "PHP, MySQL, JavaScript, Bootstrap"
-  },
-  {
-    step: "03",
-    name: "marketplace",
-    imageUrl: images[2],
-    type: "Personal Project",
-    description: "A complete e-commerce marketplace platform that allows users to buy and sell products online. Features include product listing, payment integration, user authentication, order management, and a seller dashboard with analytics.",
-    technologies: "Laravel, MySQL, React, Tailwind"
-  },
+    name: "Pengaduan Masyarakat",
+    imageUrl: publicComplaint,
+    role: "Full-stack Developer",
+    peran: "Building the back-end features, creating the front-end interface, and integrating the two.",
+    teknologi: "JavaScript, React.js, PHP, Laravel, MySQL",
+    github: "https://github.com/BramaAntoro/public-complaint"
+  }
 ];
 
 export const Project = () => {
@@ -59,27 +44,53 @@ export const Project = () => {
                         height={320}
                       />
                     )}
-                    <p className="md:my-6 text-2xl">{service.name}</p>
-                    <button className="my-2 bg-yellow-800 hover:bg-yellow-700 text-white font-bold py-2 px-4 w-auto rounded-full inline-flex items-center">
-                      <span>click or hover to see description</span>
-                      <WrenchScrewdriverIcon className="h-6 w-6 ml-2" />
-                    </button>
+                    <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-4 rounded-b-xl">
+                      <button className="bg-yellow-600 hover:bg-yellow-500 text-white font-semibold py-2 px-4 rounded-full inline-flex items-center text-sm">
+                        <span>move the mouse or click to see details</span>
+                        <WrenchScrewdriverIcon className="h-4 w-4 ml-2" />
+                      </button>
+                    </div>
                   </div>
+                  
                   {/* Back Face */}
-                  <div className="absolute inset-0 h-full w-full rounded-xl bg-black/80 px-8 text-center text-slate-200 [transform:rotateY(180deg)] [backface-visibility:hidden]">
-                    <div className="flex min-h-full flex-col items-center justify-center gap-3">
-                      <h2 className="text-xl font-bold">{service.name}</h2>
-                      <span className="text-sm font-semibold bg-blue-600 px-3 py-1 rounded-full">
-                        {service.type}
-                      </span>
-                      <p className="text-sm text-pretty text-center leading-relaxed">
-                        {service.description}
-                      </p>
-                      <div className="mt-2">
-                        <p className="text-xs font-semibold text-yellow-300 mb-1">Technologies:</p>
-                        <p className="text-xs text-gray-300 leading-relaxed">
-                          {service.technologies}
-                        </p>
+                  <div className="absolute inset-0 h-full w-full rounded-xl bg-gradient-to-br from-gray-900 to-gray-800 p-6 text-slate-200 [transform:rotateY(180deg)] [backface-visibility:hidden]">
+                    <div className="flex min-h-full flex-col justify-between">
+                      <div>
+                        <h2 className="text-lg font-bold mb-3 text-center">{service.name}</h2>
+                        
+                        <div className="space-y-3">
+                          <div>
+                            <p className="text-xs font-semibold text-blue-400 mb-1">Role:</p>
+                            <span className="text-sm bg-blue-600 px-2 py-1 rounded text-white">
+                              {service.role}
+                            </span>
+                          </div>
+                          
+                          <div>
+                            <p className="text-xs font-semibold text-green-400 mb-1">Responsibilities:</p>
+                            <p className="text-xs leading-relaxed text-gray-300">
+                              {service.peran}
+                            </p>
+                          </div>
+                          
+                          <div>
+                            <p className="text-xs font-semibold text-yellow-400 mb-1">Technologies:</p>
+                            <p className="text-xs text-gray-300">
+                              {service.teknologi}
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                      
+                      <div className="mt-4">
+                        <a 
+                          href={service.github} 
+                          target="_blank" 
+                          rel="noopener noreferrer"
+                          className="block w-full bg-gray-700 hover:bg-gray-600 text-white text-center py-2 px-3 rounded text-sm font-medium transition-colors"
+                        >
+                          View on GitHub
+                        </a>
                       </div>
                     </div>
                   </div>
