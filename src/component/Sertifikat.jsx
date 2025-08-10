@@ -4,6 +4,7 @@ import sertifikatDicodingFrontEndWeb from '../assets/img/sertifikat/dicoding/Bel
 
 // udemy
 import sertifikatUdemyBootstrap from '../assets/img/sertifikat/udemy/Sertifikat-Bootstrap-Udemy.jpg';
+import sertifikatUdemyLaravel from '../assets/img/sertifikat/udemy/Sertifikat-Laravel-Udemy.jpg';
 
 // myskill
 import sertifikatMySkillJavaScript from '../assets/img/sertifikat/myskill/Certificate-JavaScript-MySkill.jpg';
@@ -42,6 +43,12 @@ export const Sertifikat = () => {
             sertifikat: "Udemy Bootstrap CSS Certificate: Beginner to Advanced",
             penjelasan: "Certificate of completion for Bootstrap CSS: Beginner to Advanced, December 29, 2024. Instructor: Programmer Zaman Now",
             kredesial: "https://www.udemy.com/certificate/UC-fd2886c7-0796-4fed-8e69-cb0f4d53ae1f/"
+        },
+        {
+            img: sertifikatUdemyLaravel,
+            sertifikat: "Udemy Laravel Certificate: Beginner to Advanced",
+            penjelasan: "Certificate of completion for Laravel: Beginner to Advanced,  June 24, 2025. Instructor: Programmer Zaman Now",
+            kredesial: "https://www.udemy.com/certificate/UC-b89576bb-1a20-4f93-9130-80cf30ae7bf0/"
         },
         // MySkill
         {
@@ -113,7 +120,7 @@ export const Sertifikat = () => {
                                 </p>
                                 <a href={item.kredesial} target="_blank" rel="noopener noreferrer">
                                     <button className="bg-yellow-600 hover:bg-yellow-500 text-white font-bold py-2 px-4 rounded-full transition-colors duration-300 text-xs">
-                                        Lihat Kredensial
+                                        See Credentials
                                     </button>
                                 </a>
                             </div>
