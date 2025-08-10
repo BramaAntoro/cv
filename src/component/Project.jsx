@@ -1,23 +1,36 @@
 import { WrenchScrewdriverIcon } from "@heroicons/react/20/solid";
-import managementLibrary from '../assets/projects/managementLibrary.png';
-import publicComplaint from '../assets/projects/publicComplaint.png';
+import managementLibrary from '../assets/img/projects/management-library.png';
+import publicComplaint from '../assets/img/projects/public complaint.png';
+import leaveAppWGS from '../assets/img/projects/leave-app-wgs.png';
 
 const services = [
   {
     step: "01",
+    name: "Leave App WGS",
+    imageUrl: leaveAppWGS,
+    role: "Back-end Developer",
+    deskripsi: "An employee leave management application that supports submission, approval, and leave record tracking.",
+    peran: "Designing and developing back-end logic, managing the database, and creating APIs for front-end integration.",
+    teknologi: "JavaScript, Node.js, Express, PostgreSQL, Prisma ORM",
+    github: "https://github.com/Rifandiysf/leave-app-wgs"
+  },
+  {
+    step: "02",
     name: "Management Library",
     imageUrl: managementLibrary,
     role: "Full-stack Developer",
-    peran: "Building the back-end features, creating the front-end interface, and integrating the two.",
+    deskripsi: "A library management application for handling books, members, and borrowing transactions.",
+    peran: "Building back-end features, creating the front-end interface, and integrating both parts.",
     teknologi: "PHP, Laravel, Livewire, MySQL",
     github: "https://github.com/BramaAntoro/management-library"
   },
   {
-    step: "02",
-    name: "Pengaduan Masyarakat",
+    step: "03",
+    name: "Public Complaint",
     imageUrl: publicComplaint,
     role: "Full-stack Developer",
-    peran: "Building the back-end features, creating the front-end interface, and integrating the two.",
+    deskripsi: "An online application for receiving, managing, and following up on public reports.",
+    peran: "Building back-end features, creating the front-end interface, and integrating both parts.",
     teknologi: "JavaScript, React.js, PHP, Laravel, MySQL",
     github: "https://github.com/BramaAntoro/public-complaint"
   }
@@ -28,7 +41,9 @@ export const Project = () => {
     <section className="py-16 mx-auto sm:py-20" id="project">
       <div className="mx-auto flex justify-center object-center px-4 py-16 sm:py-24 lg:max-w-7xl">
         <div className="flex justify-center object-center flex-col gap-12 sm:gap-16">
-          <h2 className="text-4xl font-semibold tracking-tight text-gray-950 sm:text-5xl lg:text-6xl text-center">Project</h2>
+          <h2 className="text-4xl font-semibold tracking-tight text-gray-950 sm:text-5xl lg:text-6xl text-center">
+            Project
+          </h2>
           <div className="mx-auto grid gap-12 space-y-10 md:space-y-0 sm:gap-16 lg:grid-cols-3">
             {services.map((service) => (
               <div key={service.name} className="group h-96 w-96 [perspective:1000px]">
@@ -51,13 +66,18 @@ export const Project = () => {
                       </button>
                     </div>
                   </div>
-                  
+
                   {/* Back Face */}
                   <div className="absolute inset-0 h-full w-full rounded-xl bg-gradient-to-br from-gray-900 to-gray-800 p-6 text-slate-200 [transform:rotateY(180deg)] [backface-visibility:hidden]">
                     <div className="flex min-h-full flex-col justify-between">
                       <div>
                         <h2 className="text-lg font-bold mb-3 text-center">{service.name}</h2>
-                        
+
+                        {/* Description */}
+                        <p className="text-xs text-gray-300 mb-4 text-center">
+                          {service.deskripsi}
+                        </p>
+
                         <div className="space-y-3">
                           <div>
                             <p className="text-xs font-semibold text-blue-400 mb-1">Role:</p>
@@ -65,14 +85,14 @@ export const Project = () => {
                               {service.role}
                             </span>
                           </div>
-                          
+
                           <div>
                             <p className="text-xs font-semibold text-green-400 mb-1">Responsibilities:</p>
                             <p className="text-xs leading-relaxed text-gray-300">
                               {service.peran}
                             </p>
                           </div>
-                          
+
                           <div>
                             <p className="text-xs font-semibold text-yellow-400 mb-1">Technologies:</p>
                             <p className="text-xs text-gray-300">
@@ -81,11 +101,11 @@ export const Project = () => {
                           </div>
                         </div>
                       </div>
-                      
+
                       <div className="mt-4">
-                        <a 
-                          href={service.github} 
-                          target="_blank" 
+                        <a
+                          href={service.github}
+                          target="_blank"
                           rel="noopener noreferrer"
                           className="block w-full bg-gray-700 hover:bg-gray-600 text-white text-center py-2 px-3 rounded text-sm font-medium transition-colors"
                         >
