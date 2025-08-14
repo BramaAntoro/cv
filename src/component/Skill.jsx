@@ -1,9 +1,8 @@
-import React from 'react';
 import { FaHtml5, FaCss3Alt, FaJsSquare, FaBootstrap, FaReact, FaPhp, FaLaravel, FaGit, FaGithub, FaPython } from "react-icons/fa";
 import { SiTailwindcss, SiPostgresql, SiMysql, SiUml, SiNodedotjs } from "react-icons/si";
 import { TbRelationManyToMany } from "react-icons/tb";
+import n8nLogo from "../assets/img/skills/logo-n8n.svg";
 
-// Custom keyframes for Tailwind
 const customScrollKeyframes = `
 @keyframes scrollRightToLeft {
   0% { transform: translateX(0); }
@@ -11,14 +10,13 @@ const customScrollKeyframes = `
 }
 `;
 
-// Inject keyframes into document head
 if (typeof document !== 'undefined') {
-  const style = document.createElement('style');
-  style.textContent = customScrollKeyframes;
-  if (!document.head.querySelector('style[data-scroll-animation]')) {
-    style.setAttribute('data-scroll-animation', 'true');
-    document.head.appendChild(style);
-  }
+    const style = document.createElement('style');
+    style.textContent = customScrollKeyframes;
+    if (!document.head.querySelector('style[data-scroll-animation]')) {
+        style.setAttribute('data-scroll-animation', 'true');
+        document.head.appendChild(style);
+    }
 }
 
 export function Skill() {
@@ -50,7 +48,8 @@ export function Skill() {
     ];
 
     const otherSkills = [
-        { icon: FaPython, color: "text-green-500" }
+        { icon: FaPython, color: "text-green-500" },
+        { icon: n8nLogo, color: "text-green-500" }
     ];
 
     return (
@@ -73,19 +72,19 @@ export function Skill() {
                         <div>
                             <h2 className="text-black text-2xl font-bold mb-6 text-center">Frontend Development</h2>
                             <div className="relative overflow-hidden h-24 flex items-center">
-                                <div 
+                                <div
                                     className="flex space-x-8 animate-[scrollRightToLeft_12s_linear_infinite]"
                                 >
                                     {/* Render skills multiple times for seamless loop */}
                                     {[...frontendSkills, ...frontendSkills, ...frontendSkills].map((skill, index) => {
                                         const IconComponent = skill.icon;
                                         return (
-                                            <div 
+                                            <div
                                                 key={index}
                                                 className="flex-shrink-0 transition-transform hover:scale-110"
                                             >
-                                                <IconComponent 
-                                                    size={60} 
+                                                <IconComponent
+                                                    size={60}
                                                     className={skill.color}
                                                 />
                                             </div>
@@ -99,19 +98,19 @@ export function Skill() {
                         <div>
                             <h2 className="text-black text-2xl font-bold mb-6 text-center">Backend Development</h2>
                             <div className="relative overflow-hidden h-24 flex items-center">
-                                <div 
+                                <div
                                     className="flex space-x-8 animate-[scrollRightToLeft_10s_linear_infinite]"
                                 >
                                     {/* Render skills multiple times for seamless loop */}
                                     {[...backendSkills, ...backendSkills, ...backendSkills].map((skill, index) => {
                                         const IconComponent = skill.icon;
                                         return (
-                                            <div 
+                                            <div
                                                 key={index}
                                                 className="flex-shrink-0 transition-transform hover:scale-110"
                                             >
-                                                <IconComponent 
-                                                    size={60} 
+                                                <IconComponent
+                                                    size={60}
                                                     className={skill.color}
                                                 />
                                             </div>
@@ -132,12 +131,12 @@ export function Skill() {
                                     {versionControlSkills.map((skill, index) => {
                                         const IconComponent = skill.icon;
                                         return (
-                                            <div 
+                                            <div
                                                 key={index}
                                                 className="flex-shrink-0 transition-transform hover:scale-110"
                                             >
-                                                <IconComponent 
-                                                    size={60} 
+                                                <IconComponent
+                                                    size={60}
                                                     className={skill.color}
                                                 />
                                             </div>
@@ -155,12 +154,12 @@ export function Skill() {
                                     {modelingSkills.map((skill, index) => {
                                         const IconComponent = skill.icon;
                                         return (
-                                            <div 
+                                            <div
                                                 key={index}
                                                 className="flex-shrink-0 transition-transform hover:scale-110"
                                             >
-                                                <IconComponent 
-                                                    size={60} 
+                                                <IconComponent
+                                                    size={60}
                                                     className={skill.color}
                                                 />
                                             </div>
@@ -178,18 +177,30 @@ export function Skill() {
                             <div className="relative h-24 flex items-center justify-center">
                                 <div className="flex space-x-8">
                                     {otherSkills.map((skill, index) => {
-                                        const IconComponent = skill.icon;
-                                        return (
-                                            <div 
-                                                key={index}
-                                                className="flex-shrink-0 transition-transform hover:scale-110"
-                                            >
-                                                <IconComponent 
-                                                    size={60} 
+                                        if (typeof skill.icon === "string") {
+                                            const isSVG = skill.icon.endsWith(".svg");
+                                            return (
+                                                <div
+                                                    key={index}
+                                                    className={isSVG ? "w-full h-full" : "w-[60px] h-[60px] flex items-center justify-center"}
+                                                >
+                                                    <img
+                                                        src={skill.icon}
+                                                        alt="skill logo"
+                                                        className={isSVG ? "w-full h-full object-contain" : "w-full h-full object-contain"}
+                                                    />
+                                                </div>
+                                            );
+                                        } else {
+                                            const IconComponent = skill.icon;
+                                            return (
+                                                <IconComponent
+                                                    key={index}
+                                                    size={60}
                                                     className={skill.color}
                                                 />
-                                            </div>
-                                        );
+                                            );
+                                        }
                                     })}
                                 </div>
                             </div>
