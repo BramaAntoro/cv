@@ -40,7 +40,7 @@ const services = [
     name: "sibening",
     imageUrl: sibening,
     role: "Back-end Developer",
-    deskripsi: "Si Bening is a school counseling web application to help students share their thoughts and consult with the guidance counselor easily, quickly, and comfortably.",
+    deskripsi: "Si Bening (Sistem informasi Bimbingan Elektronik & Konseling) is a school counseling web application to help students share their thoughts and consult with the guidance counselor easily, quickly, and comfortably.",
     peran: "Designing and developing back-end logic, managing the database, and creating APIs for front-end integration.",
     teknologi: "PHP, Laravel, MySQL",
     github: ""
