@@ -2,6 +2,7 @@ import { WrenchScrewdriverIcon } from "@heroicons/react/20/solid";
 import managementLibrary from '../assets/img/projects/management-library.png';
 import publicComplaint from '../assets/img/projects/public complaint.png';
 import leaveAppWGS from '../assets/img/projects/leave-app-wgs.png';
+import sibening from '../assets/img/projects/sibening.png';
 
 const services = [
   {
@@ -33,6 +34,16 @@ const services = [
     peran: "Building back-end features, creating the front-end interface, and integrating both parts.",
     teknologi: "JavaScript, React.js, PHP, Laravel, MySQL",
     github: "https://github.com/BramaAntoro/public-complaint"
+  },
+  {
+    step: "04",
+    name: "sibening",
+    imageUrl: sibening,
+    role: "Back-end Developer",
+    deskripsi: "Si Bening is a school counseling web application to help students share their thoughts and consult with the guidance counselor easily, quickly, and comfortably.",
+    peran: "Designing and developing back-end logic, managing the database, and creating APIs for front-end integration.",
+    teknologi: "PHP, Laravel, MySQL",
+    github: ""
   }
 ];
 
@@ -103,14 +114,20 @@ export const Project = () => {
                       </div>
 
                       <div className="mt-4">
-                        <a
-                          href={service.github}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="block w-full bg-gray-700 hover:bg-gray-600 text-white text-center py-2 px-3 rounded text-sm font-medium transition-colors"
-                        >
-                          View on GitHub
-                        </a>
+                        {service.github ? (
+                          <a
+                            href={service.github}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="block w-full bg-gray-700 hover:bg-gray-600 text-white text-center py-2 px-3 rounded text-sm font-medium transition-colors"
+                          >
+                            View on GitHub
+                          </a>
+                        ) : (
+                          <p className="block w-full bg-gray-700 text-white text-center py-2 px-3 rounded text-sm font-medium">
+                            this repository is private
+                          </p>
+                        )}
                       </div>
                     </div>
                   </div>
