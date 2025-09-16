@@ -21,6 +21,9 @@ import sertifikatCodingStudio2 from '../assets/img/sertifikat/codingstudio/Certi
 // kominfo
 import sertifikatKominfo from '../assets/img/sertifikat/kominfo/Sertifikat-partisipasi-Kominfo-Muhammad-Brama-Antoro.jpg';
 
+// SmkDev
+import sertifikatCompletionSmkDev from '../assets/img/sertifikat/smkDev/Certificate-of-completion-SMKDEV-Scholarships-Expert-Class-2025.jpg';
+
 export const Sertifikat = () => {
     // data sertifikat
     var data = [
@@ -48,6 +51,13 @@ export const Sertifikat = () => {
             img: sertifikatUdemyLaravel,
             sertifikat: "Udemy Laravel Certificate: Beginner to Advanced",
             penjelasan: "Certificate of completion for Laravel: Beginner to Advanced,  June 24, 2025. Instructor: Programmer Zaman Now",
+            kredesial: "https://www.udemy.com/certificate/UC-b89576bb-1a20-4f93-9130-80cf30ae7bf0/"
+        },
+        // SmkDev
+        {
+            img: sertifikatCompletionSmkDev,
+            sertifikat: "Certificate SMKDEV Scholarships Expert Class 2025",
+            penjelasan: "Certificate of completion SMKDEV Scholarships Expert Class 2025",
             kredesial: "https://www.udemy.com/certificate/UC-b89576bb-1a20-4f93-9130-80cf30ae7bf0/"
         },
         // MySkill
@@ -94,7 +104,7 @@ export const Sertifikat = () => {
             img: sertifikatKominfo,
             sertifikat: "Kominfo Participation Certificate: Makin Cakap Digital 2022",
             penjelasan: "Participation certificate in the Makin Cakap Digital 2022 event - West Java Education - Utilizing the Internet to Spread Positive Content. Organized by Kominfo, Siberkreasi, and Yayasan Pendidikan Dasar dan Menengah Pasundan.",
-            kredesial: "https://drive.google.com/file/d/12d45gfs93iAdY6Z0ISgnuc7GtkuSfRac/view?usp=sharing"
+            kredesial: ""
         },
     ];
 
