@@ -10,18 +10,16 @@ const services = [
     name: "Leave App WGS",
     imageUrl: leaveAppWGS,
     role: "Back-end Developer",
-    deskripsi: "An employee leave management application that supports submission, approval, and leave record tracking.",
-    peran: "Designing and developing back-end logic, managing the database, and creating APIs for front-end integration.",
+    deskripsi: "Leave App WGS is a web-based application that provides a system for employee leave submission, approval, and recording, equipped with automated features for mandatory leave and balance, while also introducing a more structured workflow.",
     teknologi: "JavaScript, Node.js, Express, PostgreSQL, Prisma ORM",
-    github: "https://github.com/Rifandiysf/leave-app-wgs"
+    github: ""
   },
   {
     step: "02",
     name: "Management Library",
     imageUrl: managementLibrary,
     role: "Full-stack Developer",
-    deskripsi: "A library management application for handling books, members, and borrowing transactions.",
-    peran: "Building back-end features, creating the front-end interface, and integrating both parts.",
+    deskripsi: "Management Library is a web-based application designed to simplify integrated library data management. This application provides features for managing books, members, and borrowing/return transactions, making administrative processes more efficient and structured.",
     teknologi: "PHP, Laravel, Livewire, MySQL",
     github: "https://github.com/BramaAntoro/management-library"
   },
@@ -30,18 +28,16 @@ const services = [
     name: "Public Complaint",
     imageUrl: publicComplaint,
     role: "Full-stack Developer",
-    deskripsi: "An online application for receiving, managing, and following up on public reports.",
-    peran: "Building back-end features, creating the front-end interface, and integrating both parts.",
+    deskripsi: "Public Complaints is a web-based application designed to make it easier for the public to submit complaints online, while also assisting authorities in verifying, processing, and following up on these reports efficiently.",
     teknologi: "JavaScript, React.js, PHP, Laravel, MySQL",
     github: "https://github.com/BramaAntoro/public-complaint"
   },
   {
     step: "04",
-    name: "sibening",
+    name: "SiBening (Sistem informasi Bimbingan Elektronik & Konseling)",
     imageUrl: sibening,
     role: "Back-end Developer",
-    deskripsi: "Si Bening (Sistem informasi Bimbingan Elektronik & Konseling) is a school counseling web application to help students share their thoughts and consult with the guidance counselor easily, quickly, and comfortably.",
-    peran: "Designing and developing back-end logic, managing the database, and creating APIs for front-end integration.",
+    deskripsi: "SiBening is a web-based information system that provides a platform for students to communicate with counselor teachers more easily, while also making it easier for teachers to monitor and handle student issues in an organized manner.",
     teknologi: "PHP, Laravel, MySQL",
     github: ""
   }
@@ -96,14 +92,6 @@ export const Project = () => {
                               {service.role}
                             </span>
                           </div>
-
-                          <div>
-                            <p className="text-xs font-semibold text-green-400 mb-1">Responsibilities:</p>
-                            <p className="text-xs leading-relaxed text-gray-300">
-                              {service.peran}
-                            </p>
-                          </div>
-
                           <div>
                             <p className="text-xs font-semibold text-yellow-400 mb-1">Technologies:</p>
                             <p className="text-xs text-gray-300">
