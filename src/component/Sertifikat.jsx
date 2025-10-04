@@ -1,4 +1,5 @@
 // dicoding
+import sertifikatDicodingDasarAI from '../assets/img/sertifikat/dicoding/sertifikat-kompetensi-DiCoding-Dasar-AI_page-0001.jpg';
 import sertifikatDicodingJavascript from '../assets/img/sertifikat/dicoding/sertifikat-kompetensi-DiCoding-JAVASCRIPT_page-0001.jpg';
 import sertifikatDicodingFrontEndWeb from '../assets/img/sertifikat/dicoding/Belajar-Membuat-Front-End-Web-untuk-Pemula_page-0001.jpg';
 
@@ -29,9 +30,15 @@ export const Sertifikat = () => {
     var data = [
         // Dicoding
         {
+            img: sertifikatDicodingDasarAI,
+            sertifikat: "Dicoding Dasar AI Certificate",
+            penjelasan: "Dicoding competency certification for passing the Basic AI Learning class, valid until October 4, 2028",
+            kredesial: "https://www.dicoding.com/certificates/KEXL214E0ZG2"
+        },
+        {
             img: sertifikatDicodingJavascript,
             sertifikat: "Dicoding JavaScript Certificate",
-            penjelasan: "Competency certificate for completing Dicoding's Basic JavaScript Programming class. Valid until December 18, 2027",
+            penjelasan: "Competency certificate for completing Dicoding Basic JavaScript Programming class. Valid until December 18, 2027",
             kredesial: "https://www.dicoding.com/certificates/KEXLYRE4RZG2"
         },
         {
