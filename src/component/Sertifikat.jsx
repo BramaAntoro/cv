@@ -3,6 +3,9 @@ import sertifikatDicodingDasarAI from '../assets/img/sertifikat/dicoding/sertifi
 import sertifikatDicodingJavascript from '../assets/img/sertifikat/dicoding/sertifikat-kompetensi-DiCoding-JAVASCRIPT_page-0001.jpg';
 import sertifikatDicodingFrontEndWeb from '../assets/img/sertifikat/dicoding/Belajar-Membuat-Front-End-Web-untuk-Pemula_page-0001.jpg';
 
+// innoventure unikom
+import sertifikatInnoventureUnikom from '../assets/img/sertifikat/innoventureUnikom/sertifikat-penghargaan-innoventure-unikom-2025-Brama.png';
+
 // udemy
 import sertifikatUdemyBootstrap from '../assets/img/sertifikat/udemy/Sertifikat-Bootstrap-Udemy.jpg';
 import sertifikatUdemyLaravel from '../assets/img/sertifikat/udemy/Sertifikat-Laravel-Udemy.jpg';
@@ -46,6 +49,13 @@ export const Sertifikat = () => {
             sertifikat: "Dicoding Front-End Web Development Certificate",
             penjelasan: "This certificate proves my proficiency in front-end web development. Valid until January 11, 2028",
             kredesial: "https://www.dicoding.com/certificates/GRX53LNVKZ0M"
+        },
+        // innoventure unikom
+        {
+            img: sertifikatInnoventureUnikom,
+            sertifikat: "Innoventure Unikom 2025 Award Certificate (Brama)",
+            penjelasan: "This certificate proves my achievement as 2nd Place Winner of Innoventure UNIKOM 2025 in the Website Development category, while also recognizing my skills in web development and team collaboration.",
+            kredesial: "https://drive.google.com/drive/folders/1SCjAo2yQto802AQohMD1YpJ3xxryJgH-"
         },
         // Udemy
         {
