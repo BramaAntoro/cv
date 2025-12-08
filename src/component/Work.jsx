@@ -4,8 +4,8 @@ import wgs from '../assets/img/wgs.jpeg';
 export const Work = () => {
     const [channelData, setChannelData] = useState(null);
     const [loading, setLoading] = useState(true);
-    const API_KEY = "AIzaSyBDRig9BoSmYgs3a-xwDAqeGi4X0yH8QFw";
-    const CHANNEL_ID = "UC8oLIwownHoOyyAR5c3XvBg";
+    const API_KEY = import.meta.env.VITE_API_KEY;
+    const CHANNEL_ID = import.meta.env.VITE_CHANNEL_ID;
 
     useEffect(() => {
         const fetchChannelData = () => {
@@ -145,14 +145,14 @@ export const Work = () => {
                                         </h3>
                                         <div className="text-sm sm:text-base text-gray-600 mb-4 flex flex-wrap gap-2">
                                             <span className="bg-purple-100 text-purple-800 px-3 py-1 rounded-full font-medium">
-                                                Juli 2024 - Present
+                                                Juli 2025 - November 2026
                                             </span>
                                             <span className="mx-2 text-gray-400 hidden sm:inline">•</span>
                                             <span className="font-semibold text-gray-800">WGS</span>
                                         </div>
 
                                         <p className="text-sm sm:text-base text-gray-700 leading-relaxed">
-                                            Building a corporate leave management application, developing back-end logic,
+                                            Building a corporate leave management application (WGS Cuti), developing back-end logic,
                                             managing the database, and creating APIs for front-end integration.
                                         </p>
                                     </div>

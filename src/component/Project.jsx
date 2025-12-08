@@ -1,16 +1,17 @@
+import { useState } from 'react';
 import { WrenchScrewdriverIcon } from "@heroicons/react/20/solid";
 import managementLibrary from '../assets/img/projects/management-library.png';
 import publicComplaint from '../assets/img/projects/public complaint.png';
-import leaveAppWGS from '../assets/img/projects/leave-app-wgs.png';
+import WGSCuti from '../assets/img/projects/wgs cuti.png';
 import sibening from '../assets/img/projects/sibening.png';
 
 const services = [
   {
     step: "01",
     name: "Leave App WGS",
-    imageUrl: leaveAppWGS,
+    imageUrl: WGSCuti,
     role: "Back-end Developer",
-    deskripsi: "Leave App WGS is a web-based application that provides a system for employee leave submission, approval, and recording, equipped with automated features for mandatory leave and balance, while also introducing a more structured workflow.",
+    deskripsi: "WGS Cuti is a web application that simplifies leave submission, approval, and record-keeping in a single centralized system. This application allows employees to apply for leave independently and provides direct access to view remaining leave entitlements, while HR can manage all data more neatly and efficiently.",
     teknologi: "JavaScript, Node.js, Express, PostgreSQL, Prisma ORM",
     github: ""
   },
@@ -44,6 +45,24 @@ const services = [
 ];
 
 export const Project = () => {
+  const [filter, setFilter] = useState('All');
+
+  const filteredServices = services.filter(service => {
+    if (filter === 'All') {
+      return true;
+    }
+    if (filter === 'Full-stack') {
+      return service.role === 'Full-stack Developer';
+    }
+    if (filter === 'Back-end') {
+      return service.role === 'Back-end Developer';
+    }
+    if (filter === 'Front-end') {
+        return service.role === 'Front-end Developer';
+      }
+    return false;
+  });
+
   return (
     <section className="py-16 mx-auto sm:py-20" id="project">
       <div className="mx-auto flex justify-center object-center px-4 py-16 sm:py-24 lg:max-w-7xl">
@@ -51,8 +70,16 @@ export const Project = () => {
           <h2 className="text-4xl font-semibold tracking-tight text-gray-950 sm:text-5xl lg:text-6xl text-center">
             Project
           </h2>
+
+          <div className="flex justify-center gap-4 mb-8">
+            <button onClick={() => setFilter('All')} className={`px-4 py-2 rounded ${filter === 'All' ? 'bg-yellow-600 text-white' : 'bg-gray-200'}`}>All</button>
+            <button onClick={() => setFilter('Full-stack')} className={`px-4 py-2 rounded ${filter === 'Full-stack' ? 'bg-yellow-600 text-white' : 'bg-gray-200'}`}>Full-stack</button>
+            <button onClick={() => setFilter('Back-end')} className={`px-4 py-2 rounded ${filter === 'Back-end' ? 'bg-yellow-600 text-white' : 'bg-gray-200'}`}>Back-end</button>
+            <button onClick={() => setFilter('Front-end')} className={`px-4 py-2 rounded ${filter === 'Front-end' ? 'bg-yellow-600 text-white' : 'bg-gray-200'}`}>Front-end</button>
+          </div>
+
           <div className="mx-auto grid gap-12 space-y-10 md:space-y-0 sm:gap-16 lg:grid-cols-3">
-            {services.map((service) => (
+            {filteredServices.map((service) => (
               <div key={service.name} className="group h-96 w-96 [perspective:1000px]">
                 <div className="relative h-full w-full rounded-xl shadow-xl transition-all duration-500 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
                   {/* Front Face */}
