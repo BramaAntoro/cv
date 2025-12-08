@@ -72,10 +72,10 @@ export const Project = () => {
           </h2>
 
           <div className="flex justify-center gap-4 mb-8">
-            <button onClick={() => setFilter('All')} className={`px-4 py-2 rounded ${filter === 'All' ? 'bg-yellow-600 text-white' : 'bg-gray-200'}`}>All</button>
-            <button onClick={() => setFilter('Full-stack')} className={`px-4 py-2 rounded ${filter === 'Full-stack' ? 'bg-yellow-600 text-white' : 'bg-gray-200'}`}>Full-stack</button>
-            <button onClick={() => setFilter('Back-end')} className={`px-4 py-2 rounded ${filter === 'Back-end' ? 'bg-yellow-600 text-white' : 'bg-gray-200'}`}>Back-end</button>
-            <button onClick={() => setFilter('Front-end')} className={`px-4 py-2 rounded ${filter === 'Front-end' ? 'bg-yellow-600 text-white' : 'bg-gray-200'}`}>Front-end</button>
+            <button onClick={() => setFilter('All')} className={`px-4 py-2 rounded ${filter === 'All' ? 'bg-blue-600 text-white' : 'bg-gray-200'}`}>All</button>
+            <button onClick={() => setFilter('Full-stack')} className={`px-4 py-2 rounded ${filter === 'Full-stack' ? 'bg-blue-600 text-white' : 'bg-gray-200'}`}>Full-stack</button>
+            <button onClick={() => setFilter('Back-end')} className={`px-4 py-2 rounded ${filter === 'Back-end' ? 'bg-blue-600 text-white' : 'bg-gray-200'}`}>Back-end</button>
+            <button onClick={() => setFilter('Front-end')} className={`px-4 py-2 rounded ${filter === 'Front-end' ? 'bg-blue-600 text-white' : 'bg-gray-200'}`}>Front-end</button>
           </div>
 
           <div className="mx-auto grid gap-12 space-y-10 md:space-y-0 sm:gap-16 lg:grid-cols-3">

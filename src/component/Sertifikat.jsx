@@ -2,6 +2,7 @@
 import sertifikatDicodingDasarAI from '../assets/img/sertifikat/dicoding/sertifikat-kompetensi-DiCoding-Dasar-AI_page-0001.jpg';
 import sertifikatDicodingJavascript from '../assets/img/sertifikat/dicoding/sertifikat-kompetensi-DiCoding-JAVASCRIPT_page-0001.jpg';
 import sertifikatDicodingFrontEndWeb from '../assets/img/sertifikat/dicoding/Belajar-Membuat-Front-End-Web-untuk-Pemula_page-0001.jpg';
+import sertifikatDicodingPython from '../assets/img/sertifikat/dicoding/sertifikat_kompetensi_DiCoding_Python_page-0001.jpg';
 
 // innoventure unikom
 import sertifikatInnoventureUnikom from '../assets/img/sertifikat/innoventureUnikom/sertifikat-penghargaan-innoventure-unikom-2025-Brama.png';
@@ -32,6 +33,12 @@ export const Sertifikat = () => {
     // data sertifikat
     var data = [
         // Dicoding
+        {
+            img: sertifikatDicodingPython,
+            sertifikat: "Dicoding Python Certificate",
+            penjelasan: "Dicoding competency certification for passing the Python, valid until November 23, 2028",
+            kredesial: "https://www.dicoding.com/certificates/N9ZO2JOO6PG5"
+        },
         {
             img: sertifikatDicodingDasarAI,
             sertifikat: "Dicoding Dasar AI Certificate",
