@@ -1,211 +1,86 @@
 import { FaHtml5, FaCss3Alt, FaJsSquare, FaBootstrap, FaReact, FaPhp, FaLaravel, FaGit, FaGithub, FaPython } from "react-icons/fa";
-import { SiTailwindcss, SiPostgresql, SiMysql, SiUml, SiNodedotjs } from "react-icons/si";
+import { SiTailwindcss, SiPostgresql, SiMysql, SiUml, SiNodedotjs, SiNextdotjs, SiExpress } from "react-icons/si";
 import { TbRelationManyToMany } from "react-icons/tb";
 import n8nLogo from "../assets/img/skills/logo-n8n.svg";
 
-const customScrollKeyframes = `
-@keyframes scrollRightToLeft {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-33.33%); }
-}
-`;
-
-if (typeof document !== 'undefined') {
-    const style = document.createElement('style');
-    style.textContent = customScrollKeyframes;
-    if (!document.head.querySelector('style[data-scroll-animation]')) {
-        style.setAttribute('data-scroll-animation', 'true');
-        document.head.appendChild(style);
-    }
-}
-
 export function Skill() {
-    const frontendSkills = [
-        { icon: FaHtml5, color: "text-orange-500" },
-        { icon: FaCss3Alt, color: "text-blue-500" },
-        { icon: FaJsSquare, color: "text-yellow-500" },
-        { icon: FaBootstrap, color: "text-purple-500" },
-        { icon: SiTailwindcss, color: "text-cyan-500" },
-        { icon: FaReact, color: "text-blue-500" }
-    ];
-
-    const backendSkills = [
-        { icon: FaPhp, color: "text-indigo-500" },
-        { icon: FaLaravel, color: "text-red-500" },
-        { icon: SiNodedotjs, color: "text-green-500" },
-        { icon: SiMysql, color: "text-orange-500" },
-        { icon: SiPostgresql, color: "text-blue-500" }
-    ];
-
-    const versionControlSkills = [
-        { icon: FaGit, color: "text-orange-500" },
-        { icon: FaGithub, color: "text-gray-800" }
-    ];
-
-    const modelingSkills = [
-        { icon: SiUml, color: "text-orange-500" },
-        { icon: TbRelationManyToMany, color: "text-blue-500" }
-    ];
-
-    const otherSkills = [
-        { icon: FaPython, color: "text-green-500" },
-        { icon: n8nLogo, color: "text-green-500" }
+    const skillGroups = [
+        {
+            title: "Frontend",
+            skills: [
+                { icon: FaHtml5, name: "HTML5", color: "text-orange-500" },
+                { icon: FaCss3Alt, name: "CSS3", color: "text-blue-500" },
+                { icon: FaJsSquare, name: "JavaScript", color: "text-yellow-500" },
+                { icon: FaReact, name: "React", color: "text-blue-400" },
+                { icon: SiTailwindcss, name: "Tailwind", color: "text-cyan-500" },
+                { icon: FaBootstrap, name: "Bootstrap", color: "text-purple-600" }
+            ]
+        },
+        {
+            title: "Backend",
+            skills: [
+                { icon: FaPhp, name: "PHP", color: "text-indigo-500" },
+                { icon: SiNodedotjs, name: "Node.js", color: "text-green-600" },
+                { icon: SiExpress, name: "Express.js", color: "text-gray-600" },
+                { icon: SiMysql, name: "MySQL", color: "text-blue-600" },
+                { icon: SiPostgresql, name: "PostgreSQL", color: "text-indigo-400" }
+            ]
+        },
+        {
+            title: "Fullstack",
+            skills: [
+                { icon: SiNextdotjs, name: "Next.js", color: "text-black" },
+                { icon: FaLaravel, name: "Laravel", color: "text-red-500" }
+            ]
+        },
+        {
+            title: "Tools & Others",
+            skills: [
+                { icon: FaGit, name: "Git", color: "text-orange-600" },
+                { icon: FaGithub, name: "GitHub", color: "text-gray-900" },
+                { icon: SiUml, name: "UML", color: "text-blue-500" },
+                { icon: FaPython, name: "Python", color: "text-green-500" },
+                { icon: () => <img src={n8nLogo} alt="n8n" className="w-10 h-10" />, name: "n8n", color: "" }
+            ]
+        }
     ];
 
     return (
-        <section className="dark:bg-white text-gray-200 py-24" id="skills">
-            <div className="max-w-6xl mx-auto px-5">
-                <div className="text-center mb-20">
-                    <h1 className="text-black text-4xl sm:text-5xl md:text-6xl font-bold mb-4">Skills</h1>
-                    <p className="text-black text-base leading-relaxed xl:w-2/4 lg:w-3/4 mx-auto">
-                        I have skills in using various technologies that support web development effectively and efficiently, from design to database management and dynamic web application development.
+        <section className="py-24 bg-white" id="skills">
+            <div className="max-w-7xl mx-auto px-6">
+                <div className="text-center mb-16">
+                    <h2 className="text-4xl md:text-5xl font-extrabold text-gray-900 mb-4">
+                        Technical Skills
+                    </h2>
+                    <div className="w-24 h-1.5 bg-blue-600 mx-auto rounded-full mb-6"></div>
+                    <p className="text-gray-600 max-w-2xl mx-auto text-lg">
+                        I specialize in modern web technologies, with a strong focus on building robust backend systems and complete full-stack applications.
                     </p>
-                    <div className="flex justify-center mt-6">
-                        <div className="w-16 h-1 rounded-full bg-indigo-500 inline-flex"></div>
-                    </div>
                 </div>
 
-                <div className="space-y-16">
-                    {/* Frontend & Backend Row */}
-                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-                        {/* Frontend Section */}
-                        <div>
-                            <h2 className="text-black text-2xl font-bold mb-6 text-center">Frontend Development</h2>
-                            <div className="relative overflow-hidden h-24 flex items-center">
-                                <div
-                                    className="flex space-x-8 animate-[scrollRightToLeft_12s_linear_infinite]"
-                                >
-                                    {/* Render skills multiple times for seamless loop */}
-                                    {[...frontendSkills, ...frontendSkills, ...frontendSkills].map((skill, index) => {
-                                        const IconComponent = skill.icon;
-                                        return (
-                                            <div
-                                                key={index}
-                                                className="flex-shrink-0 transition-transform hover:scale-110"
-                                            >
-                                                <IconComponent
-                                                    size={60}
-                                                    className={skill.color}
-                                                />
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                    {skillGroups.map((group, idx) => (
+                        <div key={idx} className="bg-gray-50 rounded-2xl p-6 border border-gray-100 hover:shadow-xl transition-shadow duration-300 flex flex-col h-full">
+                            <h3 className="text-lg font-bold text-gray-900 mb-6 border-b border-gray-200 pb-3">
+                                {group.title}
+                            </h3>
+                            <div className="grid grid-cols-3 gap-4">
+                                {group.skills.map((skill, sIdx) => {
+                                    const Icon = skill.icon;
+                                    return (
+                                        <div key={sIdx} className="flex flex-col items-center group">
+                                            <div className="w-12 h-12 bg-white rounded-xl shadow-sm flex items-center justify-center mb-2 group-hover:scale-110 group-hover:shadow-md transition-all duration-300">
+                                                {typeof Icon === 'function' ? <Icon className={`text-2xl ${skill.color}`} /> : <Icon className={`text-2xl ${skill.color}`} />}
                                             </div>
-                                        );
-                                    })}
-                                </div>
+                                            <span className="text-[10px] font-semibold text-gray-600 text-center uppercase tracking-tighter">
+                                                {skill.name}
+                                            </span>
+                                        </div>
+                                    )
+                                })}
                             </div>
                         </div>
-
-                        {/* Backend Section */}
-                        <div>
-                            <h2 className="text-black text-2xl font-bold mb-6 text-center">Backend Development</h2>
-                            <div className="relative overflow-hidden h-24 flex items-center">
-                                <div
-                                    className="flex space-x-8 animate-[scrollRightToLeft_10s_linear_infinite]"
-                                >
-                                    {/* Render skills multiple times for seamless loop */}
-                                    {[...backendSkills, ...backendSkills, ...backendSkills].map((skill, index) => {
-                                        const IconComponent = skill.icon;
-                                        return (
-                                            <div
-                                                key={index}
-                                                className="flex-shrink-0 transition-transform hover:scale-110"
-                                            >
-                                                <IconComponent
-                                                    size={60}
-                                                    className={skill.color}
-                                                />
-                                            </div>
-                                        );
-                                    })}
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    {/* Version Control & Modeling Row */}
-                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-                        {/* Version Control Section */}
-                        <div>
-                            <h2 className="text-black text-2xl font-bold mb-6 text-center">Version Control System</h2>
-                            <div className="relative h-24 flex items-center justify-center">
-                                <div className="flex space-x-8">
-                                    {versionControlSkills.map((skill, index) => {
-                                        const IconComponent = skill.icon;
-                                        return (
-                                            <div
-                                                key={index}
-                                                className="flex-shrink-0 transition-transform hover:scale-110"
-                                            >
-                                                <IconComponent
-                                                    size={60}
-                                                    className={skill.color}
-                                                />
-                                            </div>
-                                        );
-                                    })}
-                                </div>
-                            </div>
-                        </div>
-
-                        {/* System Modeling Section */}
-                        <div>
-                            <h2 className="text-black text-2xl font-bold mb-6 text-center">System Modeling and Database Design</h2>
-                            <div className="relative h-24 flex items-center justify-center">
-                                <div className="flex space-x-8">
-                                    {modelingSkills.map((skill, index) => {
-                                        const IconComponent = skill.icon;
-                                        return (
-                                            <div
-                                                key={index}
-                                                className="flex-shrink-0 transition-transform hover:scale-110"
-                                            >
-                                                <IconComponent
-                                                    size={60}
-                                                    className={skill.color}
-                                                />
-                                            </div>
-                                        );
-                                    })}
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    {/* Other Skills Row */}
-                    <div className="flex justify-center">
-                        <div className="w-full max-w-md">
-                            <h2 className="text-black text-2xl font-bold mb-6 text-center">Other Skills</h2>
-                            <div className="relative h-24 flex items-center justify-center">
-                                <div className="flex space-x-8">
-                                    {otherSkills.map((skill, index) => {
-                                        if (typeof skill.icon === "string") {
-                                            const isSVG = skill.icon.endsWith(".svg");
-                                            return (
-                                                <div
-                                                    key={index}
-                                                    className={isSVG ? "w-full h-full" : "w-[60px] h-[60px] flex items-center justify-center"}
-                                                >
-                                                    <img
-                                                        src={skill.icon}
-                                                        alt="skill logo"
-                                                        className={isSVG ? "w-full h-full object-contain" : "w-full h-full object-contain"}
-                                                    />
-                                                </div>
-                                            );
-                                        } else {
-                                            const IconComponent = skill.icon;
-                                            return (
-                                                <IconComponent
-                                                    key={index}
-                                                    size={60}
-                                                    className={skill.color}
-                                                />
-                                            );
-                                        }
-                                    })}
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    ))}
                 </div>
             </div>
         </section>

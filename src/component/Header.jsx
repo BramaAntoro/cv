@@ -1,36 +1,38 @@
-import { Dropdown, Navbar } from "flowbite-react";
+import { Navbar } from "flowbite-react";
 
 export function Header() {
   return (
-    <Navbar fluid className="dark:bg-white shadow-[0_0_0_4px_rgba(0,0,0,0.25)] fixed top-0 left-0 right-0 z-10" >
-      <Navbar.Brand href="#" className="ml-12">
-        <span className="self-center whitespace-nowrap text-2xl font-bold dark:text-black">Brama</span>
+    <Navbar 
+      fluid 
+      className="bg-white/80 backdrop-blur-md border-b border-gray-100 fixed top-0 left-0 right-0 z-50 py-4"
+    >
+      <Navbar.Brand href="#" className="lg:ml-20">
+        <span className="self-center whitespace-nowrap text-3xl font-extrabold bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
+          Brama.
+        </span>
       </Navbar.Brand>
       <Navbar.Toggle />
-      <Navbar.Collapse className="mr-12">
-        <Navbar.Link href="#home">
-          <h1 className="text-gray hover:text-black">Home</h1>
+      <Navbar.Collapse className="lg:mr-20">
+        <Navbar.Link href="#home" className="text-lg font-medium hover:text-blue-600 transition-colors">
+          Home
         </Navbar.Link>
-        <Navbar.Link>
-          <h1 className="text-gray-400 hover:text-black">
-            <Dropdown inline label="About">
-              <Dropdown.Item href="#skills">Skill</Dropdown.Item>
-              <Dropdown.Item href="#Language">Language</Dropdown.Item>
-              <Dropdown.Item href="#academic">Academic</Dropdown.Item>
-            </Dropdown>
-          </h1>
+        <Navbar.Link href="#project" className="text-lg font-medium hover:text-blue-600 transition-colors">
+          Projects
         </Navbar.Link>
-        <Navbar.Link href="#work">
-          <h1 className="text-gray hover:text-black">Work</h1>
+        <Navbar.Link href="#skills" className="text-lg font-medium hover:text-blue-600 transition-colors">
+          Skills
         </Navbar.Link>
-        <Navbar.Link href="#project">
-          <h1 className="text-gray hover:text-black" >Project</h1>
+        <Navbar.Link href="#work" className="text-lg font-medium hover:text-blue-600 transition-colors">
+          Experience
         </Navbar.Link>
-        <Navbar.Link href="#sertifikat">
-          <h1 className="text-gray hover:text-black">Certificate</h1>
+        <Navbar.Link href="#academic" className="text-lg font-medium hover:text-blue-600 transition-colors">
+          Education
         </Navbar.Link>
-        <Navbar.Link href="#contact">
-          <h1 className="text-gray hover:text-black">Contact</h1>
+        <Navbar.Link href="#sertifikat" className="text-lg font-medium hover:text-blue-600 transition-colors">
+          Certificates
+        </Navbar.Link>
+        <Navbar.Link href="#contact" className="text-lg font-medium hover:text-blue-600 transition-colors">
+          Contact
         </Navbar.Link>
       </Navbar.Collapse>
     </Navbar>

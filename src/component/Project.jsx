@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { WrenchScrewdriverIcon } from "@heroicons/react/20/solid";
+import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
 import managementLibrary from '../assets/img/projects/management-library.png';
 import publicComplaint from '../assets/img/projects/public complaint.png';
 import WGSCuti from '../assets/img/projects/wgs cuti.png';
@@ -7,39 +7,35 @@ import sibening from '../assets/img/projects/sibening.png';
 
 const services = [
   {
-    step: "01",
-    name: "Leave App WGS",
+    name: "WGS Cuti",
     imageUrl: WGSCuti,
     role: "Back-end Developer",
-    deskripsi: "WGS Cuti is a web application that simplifies leave submission, approval, and record-keeping in a single centralized system. This application allows employees to apply for leave independently and provides direct access to view remaining leave entitlements, while HR can manage all data more neatly and efficiently.",
-    teknologi: "JavaScript, Node.js, Express, PostgreSQL, Prisma ORM",
+    deskripsi: "A centralized leave submission and approval system for employees and HR, simplifying administrative processes efficiently.",
+    teknologi: ["JavaScript", "Node.js", "Express", "PostgreSQL", "Prisma"],
     github: ""
   },
   {
-    step: "02",
     name: "Management Library",
     imageUrl: managementLibrary,
     role: "Full-stack Developer",
-    deskripsi: "Management Library is a web-based application designed to simplify integrated library data management. This application provides features for managing books, members, and borrowing/return transactions, making administrative processes more efficient and structured.",
-    teknologi: "PHP, Laravel, Livewire, MySQL",
+    deskripsi: "Integrated library data management system for tracking books, members, and borrowing transactions seamlessly.",
+    teknologi: ["PHP", "Laravel", "Livewire", "MySQL"],
     github: "https://github.com/BramaAntoro/management-library"
   },
   {
-    step: "03",
     name: "Public Complaint",
     imageUrl: publicComplaint,
     role: "Full-stack Developer",
-    deskripsi: "Public Complaints is a web-based application designed to make it easier for the public to submit complaints online, while also assisting authorities in verifying, processing, and following up on these reports efficiently.",
-    teknologi: "JavaScript, React.js, PHP, Laravel, MySQL",
+    deskripsi: "Online platform for public complaints, facilitating authorities in verifying and processing reports efficiently.",
+    teknologi: ["React.js", "Laravel", "MySQL"],
     github: "https://github.com/BramaAntoro/public-complaint"
   },
   {
-    step: "04",
-    name: "SiBening (Sistem informasi Bimbingan Elektronik & Konseling)",
+    name: "SiBening",
     imageUrl: sibening,
     role: "Back-end Developer",
-    deskripsi: "SiBening is a web-based information system that provides a platform for students to communicate with counselor teachers more easily, while also making it easier for teachers to monitor and handle student issues in an organized manner.",
-    teknologi: "PHP, Laravel, MySQL",
+    deskripsi: "Electronic counseling system connecting students and counselor teachers for organized monitoring and communication.",
+    teknologi: ["PHP", "Laravel", "MySQL"],
     github: ""
   }
 ];
@@ -48,108 +44,104 @@ export const Project = () => {
   const [filter, setFilter] = useState('All');
 
   const filteredServices = services.filter(service => {
-    if (filter === 'All') {
-      return true;
-    }
-    if (filter === 'Full-stack') {
-      return service.role === 'Full-stack Developer';
-    }
-    if (filter === 'Back-end') {
-      return service.role === 'Back-end Developer';
-    }
-    if (filter === 'Front-end') {
-        return service.role === 'Front-end Developer';
-      }
-    return false;
+    if (filter === 'All') return true;
+    return service.role.includes(filter);
   });
 
+  const filterOptions = ['All', 'Full-stack', 'Back-end'];
+
   return (
-    <section className="py-16 mx-auto sm:py-20" id="project">
-      <div className="mx-auto flex justify-center object-center px-4 py-16 sm:py-24 lg:max-w-7xl">
-        <div className="flex justify-center object-center flex-col gap-12 sm:gap-16">
-          <h2 className="text-4xl font-semibold tracking-tight text-gray-950 sm:text-5xl lg:text-6xl text-center">
-            Project
+    <section className="py-24 bg-gray-50" id="project">
+      <div className="max-w-7xl mx-auto px-6">
+        <div className="text-center mb-16">
+          <h2 className="text-4xl md:text-5xl font-extrabold text-gray-900 mb-4">
+            Featured Projects
           </h2>
+          <div className="w-24 h-1.5 bg-blue-600 mx-auto rounded-full mb-6"></div>
+          <p className="text-gray-600 max-w-2xl mx-auto text-lg">
+            A selection of my recent works, showcasing my expertise in building scalable and efficient web applications.
+          </p>
+        </div>
 
-          <div className="flex justify-center gap-4 mb-8">
-            <button onClick={() => setFilter('All')} className={`px-4 py-2 rounded ${filter === 'All' ? 'bg-blue-600 text-white' : 'bg-gray-200'}`}>All</button>
-            <button onClick={() => setFilter('Full-stack')} className={`px-4 py-2 rounded ${filter === 'Full-stack' ? 'bg-blue-600 text-white' : 'bg-gray-200'}`}>Full-stack</button>
-            <button onClick={() => setFilter('Back-end')} className={`px-4 py-2 rounded ${filter === 'Back-end' ? 'bg-blue-600 text-white' : 'bg-gray-200'}`}>Back-end</button>
-            <button onClick={() => setFilter('Front-end')} className={`px-4 py-2 rounded ${filter === 'Front-end' ? 'bg-blue-600 text-white' : 'bg-gray-200'}`}>Front-end</button>
-          </div>
+        <div className="flex justify-center flex-wrap gap-4 mb-16">
+          {filterOptions.map((option) => (
+            <button
+              key={option}
+              onClick={() => setFilter(option)}
+              className={`px-8 py-2.5 rounded-full font-semibold transition-all duration-300 ${
+                filter === option
+                  ? 'bg-blue-600 text-white shadow-lg shadow-blue-200 scale-105'
+                  : 'bg-white text-gray-600 border border-gray-200 hover:border-blue-400 hover:text-blue-600'
+              }`}
+            >
+              {option}
+            </button>
+          ))}
+        </div>
 
-          <div className="mx-auto grid gap-12 space-y-10 md:space-y-0 sm:gap-16 lg:grid-cols-3">
-            {filteredServices.map((service) => (
-              <div key={service.name} className="group h-96 w-96 [perspective:1000px]">
-                <div className="relative h-full w-full rounded-xl shadow-xl transition-all duration-500 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
-                  {/* Front Face */}
-                  <div className="absolute inset-0 h-full w-full rounded-xl [backface-visibility:hidden]">
-                    {service.imageUrl && (
-                      <img
-                        className="object-cover cursor-pointer object-left h-full w-full rounded-xl"
-                        src={service.imageUrl}
-                        alt={service.name}
-                        width={320}
-                        height={320}
-                      />
-                    )}
-                    <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-4 rounded-b-xl">
-                      <button className="bg-yellow-600 hover:bg-yellow-500 text-white font-semibold py-2 px-4 rounded-full inline-flex items-center text-sm">
-                        <span>move the mouse or click to see details</span>
-                        <WrenchScrewdriverIcon className="h-4 w-4 ml-2" />
-                      </button>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-10">
+          {filteredServices.map((service) => (
+            <div 
+              key={service.name} 
+              className="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-500 border border-gray-100 group"
+            >
+              <div className="flex flex-col lg:flex-row h-full">
+                {/* Image Section */}
+                <div className="lg:w-1/2 overflow-hidden relative min-h-[250px]">
+                  <img
+                    className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
+                    src={service.imageUrl}
+                    alt={service.name}
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+                    <span className="text-white font-medium text-sm bg-blue-600 px-3 py-1 rounded-full">
+                      {service.role}
+                    </span>
+                  </div>
+                </div>
+
+                {/* Content Section */}
+                <div className="lg:w-1/2 p-8 flex flex-col justify-between">
+                  <div>
+                    <h3 className="text-2xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
+                      {service.name}
+                    </h3>
+                    <p className="text-gray-600 mb-6">
+                      {service.deskripsi}
+                    </p>
+                    <div className="flex flex-wrap gap-2 mb-8">
+                      {service.teknologi.map((tech) => (
+                        <span 
+                          key={tech}
+                          className="text-xs font-semibold bg-gray-100 text-gray-600 px-3 py-1 rounded-md"
+                        >
+                          {tech}
+                        </span>
+                      ))}
                     </div>
                   </div>
 
-                  {/* Back Face */}
-                  <div className="absolute inset-0 h-full w-full rounded-xl bg-gradient-to-br from-gray-900 to-gray-800 p-6 text-slate-200 [transform:rotateY(180deg)] [backface-visibility:hidden]">
-                    <div className="flex min-h-full flex-col justify-between">
-                      <div>
-                        <h2 className="text-lg font-bold mb-3 text-center">{service.name}</h2>
-
-                        {/* Description */}
-                        <p className="text-xs text-gray-300 mb-4 text-center">
-                          {service.deskripsi}
-                        </p>
-
-                        <div className="space-y-3">
-                          <div>
-                            <p className="text-xs font-semibold text-blue-400 mb-1">Role:</p>
-                            <span className="text-sm bg-blue-600 px-2 py-1 rounded text-white">
-                              {service.role}
-                            </span>
-                          </div>
-                          <div>
-                            <p className="text-xs font-semibold text-yellow-400 mb-1">Technologies:</p>
-                            <p className="text-xs text-gray-300">
-                              {service.teknologi}
-                            </p>
-                          </div>
-                        </div>
-                      </div>
-
-                      <div className="mt-4">
-                        {service.github ? (
-                          <a
-                            href={service.github}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="block w-full bg-gray-700 hover:bg-gray-600 text-white text-center py-2 px-3 rounded text-sm font-medium transition-colors"
-                          >
-                            View on GitHub
-                          </a>
-                        ) : (
-                          <p className="block w-full bg-gray-700 text-white text-center py-2 px-3 rounded text-sm font-medium">
-                            this repository is private
-                          </p>
-                        )}
-                      </div>
-                    </div>
+                  <div className="flex items-center gap-4 mt-auto">
+                    {service.github ? (
+                      <a
+                        href={service.github}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center gap-2 text-gray-700 hover:text-blue-600 font-bold transition-colors"
+                      >
+                        <FaGithub size={20} />
+                        <span>Code</span>
+                      </a>
+                    ) : (
+                      <span className="text-gray-400 flex items-center gap-2 cursor-not-allowed italic text-sm">
+                        Private Repo
+                      </span>
+                    )}
                   </div>
                 </div>
               </div>
-            ))}
-          </div>
+            </div>
+          ))}
         </div>
       </div>
     </section>

@@ -1,37 +1,67 @@
-import { Accordion } from "flowbite-react";
+import { HiAcademicCap } from "react-icons/hi";
 
 export function Academic() {
+    const education = [
+        {
+            school: "SMK Prakarya Internasional",
+            degree: "Software and Game Development",
+            period: "2023 - 2026",
+            desc: "Focused on software architecture and modern web technologies. Actively building projects and developing technical and non-technical skills. skills."
+        },
+        {
+            school: "SMP Pasundan 01 Bandung",
+            degree: "Junior High School",
+            period: "2021 - 2024",
+            desc: "Completed secondary education. Able to adapt to a distance learning environment and develop an early interest in computer science."
+        },
+        {
+            school: "SD Kemah Indonesia",
+            degree: "Elementary School",
+            period: "2015 - 2021",
+            desc: "Foundational education in a supportive environment, focusing on character building and basic sciences."
+        }
+    ];
+
     return (
-        <div className="bg-white p-4 rounded-lg shadow-md m-10" id="academic">
-            <Accordion>
-                <Accordion.Panel>
-                    <Accordion.Title>Elementary School</Accordion.Title>
-                    <Accordion.Content className="dark:bg-white">
-                        <p className="text-black">
-                            <strong>SD Kemah Indonesia.</strong>
-                            A graduate of SD Kemah Indonesia in the 2020-2021 academic year, I completed my elementary education at one of the leading elementary schools in Cibadak, Astanaanyar District, Bandung City, West Java. During the 2015-2020 period, SD Kemah Indonesia provided quality education to its students, including myself. Through a comprehensive curriculum and an innovative learning approach, the school helped me develop the knowledge, skills, and character needed to succeed in the future. As a graduate of SD Kemah Indonesia, I am proud of my achievements and ready to continue my educational journey to higher levels.
-                        </p>
-                    </Accordion.Content>
-                </Accordion.Panel>
-                <Accordion.Panel>
-                    <Accordion.Title>Junior High School</Accordion.Title>
-                    <Accordion.Content className="dark:bg-white">
-                        <p className="text-black">
-                            <strong>SMP Pasundan 01 Bandung.</strong>
-                            As a graduate of SMP Pasundan 01 Bandung in the 2023-2024 academic year, I completed my junior high school education at one of the prominent junior high schools in Bandung. SMP Pasundan 01 Bandung is accredited with an "A" rating and has a qualified and experienced teaching staff. During my studies, I participated in distance learning (PJJ) or online learning (BDR) in response to the large-scale social restrictions (PSBB) enforced due to the Covid-19 pandemic. Graduating from SMP Pasundan 01 Bandung has provided me with the knowledge and skills that will help me continue my education to higher levels.
-                        </p>
-                    </Accordion.Content>
-                </Accordion.Panel>
-                <Accordion.Panel>
-                    <Accordion.Title>Vocational High School</Accordion.Title>
-                    <Accordion.Content className="dark:bg-white">
-                        <p className="mb-2 text-black">
-                            <strong>SMK Prakarya Internasional.</strong>
-                            I am currently attending SMK Prakarya Internasional with a major in <strong>Software and Game Development.</strong> This major offers a program focused on software development and game creation. At SMK Prakarya Internasional, I am learning about programming, web development, game programming with Unity, and other related technologies. I am very excited to develop my skills and knowledge in this field, as I believe the software and game industries have great potential and are exciting for my future career.
-                        </p>
-                    </Accordion.Content>
-                </Accordion.Panel>
-            </Accordion>
-        </div>
+        <section className="py-24 bg-white" id="academic">
+            <div className="max-w-7xl mx-auto px-6">
+                <div className="text-center mb-16">
+                    <h2 className="text-4xl md:text-5xl font-extrabold text-gray-900 mb-4 flex items-center justify-center gap-4">
+                        <HiAcademicCap className="text-blue-600" /> Education
+                    </h2>
+                    <div className="w-24 h-1.5 bg-blue-600 mx-auto rounded-full mb-6"></div>
+                </div>
+
+                <div className="relative max-w-4xl mx-auto">
+                    {/* Vertical Line for Timeline */}
+                    <div className="absolute left-0 md:left-1/2 top-0 bottom-0 w-1 bg-gray-100 transform -translate-x-1/2 hidden md:block"></div>
+
+                    <div className="space-y-12">
+                        {education.map((edu, idx) => (
+                            <div key={idx} className={`relative flex flex-col md:flex-row items-center ${idx % 2 === 0 ? 'md:flex-row-reverse' : ''}`}>
+                                {/* Circle on timeline */}
+                                <div className="absolute left-0 md:left-1/2 w-6 h-6 bg-blue-600 border-4 border-white rounded-full transform -translate-x-1/2 z-10 hidden md:block"></div>
+
+                                {/* Content Card */}
+                                <div className="w-full md:w-[45%]">
+                                    <div className="bg-gray-50 p-8 rounded-2xl border border-gray-100 hover:border-blue-400 hover:shadow-xl transition-all duration-300">
+                                        <span className="text-blue-600 font-bold text-sm bg-blue-50 px-3 py-1 rounded-full mb-4 inline-block">
+                                            {edu.period}
+                                        </span>
+                                        <h3 className="text-2xl font-bold text-gray-900 mb-1">{edu.school}</h3>
+                                        <p className="text-gray-700 font-semibold mb-4">{edu.degree}</p>
+                                        <p className="text-gray-600 leading-relaxed text-sm">
+                                            {edu.desc}
+                                        </p>
+                                    </div>
+                                </div>
+                                <div className="hidden md:block w-[10%]"></div>
+                                <div className="hidden md:block w-[45%]"></div>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            </div>
+        </section>
     );
 }

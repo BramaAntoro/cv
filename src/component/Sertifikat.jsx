@@ -1,3 +1,6 @@
+import { HiBadgeCheck, HiExternalLink, HiChevronRight, HiChevronLeft } from "react-icons/hi";
+import { useRef } from "react";
+
 // dicoding
 import sertifikatDicodingDasarAI from '../assets/img/sertifikat/dicoding/sertifikat-kompetensi-DiCoding-Dasar-AI_page-0001.jpg';
 import sertifikatDicodingJavascript from '../assets/img/sertifikat/dicoding/sertifikat-kompetensi-DiCoding-JAVASCRIPT_page-0001.jpg';
@@ -30,162 +33,196 @@ import sertifikatKominfo from '../assets/img/sertifikat/kominfo/Sertifikat-parti
 import sertifikatCompletionSmkDev from '../assets/img/sertifikat/smkDev/Certificate-of-completion-SMKDEV-Scholarships-Expert-Class-2025.jpg';
 
 export const Sertifikat = () => {
-    // data sertifikat
-    var data = [
-        // Dicoding
+    const scrollRef = useRef(null);
+
+    const data = [
+        {
+            img: sertifikatInnoventureUnikom,
+            sertifikat: "2nd Winner Innoventure UNIKOM 2025",
+            issuer: "UNIKOM",
+            kredesial: "https://drive.google.com/drive/folders/1SCjAo2yQto802AQohMD1YpJ3xxryJgH-"
+        },
         {
             img: sertifikatDicodingPython,
-            sertifikat: "Dicoding Python Certificate",
-            penjelasan: "Dicoding competency certification for passing the Python, valid until November 23, 2028",
+            sertifikat: "Python Programming",
+            issuer: "Dicoding Indonesia",
             kredesial: "https://www.dicoding.com/certificates/N9ZO2JOO6PG5"
         },
         {
-            img: sertifikatDicodingDasarAI,
-            sertifikat: "Dicoding Dasar AI Certificate",
-            penjelasan: "Dicoding competency certification for passing the Basic AI Learning class, valid until October 4, 2028",
-            kredesial: "https://www.dicoding.com/certificates/KEXL214E0ZG2"
-        },
-        {
             img: sertifikatDicodingJavascript,
-            sertifikat: "Dicoding JavaScript Certificate",
-            penjelasan: "Competency certificate for completing Dicoding Basic JavaScript Programming class. Valid until December 18, 2027",
+            sertifikat: "JavaScript Programming",
+            issuer: "Dicoding Indonesia",
             kredesial: "https://www.dicoding.com/certificates/KEXLYRE4RZG2"
         },
         {
             img: sertifikatDicodingFrontEndWeb,
-            sertifikat: "Dicoding Front-End Web Development Certificate",
-            penjelasan: "This certificate proves my proficiency in front-end web development. Valid until January 11, 2028",
+            sertifikat: "Front-End Web Development",
+            issuer: "Dicoding Indonesia",
             kredesial: "https://www.dicoding.com/certificates/GRX53LNVKZ0M"
         },
-        // innoventure unikom
         {
-            img: sertifikatInnoventureUnikom,
-            sertifikat: "Innoventure Unikom 2025 Award Certificate (Brama)",
-            penjelasan: "This certificate proves my achievement as 2nd Place Winner of Innoventure UNIKOM 2025 in the Website Development category, while also recognizing my skills in web development and team collaboration.",
-            kredesial: "https://drive.google.com/drive/folders/1SCjAo2yQto802AQohMD1YpJ3xxryJgH-"
-        },
-        // Udemy
-        {
-            img: sertifikatUdemyBootstrap,
-            sertifikat: "Udemy Bootstrap CSS Certificate: Beginner to Advanced",
-            penjelasan: "Certificate of completion for Bootstrap CSS: Beginner to Advanced, December 29, 2024. Instructor: Programmer Zaman Now",
-            kredesial: "https://www.udemy.com/certificate/UC-fd2886c7-0796-4fed-8e69-cb0f4d53ae1f/"
+            img: sertifikatDicodingDasarAI,
+            sertifikat: "Basic AI Learning",
+            issuer: "Dicoding Indonesia",
+            kredesial: "https://www.dicoding.com/certificates/KEXL214E0ZG2"
         },
         {
             img: sertifikatUdemyLaravel,
-            sertifikat: "Udemy Laravel Certificate: Beginner to Advanced",
-            penjelasan: "Certificate of completion for Laravel: Beginner to Advanced,  June 24, 2025. Instructor: Programmer Zaman Now",
+            sertifikat: "Laravel: Beginner to Advanced",
+            issuer: "Udemy",
             kredesial: "https://www.udemy.com/certificate/UC-b89576bb-1a20-4f93-9130-80cf30ae7bf0/"
         },
-        // SmkDev
         {
-            img: sertifikatCompletionSmkDev,
-            sertifikat: "Certificate SMKDEV Scholarships Expert Class 2025",
-            penjelasan: "Certificate of completion SMKDEV Scholarships Expert Class 2025",
-            kredesial: "https://www.udemy.com/certificate/UC-b89576bb-1a20-4f93-9130-80cf30ae7bf0/"
-        },
-        // MySkill
-        {
-            img: sertifikatMySkillJavaScript,
-            sertifikat: "MySkill JavaScript Certificate",
-            penjelasan: "Certificate of JavaScript skill specialization in MySkill, August 18, 2024",
-            kredesial: "https://storage.googleapis.com/myskill-v2-certificates/topic-sTLaN1dknfdCpAbUm5O2/UWddfZoysfU2JRAf2qjYmVhRtUy2-cYr7yu1y48WG4z5wksvJ.pdf"
+            img: sertifikatUdemyBootstrap,
+            sertifikat: "Bootstrap CSS: Beginner to Advanced",
+            issuer: "Udemy",
+            kredesial: "https://www.udemy.com/certificate/UC-fd2886c7-0796-4fed-8e69-cb0f4d53ae1f/"
         },
         {
             img: sertifikatMySkillReactJS,
-            sertifikat: "MySkill React.JS Certificate",
-            penjelasan: "Certificate of React.JS skill specialization in MySkill, January 28, 2025",
+            sertifikat: "React.JS Specialization",
+            issuer: "MySkill",
             kredesial: "https://storage.googleapis.com/myskill-v2-certificates/topic-sTLaN1dknfdCpAbUm5O2/UWddfZoysfU2JRAf2qjYmVhRtUy2-cYr7yu1y48WG4z5wksvJ.pdf"
         },
-        // Academy Sekolahan
+        {
+            img: sertifikatMySkillJavaScript,
+            sertifikat: "JavaScript Specialization",
+            issuer: "MySkill",
+            kredesial: "https://storage.googleapis.com/myskill-v2-certificates/topic-sTLaN1dknfdCpAbUm5O2/UWddfZoysfU2JRAf2qjYmVhRtUy2-cYr7yu1y48WG4z5wksvJ.pdf"
+        },
+        {
+            img: sertifikatCompletionSmkDev,
+            sertifikat: "Expert Class 2025",
+            issuer: "SMKDEV",
+            kredesial: "https://www.udemy.com/certificate/UC-b89576bb-1a20-4f93-9130-80cf30ae7bf0/"
+        },
         {
             img: sertifikatAcademySekolahanMysql,
-            sertifikat: "Academy Sekolahan MySQL Certificate",
-            penjelasan: "Certificate of completion for MySQL at Academy Sekolahan, December 26, 2024",
+            sertifikat: "MySQL Database Mastery",
+            issuer: "Academy Sekolahan",
             kredesial: "https://academy.sekolahan.id/verify-certificate/362775"
         },
         {
             img: sertifikatAcademySekolahanPHP,
-            sertifikat: "Academy Sekolahan PHP Certificate",
-            penjelasan: "Certificate of completion for PHP at Academy Sekolahan, February 16, 2025",
+            sertifikat: "PHP Web Development",
+            issuer: "Academy Sekolahan",
             kredesial: "https://academy.sekolahan.id/verify-certificate/464017"
         },
-        // CodingStudio
         {
             img: sertifikatCodingStudio1,
-            sertifikat: "Coding Studio Fundamental Front-End Web Development 1 Certificate",
-            penjelasan: "Certificate of completion for Flexy Fundamental Front-End Web Development I, June 19, 2024",
-            kredesial: "https://member.codingstudio.id/certificate/77EBA40B94-77DFB8E69C-77DFB89A6F"
+            sertifikat: "Fundamental Front-End I",
+            issuer: "Coding Studio",
+            kredesial: "https://member.codingstudio.id/certificate/77EBA40B94-77DFB8E69C-77DFB8E69C-77DFB89A6F"
         },
         {
             img: sertifikatCodingStudio2,
-            sertifikat: "Coding Studio Fundamental Front-End Web Development 2 Certificate",
-            penjelasan: "Certificate of completion for Flexy Fundamental Front-End Web Development II, June 19, 2024",
+            sertifikat: "Fundamental Front-End II",
+            issuer: "Coding Studio",
             kredesial: "https://member.codingstudio.id/certificate/77EBA40B94-77FDB43C25-77DFB89A6F"
         },
-        // Kominfo
         {
             img: sertifikatKominfo,
-            sertifikat: "Kominfo Participation Certificate: Makin Cakap Digital 2022",
-            penjelasan: "Participation certificate in the Makin Cakap Digital 2022 event - West Java Education - Utilizing the Internet to Spread Positive Content. Organized by Kominfo, Siberkreasi, and Yayasan Pendidikan Dasar dan Menengah Pasundan.",
+            sertifikat: "Makin Cakap Digital 2022",
+            issuer: "Kominfo",
             kredesial: ""
-        },
+        }
     ];
 
-    const tampilSertifikat = () => {
-        return data.map((item, index) => (
-            <div key={index} className="flex-none">
-                <div className="group [perspective:1000px]">
-                    <div className="relative rounded-xl shadow-xl transition-all duration-500 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
-                        {/* Front Face - Image Only */}
-                        <div className="rounded-xl [backface-visibility:hidden]">
-                            <img
-                                className="w-full max-w-sm sm:max-w-md md:max-w-lg lg:max-w-xl xl:max-w-2xl h-auto rounded-xl cursor-pointer"
-                                src={item.img}
-                                alt={item.sertifikat}
-                            />
-                        </div>
-                        {/* Back Face - Description and Credential Button */}
-                        <div className="absolute inset-0 rounded-xl bg-gradient-to-br from-blue-900 to-purple-900 px-6 text-center text-white [transform:rotateY(180deg)] [backface-visibility:hidden] overflow-hidden">
-                            <div className="flex h-full flex-col items-center justify-center gap-4">
-                                <h2 className="text-base font-bold leading-tight line-clamp-2">{item.sertifikat}</h2>
-                                <p className="text-xs text-gray-200 text-center leading-relaxed line-clamp-6 overflow-hidden">
-                                    {item.penjelasan}
-                                </p>
-                                <a href={item.kredesial} target="_blank" rel="noopener noreferrer">
-                                    <button className="bg-yellow-600 hover:bg-yellow-500 text-white font-bold py-2 px-4 rounded-full transition-colors duration-300 text-xs">
-                                        See Credentials
-                                    </button>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        ));
-    }
+    const scroll = (direction) => {
+        const { current } = scrollRef;
+        if (direction === 'left') {
+            current.scrollBy({ left: -400, behavior: 'smooth' });
+        } else {
+            current.scrollBy({ left: 400, behavior: 'smooth' });
+        }
+    };
 
     return (
-        <section className="container-sertifikat p-5" id="sertifikat">
-            <h1 className="text-4xl font-bold mb-6 judul-sertifikat">Sertifikat</h1>
-
-            <div className="overflow-x-auto overflow-y-hidden whitespace-nowrap py-5 scrollbar-thin scrollbar-thumb-gray-500 scrollbar-track-gray-200 hover:scrollbar-thumb-gray-600">
-                <div className="inline-flex gap-5 pb-2">
-                    {tampilSertifikat()}
+        <section className="py-24 bg-gray-50 overflow-hidden" id="sertifikat">
+            <div className="max-w-7xl mx-auto px-6">
+                <div className="text-center mb-16">
+                    <h2 className="text-4xl md:text-5xl font-extrabold text-gray-900 mb-4 flex items-center justify-center gap-4">
+                        <HiBadgeCheck className="text-blue-600" /> My Certifications
+                    </h2>
+                    <div className="w-24 h-1.5 bg-blue-600 mx-auto rounded-full mb-6"></div>
+                    <p className="text-gray-600 max-w-2xl mx-auto text-lg">
+                        Swipe or use the arrows to see all my 15+ certifications.
+                    </p>
                 </div>
-            </div>
 
-            <div className="text-center mt-6">
-                <span className="text-xl font-semibold ">
-                    See full
-                </span>
-                <a
-                    href="https://drive.google.com/drive/folders/1t8jimFZROLVnlWbXQAq7crUQ4AvU7FeE?usp=drive_link"
-                    target="_blank"
-                    className="text-2xl font-bold text-blue-600 hover:text-blue-800 hover:underline transition-all duration-300"
-                >
-                    certificate
-                </a>
+                <div className="relative group mb-12">
+                    {/* Navigation Buttons */}
+                    <button 
+                        onClick={() => scroll('left')}
+                        className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 z-10 bg-white p-3 rounded-full shadow-xl border border-gray-100 text-gray-600 hover:text-blue-600 hover:scale-110 transition-all opacity-0 group-hover:opacity-100 hidden md:block"
+                    >
+                        <HiChevronLeft size={24} />
+                    </button>
+                    <button 
+                        onClick={() => scroll('right')}
+                        className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 z-10 bg-white p-3 rounded-full shadow-xl border border-gray-100 text-gray-600 hover:text-blue-600 hover:scale-110 transition-all opacity-0 group-hover:opacity-100 hidden md:block"
+                    >
+                        <HiChevronRight size={24} />
+                    </button>
+
+                    {/* Horizontal Scroll Container */}
+                    <div 
+                        ref={scrollRef}
+                        className="flex overflow-x-auto gap-6 pb-8 snap-x snap-mandatory no-scrollbar scroll-smooth"
+                    >
+                        {data.map((item, index) => (
+                            <div 
+                                key={index} 
+                                className="flex-none w-[280px] md:w-[350px] snap-start"
+                            >
+                                <div className="bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-500 border border-gray-100 group flex flex-col h-full">
+                                    <div className="relative aspect-video overflow-hidden bg-gray-100">
+                                        <img
+                                            className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                                            src={item.img}
+                                            alt={item.sertifikat}
+                                        />
+                                        {item.kredesial && (
+                                            <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                                                <a 
+                                                    href={item.kredesial} 
+                                                    target="_blank" 
+                                                    rel="noopener noreferrer"
+                                                    className="bg-white text-blue-600 p-4 rounded-full hover:scale-110 transition-transform shadow-lg"
+                                                >
+                                                    <HiExternalLink size={24} />
+                                                </a>
+                                            </div>
+                                        )}
+                                    </div>
+                                    <div className="p-6 flex flex-col flex-grow">
+                                        <h3 className="text-base font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors line-clamp-2">
+                                            {item.sertifikat}
+                                        </h3>
+                                        <div className="mt-auto pt-4 border-t border-gray-50 flex items-center justify-between">
+                                            <span className="text-blue-600 font-bold text-xs">
+                                                {item.issuer}
+                                            </span>
+                                            <HiBadgeCheck className="text-blue-500" size={18} />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+
+                <div className="text-center">
+                    <a
+                        href="https://drive.google.com/drive/folders/1t8jimFZROLVnlWbXQAq7crUQ4AvU7FeE?usp=drive_link"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-3 bg-white border border-gray-200 px-10 py-4 rounded-full text-blue-600 hover:border-blue-600 hover:shadow-xl font-bold text-lg transition-all hover:-translate-y-1"
+                    >
+                        View Full Drive Folder
+                        <HiExternalLink />
+                    </a>
+                </div>
             </div>
         </section>
     );
