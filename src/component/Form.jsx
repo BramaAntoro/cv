@@ -22,7 +22,7 @@ export function Form() {
     }
 
     const contactInfo = [
-        { icon: HiMail, label: "Email", value: "bramaantoro@gmail.com", link: "mailto:bramaantoro@gmail.com" },
+        { icon: HiMail, label: "Email", value: "brama4751antoro@gmail.com", link: "mailto:brama4751antoro@gmail.com" },
         { icon: HiPhone, label: "WhatsApp", value: "+62 821 2016 4306", link: `https://wa.me/${phoneNumber}` },
         { icon: HiLocationMarker, label: "Location", value: "Bandung, West Java", link: "#" }
     ];
