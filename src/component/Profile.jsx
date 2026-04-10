@@ -3,6 +3,11 @@ import { ReactTyped } from "react-typed";
 import { FaGithub, FaLinkedin, FaInstagram, FaEnvelope } from "react-icons/fa";
 
 export function Profile() {
+  const githubUrl = import.meta.env.VITE_GITHUB_URL;
+  const lnkedInUrl = import.meta.env.VITE_LINKEDIN_URL;
+  const instagramUrl = import.meta.env.VITE_INSTAGRAM_URL;
+  const emailUrl = import.meta.env.VITE_EMAIL_URL;
+
   return (
     <section
       id="home"
@@ -24,11 +29,7 @@ export function Profile() {
 
             <div className="text-2xl md:text-3xl font-medium text-gray-600 mb-8 h-12">
               <ReactTyped
-                strings={[
-                  "Back-end Developer",
-                  "Full-stack Developer",
-                  "Software Engineering Student",
-                ]}
+                strings={["Back-end Developer", "Full-stack Developer"]}
                 typeSpeed={80}
                 loop
                 backSpeed={40}
@@ -53,26 +54,29 @@ export function Profile() {
 
               <div className="flex items-center gap-5">
                 <a
-                  href="https://github.com/BramaAntoro"
+                  href={githubUrl}
                   target="_blank"
                   className="text-gray-400 hover:text-gray-900 transition-colors"
                 >
                   <FaGithub size={28} />
                 </a>
                 <a
-                  href="#"
+                  href={lnkedInUrl}
+                  target="_blank"
                   className="text-gray-400 hover:text-blue-600 transition-colors"
                 >
                   <FaLinkedin size={28} />
                 </a>
                 <a
-                  href="#"
+                  href={instagramUrl}
+                  target="_blank"
                   className="text-gray-400 hover:text-pink-600 transition-colors"
                 >
                   <FaInstagram size={28} />
                 </a>
                 <a
-                  href="mailto:your-email@example.com"
+                  href={emailUrl}
+                  target="_blank"
                   className="text-gray-400 hover:text-red-500 transition-colors"
                 >
                   <FaEnvelope size={28} />
@@ -91,7 +95,7 @@ export function Profile() {
                 <img
                   src={picture}
                   alt="Muhammad Brama Antoro"
-                  className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700"
+                  className="w-full h-full object-cover"
                 />
               </div>
 

@@ -8,8 +8,6 @@ export function Skill() {
         {
             title: "Frontend",
             skills: [
-                { icon: FaHtml5, name: "HTML5", color: "text-orange-500" },
-                { icon: FaCss3Alt, name: "CSS3", color: "text-blue-500" },
                 { icon: FaJsSquare, name: "JavaScript", color: "text-yellow-500" },
                 { icon: FaReact, name: "React", color: "text-blue-400" },
                 { icon: SiTailwindcss, name: "Tailwind", color: "text-cyan-500" },
@@ -40,7 +38,6 @@ export function Skill() {
                 { icon: FaGithub, name: "GitHub", color: "text-gray-900" },
                 { icon: SiUml, name: "UML", color: "text-blue-500" },
                 { icon: FaPython, name: "Python", color: "text-green-500" },
-                { icon: () => <img src={n8nLogo} alt="n8n" className="w-10 h-10" />, name: "n8n", color: "" }
             ]
         }
     ];

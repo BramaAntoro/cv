@@ -214,7 +214,7 @@ export const Sertifikat = () => {
 
                 <div className="text-center">
                     <a
-                        href="https://drive.google.com/drive/folders/1t8jimFZROLVnlWbXQAq7crUQ4AvU7FeE?usp=drive_link"
+                        href="https://drive.google.com/drive/folders/1TTyhxO28NbYyvPdS9DCOzDYcfGFtIHIS?usp=sharing"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="inline-flex items-center gap-3 bg-white border border-gray-200 px-10 py-4 rounded-full text-blue-600 hover:border-blue-600 hover:shadow-xl font-bold text-lg transition-all hover:-translate-y-1"
