@@ -32,10 +32,26 @@ import sertifikatKominfo from '../assets/img/sertifikat/kominfo/Sertifikat-parti
 // SmkDev
 import sertifikatCompletionSmkDev from '../assets/img/sertifikat/smkDev/Certificate-of-completion-SMKDEV-Scholarships-Expert-Class-2025.jpg';
 
+// PKL / WGS
+import sertifikatWGS_PKL from '../assets/img/sertifikat/pkl/Muhammad Brama Antoro - 23104116.jpg';
+import sertifikatWGS_UJIKOM from '../assets/img/sertifikat/pkl/UJIKOM - Muhammad Brama Antoro - 23104116_page-0001.jpg';
+
 export const Sertifikat = () => {
     const scrollRef = useRef(null);
 
     const data = [
+        {
+            img: sertifikatWGS_PKL,
+            sertifikat: "Industrial Internship (PKL) - Backend Developer",
+            issuer: "PT Walden Global Services",
+            kredesial: "https://drive.google.com/file/d/1oYw66_M47nWHH7UsOCFD8rekulygVwup/view?usp=drive_link"
+        },
+        {
+            img: sertifikatWGS_UJIKOM,
+            sertifikat: "Certificate of Competence (UJIKOM) - Backend Developer",
+            issuer: "PT Walden Global Services",
+            kredesial: "https://drive.google.com/file/d/1Ojv8Fb8uBtgGtU3NEeMV36pfjZRyoX_-/view?usp=drive_link"
+        },
         {
             img: sertifikatInnoventureUnikom,
             sertifikat: "2nd Winner Innoventure UNIKOM 2025",
@@ -182,6 +198,7 @@ export const Sertifikat = () => {
                                             src={item.img}
                                             alt={item.sertifikat}
                                         />
+                                        
                                         {item.kredesial && (
                                             <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
                                                 <a 
