@@ -1,13 +1,15 @@
 import { useState } from 'react';
-import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
-import managementLibrary from '../assets/img/projects/management-library.png';
-import publicComplaint from '../assets/img/projects/public complaint.png';
-import WGSCuti from '../assets/img/projects/wgs cuti.png';
-import sibening from '../assets/img/projects/sibening.png';
+import { FaGithub, FaExternalLinkAlt, FaArrowRight } from "react-icons/fa";
+import { Link } from 'react-router-dom';
+import managementLibrary from '../assets/img/projects/management_library/management-library.png';
+import publicComplaint from '../assets/img/projects/public_complaint/public complaint.png';
+import WGSCuti from '../assets/img/projects/wgs_cuti/wgs cuti.png';
+import sibening from '../assets/img/projects/sibening/sibening.png';
 
 const services = [
   {
     name: "WGS Cuti",
+    slug: "wgs-cuti",
     imageUrl: WGSCuti,
     role: "Back-end Developer",
     deskripsi: "A centralized leave submission and approval system for employees and HR, simplifying administrative processes efficiently.",
@@ -16,6 +18,7 @@ const services = [
   },
   {
     name: "Management Library",
+    slug: "management-library",
     imageUrl: managementLibrary,
     role: "Full-stack Developer",
     deskripsi: "Integrated library data management system for tracking books, members, and borrowing transactions seamlessly.",
@@ -24,6 +27,7 @@ const services = [
   },
   {
     name: "Public Complaint",
+    slug: "public-complaint",
     imageUrl: publicComplaint,
     role: "Full-stack Developer",
     deskripsi: "Online platform for public complaints, facilitating authorities in verifying and processing reports efficiently.",
@@ -32,6 +36,7 @@ const services = [
   },
   {
     name: "SiBening",
+    slug: "sibening",
     imageUrl: sibening,
     role: "Back-end Developer",
     deskripsi: "Electronic counseling system connecting students and counselor teachers for organized monitoring and communication.",
@@ -106,11 +111,11 @@ export const Project = () => {
                     <h3 className="text-2xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
                       {service.name}
                     </h3>
-                    <p className="text-gray-600 mb-6">
+                    <p className="text-gray-600 mb-6 line-clamp-3">
                       {service.deskripsi}
                     </p>
                     <div className="flex flex-wrap gap-2 mb-8">
-                      {service.teknologi.map((tech) => (
+                      {service.teknologi.slice(0, 3).map((tech) => (
                         <span 
                           key={tech}
                           className="text-xs font-semibold bg-gray-100 text-gray-600 px-3 py-1 rounded-md"
@@ -118,24 +123,35 @@ export const Project = () => {
                           {tech}
                         </span>
                       ))}
+                      {service.teknologi.length > 3 && (
+                        <span className="text-xs font-semibold bg-gray-50 text-gray-400 px-2 py-1 rounded-md">
+                          +{service.teknologi.length - 3}
+                        </span>
+                      )}
                     </div>
                   </div>
 
-                  <div className="flex items-center gap-4 mt-auto">
+                  <div className="flex items-center justify-between mt-auto">
+                    <Link
+                      to={`/project/${service.slug}`}
+                      className="flex items-center gap-2 text-blue-600 hover:text-blue-700 font-bold transition-all group/btn"
+                    >
+                      <span>Details</span>
+                      <FaArrowRight size={14} className="group-hover/btn:translate-x-1 transition-transform" />
+                    </Link>
+
                     {service.github ? (
                       <a
                         href={service.github}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="flex items-center gap-2 text-gray-700 hover:text-blue-600 font-bold transition-colors"
+                        className="text-gray-400 hover:text-gray-900 transition-colors"
+                        title="View Source Code"
                       >
-                        <FaGithub size={20} />
-                        <span>Code</span>
+                        <FaGithub size={22} />
                       </a>
                     ) : (
-                      <span className="text-gray-400 flex items-center gap-2 cursor-not-allowed italic text-sm">
-                        Private Repo
-                      </span>
+                      <span className="text-gray-300 italic text-xs">private</span>
                     )}
                   </div>
                 </div>
