@@ -1,12 +1,23 @@
 import { useState } from 'react';
 import { FaGithub, FaExternalLinkAlt, FaArrowRight } from "react-icons/fa";
 import { Link } from 'react-router-dom';
-import managementLibrary from '../assets/img/projects/management_library/management-library.png';
-import publicComplaint from '../assets/img/projects/public_complaint/public complaint.png';
-import WGSCuti from '../assets/img/projects/wgs_cuti/wgs cuti.png';
-import sibening from '../assets/img/projects/sibening/sibening.png';
+import managementLibrary from '../assets/img/projects/management_library/ui_management_library.png';
+import publicComplaint from '../assets/img/projects/public_complaint/ui_public_complaint.png';
+import WGSCuti from '../assets/img/projects/wgs_cuti/ui_wgs_cuti.png';
+import sibening from '../assets/img/projects/sibening/ui_sibening.png';
+import bbmdStore from '../assets/img/projects/bbmd_store/ui_bbmd_store.png';
 
 const services = [
+  {
+    name: "BBMD Store",
+    slug: "bbmd-store",
+    imageUrl: bbmdStore,
+    role: "Full-stack Developer",
+    deskripsi: "Point of Sale platform that optimizes store management through efficient stock and sales synchronization to support retail business productivity.",
+    teknologi: ["TypeScript", "Next.js", "Supabase", "Tailwind CSS"],
+    github: "https://github.com/BramaAntoro/bbmd-store",
+    liveLink: "https://bbmd-store.vercel.app/"
+  },
   {
     name: "WGS Cuti",
     slug: "wgs-cuti",
@@ -84,76 +95,92 @@ export const Project = () => {
           ))}
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-10">
-          {filteredServices.map((service) => (
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+          {filteredServices.map((service, index) => (
             <div 
               key={service.name} 
-              className="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-500 border border-gray-100 group"
+              data-aos="fade-up"
+              data-aos-delay={index * 100}
+              className="bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-500 border border-gray-100 group flex flex-col"
             >
-              <div className="flex flex-col lg:flex-row h-full">
-                {/* Image Section */}
-                <div className="lg:w-1/2 overflow-hidden relative min-h-[250px]">
-                  <img
-                    className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
-                    src={service.imageUrl}
-                    alt={service.name}
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
-                    <span className="text-white font-medium text-sm bg-blue-600 px-3 py-1 rounded-full">
-                      {service.role}
-                    </span>
-                  </div>
+              {/* Image Container */}
+              <div className="relative aspect-video bg-slate-50 overflow-hidden border-b border-gray-100 flex items-center justify-center">
+                <img
+                  className="w-full h-full object-contain p-6 transition-transform duration-700 group-hover:scale-110"
+                  src={service.imageUrl}
+                  alt={service.name}
+                />
+                
+                {/* Overlay on Hover */}
+                <div className="absolute inset-0 bg-blue-600/0 group-hover:bg-blue-600/5 transition-colors duration-500"></div>
+                
+                {/* Role Badge */}
+                <div className="absolute top-6 left-6">
+                  <span className="px-4 py-1.5 rounded-full bg-blue-600 text-white text-[10px] font-bold uppercase tracking-widest shadow-lg shadow-blue-200">
+                    {service.role}
+                  </span>
                 </div>
+              </div>
 
-                {/* Content Section */}
-                <div className="lg:w-1/2 p-8 flex flex-col justify-between">
-                  <div>
-                    <h3 className="text-2xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
-                      {service.name}
-                    </h3>
-                    <p className="text-gray-600 mb-6 line-clamp-3">
-                      {service.deskripsi}
-                    </p>
-                    <div className="flex flex-wrap gap-2 mb-8">
-                      {service.teknologi.slice(0, 3).map((tech) => (
-                        <span 
-                          key={tech}
-                          className="text-xs font-semibold bg-gray-100 text-gray-600 px-3 py-1 rounded-md"
-                        >
-                          {tech}
-                        </span>
-                      ))}
-                      {service.teknologi.length > 3 && (
-                        <span className="text-xs font-semibold bg-gray-50 text-gray-400 px-2 py-1 rounded-md">
-                          +{service.teknologi.length - 3}
-                        </span>
-                      )}
-                    </div>
-                  </div>
-
-                  <div className="flex items-center justify-between mt-auto">
-                    <Link
-                      to={`/project/${service.slug}`}
-                      className="flex items-center gap-2 text-blue-600 hover:text-blue-700 font-bold transition-all group/btn"
-                    >
-                      <span>Details</span>
-                      <FaArrowRight size={14} className="group-hover/btn:translate-x-1 transition-transform" />
-                    </Link>
-
+              {/* Content Section */}
+              <div className="p-10 flex flex-col flex-1">
+                <div className="flex items-start justify-between mb-4">
+                  <h3 className="text-3xl font-bold text-gray-900 group-hover:text-blue-600 transition-colors">
+                    {service.name}
+                  </h3>
+                  <div className="flex gap-3 pt-1">
+                    {service.liveLink && (
+                      <a
+                        href={service.liveLink}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-gray-400 hover:text-blue-600 transition-colors bg-gray-50 p-2 rounded-lg hover:bg-blue-50"
+                        title="Live Preview"
+                      >
+                        <FaExternalLinkAlt size={16} />
+                      </a>
+                    )}
                     {service.github ? (
                       <a
                         href={service.github}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-gray-400 hover:text-gray-900 transition-colors"
-                        title="View Source Code"
+                        className="text-gray-400 hover:text-gray-900 transition-colors bg-gray-50 p-2 rounded-lg hover:bg-gray-100"
+                        title="Source Code"
                       >
-                        <FaGithub size={22} />
+                        <FaGithub size={18} />
                       </a>
                     ) : (
-                      <span className="text-gray-300 italic text-xs">private</span>
+                      <span className="text-[10px] font-bold text-gray-300 uppercase bg-gray-50 px-2 py-1 rounded">
+                        Private
+                      </span>
                     )}
                   </div>
+                </div>
+                
+                <p className="text-gray-600 mb-8 line-clamp-2 text-lg leading-relaxed">
+                  {service.deskripsi}
+                </p>
+
+                <div className="flex flex-wrap gap-2 mb-10">
+                  {service.teknologi.map((tech) => (
+                    <span 
+                      key={tech}
+                      className="text-xs font-semibold bg-blue-50 text-blue-600 px-4 py-1.5 rounded-full"
+                    >
+                      {tech}
+                    </span>
+                  ))}
+                </div>
+
+                <div className="mt-auto flex items-center justify-between">
+                  <Link
+                    to={`/project/${service.slug}`}
+                    className="group/btn flex items-center gap-2 text-blue-600 font-bold hover:text-blue-700 transition-all"
+                  >
+                    <span>View Case Study</span>
+                    <FaArrowRight size={14} className="group-hover/btn:translate-x-1 transition-transform" />
+                  </Link>
                 </div>
               </div>
             </div>

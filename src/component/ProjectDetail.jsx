@@ -6,6 +6,7 @@ import {
   FaLayerGroup,
   FaRocket,
   FaWhatsapp,
+  FaExternalLinkAlt,
 } from "react-icons/fa";
 import { HiOutlineArrowNarrowRight } from "react-icons/hi";
 import logo from "../assets/img/logo_brama.png";
@@ -72,7 +73,7 @@ export const ProjectDetail = () => {
             <div
               data-aos="fade-up"
               data-aos-delay="100"
-              className="flex flex-wrap justify-center gap-2 mb-16"
+              className="flex flex-wrap justify-center gap-2 mb-10"
             >
               {project.tags.map((tag) => (
                 <span
@@ -83,14 +84,35 @@ export const ProjectDetail = () => {
                 </span>
               ))}
             </div>
+
+            {project.liveLink && (
+              <div data-aos="fade-up" data-aos-delay="150" className="mb-16">
+                <a
+                  href={project.liveLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-3 bg-blue-600 text-white px-8 py-4 rounded-full font-bold hover:bg-blue-700 transition-all shadow-lg shadow-blue-100 active:scale-95 group"
+                >
+                  <FaExternalLinkAlt className="group-hover:rotate-12 transition-transform" />
+                  Visit Live Site
+                </a>
+                {project.note && (
+                  <p className="mt-3 text-xs font-bold text-slate-400 uppercase tracking-widest italic">
+                    * {project.note}
+                  </p>
+                )}
+              </div>
+            )}
           </div>
 
-          <div data-aos="zoom-in" className="relative max-w-5xl mx-auto">
-            <img
-              src={project.image}
-              alt={project.name}
-              className="w-full h-auto rounded-[2rem] shadow-2xl border-4 border-white"
-            />
+          <div data-aos="zoom-in" className="relative max-w-6xl mx-auto">
+            <div className="bg-white border border-slate-200 shadow-xl overflow-hidden">
+              <img
+                src={project.uiImage}
+                alt={project.name}
+                className="w-full h-auto object-contain"
+              />
+            </div>
           </div>
         </div>
       </header>
@@ -151,50 +173,6 @@ export const ProjectDetail = () => {
                 <p className="text-lg text-slate-400 leading-relaxed">
                   {project.impact}
                 </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Visual Showcase: The UI */}
-      <section className="py-24 bg-white overflow-hidden">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="bg-slate-50 rounded-[3rem] p-12 md:p-20 overflow-hidden relative">
-            <div className="relative z-10 grid lg:grid-cols-12 gap-16 items-center">
-              <div className="lg:col-span-5" data-aos="fade-right">
-                <div className="flex items-center gap-3 mb-8 text-blue-600">
-                  <FaLayerGroup />
-                  <span className="text-sm font-black uppercase tracking-widest">
-                    Interface Design
-                  </span>
-                </div>
-                <h3 className="text-4xl md:text-5xl font-black text-slate-900 mb-8 tracking-tighter leading-tight">
-                  User-Centric <br />
-                  Digital Experience
-                </h3>
-                <p className="text-slate-600 text-lg mb-10 font-medium leading-relaxed">
-                  Every pixel is carefully placed to ensure maximum usability
-                  and a seamless flow for end-users.
-                </p>
-                <div className="flex gap-4">
-                  <div className="px-6 py-3 bg-white rounded-2xl shadow-sm text-sm font-bold border border-slate-200">
-                    Responsive
-                  </div>
-                  <div className="px-6 py-3 bg-white rounded-2xl shadow-sm text-sm font-bold border border-slate-200">
-                    Modern
-                  </div>
-                </div>
-              </div>
-              <div className="lg:col-span-7" data-aos="fade-left">
-                <div className="relative group cursor-zoom-in">
-                  <div className="absolute -inset-2 bg-blue-600/20 rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition duration-500"></div>
-                  <img
-                    src={project.uiImage}
-                    alt="UI Preview"
-                    className="relative w-full h-auto rounded-2xl shadow-2xl transition-transform duration-700 group-hover:scale-[1.02]"
-                  />
-                </div>
               </div>
             </div>
           </div>
