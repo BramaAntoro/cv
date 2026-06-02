@@ -4,21 +4,35 @@ export function Academic() {
     const education = [
         {
             school: "SMK Prakarya Internasional",
-            degree: "Software and Game Development",
-            period: "2023 - 2026",
-            desc: "Focused on software architecture and modern web technologies. Actively building projects and developing technical and non-technical skills. skills."
+            degree: "Pengembangan Perangkat Lunak Dan Gim (PPLG)",
+            period: "2023 – 2026",
+            averageScore: "Average Value: 85.49 / 100",
+            points: [
+                "Focused on Software and Game Development architecture.",
+                "2nd Place Winner at Innoventure UNIKOM 2025 (Website Development).",
+                "Received CERTIFICATE of COMPETENCE from PT Walden Global Services.",
+                "PKL Certificate from PT Walden Global Services."
+            ],
+            highlights: "Konsentrasi Keahlian / KK: 95 | PKL: 94.33"
         },
         {
             school: "SMP Pasundan 01 Bandung",
             degree: "Junior High School",
             period: "2021 - 2024",
-            desc: "Completed secondary education. Able to adapt to a distance learning environment and develop an early interest in computer science."
+            points: [
+                "Completed secondary education with strong academic standing.",
+                "Adapted to distance learning environments effectively.",
+                "Developed early interest in computer science and technology."
+            ]
         },
         {
             school: "SD Kemah Indonesia",
             degree: "Elementary School",
             period: "2015 - 2021",
-            desc: "Foundational education in a supportive environment, focusing on character building and basic sciences."
+            points: [
+                "Foundational education focusing on character building.",
+                "Active participation in basic science and literacy programs."
+            ]
         }
     ];
 
@@ -49,10 +63,31 @@ export function Academic() {
                                             {edu.period}
                                         </span>
                                         <h3 className="text-2xl font-bold text-gray-900 mb-1">{edu.school}</h3>
-                                        <p className="text-gray-700 font-semibold mb-4">{edu.degree}</p>
-                                        <p className="text-gray-600 leading-relaxed text-sm">
-                                            {edu.desc}
-                                        </p>
+                                        <div className="flex flex-wrap gap-2 mb-2">
+                                            <p className="text-gray-700 font-semibold">{edu.degree}</p>
+                                            {edu.averageScore && (
+                                                <span className="text-gray-400 font-bold px-2 border-l border-gray-300 italic">
+                                                    {edu.averageScore}
+                                                </span>
+                                            )}
+                                        </div>
+                                        <ul className="list-disc list-outside ml-4 space-y-2 mb-4">
+                                            {edu.points.map((point, pIdx) => (
+                                                <li key={pIdx} className="text-gray-600 leading-relaxed text-sm">
+                                                    {point}
+                                                </li>
+                                            ))}
+                                        </ul>
+                                        {edu.highlights && (
+                                            <div className="pt-3 border-t border-gray-200">
+                                                <p className="text-[11px] font-black text-blue-600 uppercase tracking-widest">
+                                                    Selected Focus Grades:
+                                                </p>
+                                                <p className="text-xs font-bold text-gray-500">
+                                                    {edu.highlights}
+                                                </p>
+                                            </div>
+                                        )}
                                     </div>
                                 </div>
                                 <div className="hidden md:block w-[10%]"></div>

@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { HiBriefcase, HiVideoCamera, HiExternalLink } from "react-icons/hi";
 import wgs from "../assets/img/wgs.jpeg";
-import logoBrama from "../assets/img/logo_brama.png";
+import palugadaLogo from "../assets/img/logo_palugada_tech.png";
 
 export const Work = () => {
   const [channelData, setChannelData] = useState(null);
@@ -31,7 +31,7 @@ export const Work = () => {
       role: "Full-stack Developer",
       company: "Personal Freelance – palugada.tech",
       period: "Mei 2026 – Sekarang",
-      logo: logoBrama,
+      logo: palugadaLogo,
       desc: "Developing website services for SMEs, conducting prospecting with prototypes via WhatsApp, and utilizing AI for social media brand awareness.",
       tech: ["React.js", "Node.js", "Supabase", "AI Tools"],
       type: "job",
