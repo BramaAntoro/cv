@@ -17,7 +17,23 @@ import sibeningERD from '../assets/img/projects/sibening/erd_sibening.png';
 import bbmdStoreUI from '../assets/img/projects/bbmd_store/ui_bbmd_store.png';
 import bbmdStoreERD from '../assets/img/projects/bbmd_store/erd_bbmd_store.png';
 
+import safeMindUI from '../assets/img/projects/safe-mind/ui2_safe-mind.png';
+import safeMindERD from '../assets/img/projects/safe-mind/erd_safe-mind.png';
+
 export const projectsData = {
+  "safe-mind": {
+    name: "Safe Mind",
+    role: "AI Engineer | Full-stack Developer",
+    image: safeMindUI,
+    uiImage: safeMindUI,
+    erdImage: safeMindERD,
+    tags: ["TypeScript", "Next.js", "Supabase", "Google Gemini AI"],
+    github: "https://github.com/BramaAntoro/safe-mind",
+    liveLink: "https://safe-mind-palugadatech.vercel.app/",
+    problem: "Many individuals struggle with maintaining their mental well-being and often lack a private, accessible, and intelligent tool to reflect on their daily emotions and receive constructive psychological guidance.",
+    solution: "Safe Mind is a full-stack web application that integrates Google Gemini AI as a digital psychology assistant. It provides deep reflections and personalized suggestions by analyzing user journals, built with a secure infrastructure using Supabase and a modern interface with Next.js.",
+    impact: "Provides users with AI-driven insights for self-reflection and emotional awareness, making psychological support more accessible and encouraging consistent mental health monitoring.",
+  },
   "bbmd-store": {
     name: "BBMD Store",
     role: "Full-stack Developer",

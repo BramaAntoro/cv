@@ -6,8 +6,19 @@ import publicComplaint from '../assets/img/projects/public_complaint/ui_public_c
 import WGSCuti from '../assets/img/projects/wgs_cuti/ui_wgs_cuti.png';
 import sibening from '../assets/img/projects/sibening/ui_sibening.png';
 import bbmdStore from '../assets/img/projects/bbmd_store/ui_bbmd_store.png';
+import safeMind from '../assets/img/projects/safe-mind/ui_safe-mind.png';
 
 const services = [
+  {
+    name: "Safe Mind",
+    slug: "safe-mind",
+    imageUrl: safeMind,
+    role: "AI Engineer | Full-stack Developer",
+    deskripsi: "An AI-driven psychological assistant that integrates Google Gemini AI to provide personalized reflections and mental health support based on user journal analysis.",
+    teknologi: ["TypeScript", "Next.js", "Supabase", "Google Gemini AI"],
+    github: "https://github.com/BramaAntoro/safe-mind",
+    liveLink: "https://safe-mind-palugadatech.vercel.app/"
+  },
   {
     name: "BBMD Store",
     slug: "bbmd-store",
@@ -64,7 +75,7 @@ export const Project = () => {
     return service.role.includes(filter);
   });
 
-  const filterOptions = ['All', 'Full-stack', 'Back-end'];
+  const filterOptions = ['All', 'Full-stack', 'Back-end', 'AI Engineer'];
 
   return (
     <section className="py-24 bg-gray-50" id="project">
