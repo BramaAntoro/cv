@@ -1,6 +1,4 @@
 import {
-  FaHtml5,
-  FaCss3Alt,
   FaJsSquare,
   FaBootstrap,
   FaReact,
@@ -8,7 +6,8 @@ import {
   FaLaravel,
   FaGit,
   FaGithub,
-  FaPython,
+  FaGitlab,
+  FaRobot,
 } from "react-icons/fa";
 import {
   SiTailwindcss,
@@ -19,48 +18,56 @@ import {
   SiNextdotjs,
   SiExpress,
   SiTypescript,
-  SiSupabase
+  SiSupabase,
+  SiGooglegemini,
 } from "react-icons/si";
 import { TbRelationManyToMany } from "react-icons/tb";
-import n8nLogo from "../assets/img/skills/logo-n8n.svg";
 
 export function Skill() {
   const skillGroups = [
     {
-      title: "Frontend",
+      title: "Bahasa Pemrograman",
       skills: [
+        { icon: SiTypescript, name: "TypeScript", color: "text-blue-600" },
         { icon: FaJsSquare, name: "JavaScript", color: "text-yellow-500" },
-        { icon: FaReact, name: "React", color: "text-blue-400" },
-        { icon: SiTailwindcss, name: "Tailwind", color: "text-cyan-500" },
+        { icon: FaPhp, name: "PHP", color: "text-indigo-500" },
+        { icon: SiNodedotjs, name: "Node.js", color: "text-green-600" },
+      ],
+    },
+    {
+      title: "Framework & Library",
+      skills: [
+        { icon: SiNextdotjs, name: "Next.js", color: "text-black" },
+        { icon: FaReact, name: "React.js", color: "text-blue-400" },
+        { icon: SiExpress, name: "Express.js", color: "text-gray-600" },
+        { icon: FaLaravel, name: "Laravel", color: "text-red-500" },
+        { icon: SiTailwindcss, name: "Tailwind CSS", color: "text-cyan-500" },
         { icon: FaBootstrap, name: "Bootstrap", color: "text-purple-600" },
       ],
     },
     {
-      title: "Backend",
+      title: "Database & Cloud",
       skills: [
-        { icon: FaPhp, name: "PHP", color: "text-indigo-500" },
-        { icon: SiNodedotjs, name: "Node.js", color: "text-green-600" },
-        { icon: SiExpress, name: "Express.js", color: "text-gray-600" },
-        { icon: SiMysql, name: "MySQL", color: "text-blue-600" },
         { icon: SiPostgresql, name: "PostgreSQL", color: "text-indigo-400" },
-        { icon: SiSupabase, name: "Supabase", color: "text-emerald-500" } 
+        { icon: SiMysql, name: "MySQL", color: "text-blue-600" },
+        { icon: SiSupabase, name: "Supabase", color: "text-emerald-500" },
       ],
     },
     {
-      title: "Fullstack",
-      skills: [
-        { icon: SiTypescript, name: "TypeScript", color: "text-blue-600" },
-        { icon: SiNextdotjs, name: "Next.js", color: "text-black" },
-        { icon: FaLaravel, name: "Laravel", color: "text-red-500" },
-      ],
-    },
-    {
-      title: "Tools & Others",
+      title: "Tools",
       skills: [
         { icon: FaGit, name: "Git", color: "text-orange-600" },
         { icon: FaGithub, name: "GitHub", color: "text-gray-900" },
+        { icon: FaGitlab, name: "GitLab", color: "text-orange-500" },
+      ],
+    },
+    {
+      title: "Sistem & AI",
+      skills: [
+        { icon: TbRelationManyToMany, name: "ERD", color: "text-blue-600" },
         { icon: SiUml, name: "UML", color: "text-blue-500" },
-        { icon: FaPython, name: "Python", color: "text-green-500" },
+        { icon: SiGooglegemini, name: "Gemini AI", color: "text-blue-400" },
+        { icon: FaRobot, name: "Prompting", color: "text-emerald-600" },
       ],
     },
   ];
@@ -80,7 +87,7 @@ export function Skill() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6">
           {skillGroups.map((group, idx) => (
             <div
               key={idx}
@@ -89,7 +96,7 @@ export function Skill() {
               <h3 className="text-lg font-bold text-gray-900 mb-6 border-b border-gray-200 pb-3">
                 {group.title}
               </h3>
-              <div className="grid grid-cols-3 gap-4">
+              <div className="grid grid-cols-2 gap-4">
                 {group.skills.map((skill, sIdx) => {
                   const Icon = skill.icon;
                   return (
@@ -98,11 +105,7 @@ export function Skill() {
                       className="flex flex-col items-center group"
                     >
                       <div className="w-12 h-12 bg-white rounded-xl shadow-sm flex items-center justify-center mb-2 group-hover:scale-110 group-hover:shadow-md transition-all duration-300">
-                        {typeof Icon === "function" ? (
-                          <Icon className={`text-2xl ${skill.color}`} />
-                        ) : (
-                          <Icon className={`text-2xl ${skill.color}`} />
-                        )}
+                        <Icon className={`text-2xl ${skill.color}`} />
                       </div>
                       <span className="text-[10px] font-semibold text-gray-600 text-center uppercase tracking-tighter">
                         {skill.name}
