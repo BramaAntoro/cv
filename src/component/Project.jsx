@@ -12,26 +12,6 @@ import putraInterior from '../assets/img/projects/putra_interior/ui_putra_Interi
 
 const services = [
   {
-    name: "Putra Interior",
-    slug: "putra-interior",
-    imageUrl: putraInterior,
-    role: "Front-end Developer",
-    deskripsi: "An elegant interior design portfolio showcasing warm, tidy, and personal living spaces with a focus on clean material composition and comfortable atmosphere.",
-    teknologi: ["React.js", "Tailwind CSS"],
-    github: "",
-    liveLink: "https://putra-interior.vercel.app/"
-  },
-  {
-    name: "palugada.tech",
-    slug: "palugada-tech",
-    imageUrl: palugadaTech,
-    role: "Front-end Developer",
-    deskripsi: "A professional web development service specializing in creating high-quality, responsive websites for SMEs and local businesses using modern technologies.",
-    teknologi: ["React.js", "Tailwind CSS"],
-    github: "",
-    liveLink: "https://palugadatech.my.id/"
-  },
-  {
     name: "Safe Mind",
     slug: "safe-mind",
     imageUrl: safeMind,
@@ -52,15 +32,6 @@ const services = [
     liveLink: "https://bbmd-store.vercel.app/"
   },
   {
-    name: "WGS Cuti",
-    slug: "wgs-cuti",
-    imageUrl: WGSCuti,
-    role: "Back-end Developer",
-    deskripsi: "A centralized leave submission and approval system for employees and HR, simplifying administrative processes efficiently.",
-    teknologi: ["JavaScript", "Node.js", "Express", "PostgreSQL", "Prisma"],
-    github: ""
-  },
-  {
     name: "Management Library",
     slug: "management-library",
     imageUrl: managementLibrary,
@@ -79,6 +50,15 @@ const services = [
     github: "https://github.com/BramaAntoro/public-complaint"
   },
   {
+    name: "WGS Cuti",
+    slug: "wgs-cuti",
+    imageUrl: WGSCuti,
+    role: "Back-end Developer",
+    deskripsi: "A centralized leave submission and approval system for employees and HR, simplifying administrative processes efficiently.",
+    teknologi: ["JavaScript", "Node.js", "Express", "PostgreSQL", "Prisma"],
+    github: ""
+  },
+  {
     name: "SiBening",
     slug: "sibening",
     imageUrl: sibening,
@@ -86,6 +66,26 @@ const services = [
     deskripsi: "Electronic counseling system connecting students and counselor teachers for organized monitoring and communication.",
     teknologi: ["PHP", "Laravel", "MySQL"],
     github: ""
+  },
+  {
+    name: "Putra Interior",
+    slug: "putra-interior",
+    imageUrl: putraInterior,
+    role: "Front-end Developer",
+    deskripsi: "An elegant interior design portfolio showcasing warm, tidy, and personal living spaces with a focus on clean material composition and comfortable atmosphere.",
+    teknologi: ["React.js", "Tailwind CSS"],
+    github: "",
+    liveLink: "https://putra-interior.vercel.app/"
+  },
+  {
+    name: "palugada.tech",
+    slug: "palugada-tech",
+    imageUrl: palugadaTech,
+    role: "Front-end Developer",
+    deskripsi: "A professional web development service specializing in creating high-quality, responsive websites for SMEs and local businesses using modern technologies.",
+    teknologi: ["React.js", "Tailwind CSS"],
+    github: "",
+    liveLink: "https://palugadatech.my.id/"
   }
 ];
 
@@ -97,7 +97,7 @@ export const Project = () => {
     return service.role.includes(filter);
   });
 
-  const filterOptions = ['All', 'Front-end', 'Full-stack', 'Back-end', 'AI Engineer'];
+  const filterOptions = ['All', 'AI Engineer', 'Full-stack', 'Back-end', 'Front-end'];
 
   return (
     <section className="py-24 bg-gray-50" id="project">
@@ -128,7 +128,7 @@ export const Project = () => {
           ))}
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
           {filteredServices.map((service, index) => (
             <div 
               key={service.name} 
