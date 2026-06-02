@@ -8,8 +8,19 @@ import sibening from '../assets/img/projects/sibening/ui_sibening.png';
 import bbmdStore from '../assets/img/projects/bbmd_store/ui_bbmd_store.png';
 import safeMind from '../assets/img/projects/safe-mind/ui_safe-mind.png';
 import palugadaTech from '../assets/img/projects/palugadatech/ui_palugadatech.png';
+import putraInterior from '../assets/img/projects/putra_interior/ui_putra_Interior.png';
 
 const services = [
+  {
+    name: "Putra Interior",
+    slug: "putra-interior",
+    imageUrl: putraInterior,
+    role: "Front-end Developer",
+    deskripsi: "An elegant interior design portfolio showcasing warm, tidy, and personal living spaces with a focus on clean material composition and comfortable atmosphere.",
+    teknologi: ["React.js", "Tailwind CSS"],
+    github: "",
+    liveLink: "https://putra-interior.vercel.app/"
+  },
   {
     name: "palugada.tech",
     slug: "palugada-tech",

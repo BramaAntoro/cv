@@ -21,8 +21,21 @@ import safeMindUI from '../assets/img/projects/safe-mind/ui2_safe-mind.png';
 import safeMindERD from '../assets/img/projects/safe-mind/erd_safe-mind.png';
 
 import palugadaTechUI from '../assets/img/projects/palugadatech/ui_palugadatech.png';
+import putraInteriorUI from '../assets/img/projects/putra_interior/ui_putra_Interior.png';
 
 export const projectsData = {
+  "putra-interior": {
+    name: "Putra Interior",
+    role: "Front-end Developer",
+    image: putraInteriorUI,
+    uiImage: putraInteriorUI,
+    tags: ["React.js", "Tailwind CSS"],
+    github: "",
+    liveLink: "https://putra-interior.vercel.app/",
+    problem: "Interior designers need a visually compelling way to showcase their portfolios so that potential clients can easily judge the quality, composition, and personal feel of their designs.",
+    solution: "Putra Interior is a clean, modern portfolio website designed to highlight residential projects with a focus on neat details, material aesthetics, and a warm atmosphere, facilitating better client engagement.",
+    impact: "Provides a professional platform for showcasing interior work, making it easier for potential clients to appreciate the designer's personal approach and execution quality.",
+  },
   "palugada-tech": {
     name: "palugada.tech",
     role: "Front-end Developer",
@@ -32,7 +45,7 @@ export const projectsData = {
     github: "",
     liveLink: "https://palugadatech.my.id/",
     problem: "Small businesses and local SMEs often lack a professional online presence, making it difficult to reach digital customers and build brand trust.",
-    solution: "PalugadaTech provides high-quality web development services tailored for SMEs, utilizing a proactive prototype-first approach and AI-driven content creation to deliver impactful digital solutions.",
+    solution: "palugada.tech provides high-quality web development services tailored for SMEs, utilizing a proactive prototype-first approach and AI-driven content creation to deliver impactful digital solutions.",
     impact: "Helping local businesses transition to the digital era with modern, responsive websites that increase brand awareness and customer engagement.",
   },
   "safe-mind": {
