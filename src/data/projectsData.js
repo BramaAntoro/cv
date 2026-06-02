@@ -20,7 +20,21 @@ import bbmdStoreERD from '../assets/img/projects/bbmd_store/erd_bbmd_store.png';
 import safeMindUI from '../assets/img/projects/safe-mind/ui2_safe-mind.png';
 import safeMindERD from '../assets/img/projects/safe-mind/erd_safe-mind.png';
 
+import palugadaTechUI from '../assets/img/projects/palugadatech/ui_palugadatech.png';
+
 export const projectsData = {
+  "palugada-tech": {
+    name: "palugada.tech",
+    role: "Front-end Developer",
+    image: palugadaTechUI,
+    uiImage: palugadaTechUI,
+    tags: ["React.js", "Tailwind CSS"],
+    github: "",
+    liveLink: "https://palugadatech.my.id/",
+    problem: "Small businesses and local SMEs often lack a professional online presence, making it difficult to reach digital customers and build brand trust.",
+    solution: "PalugadaTech provides high-quality web development services tailored for SMEs, utilizing a proactive prototype-first approach and AI-driven content creation to deliver impactful digital solutions.",
+    impact: "Helping local businesses transition to the digital era with modern, responsive websites that increase brand awareness and customer engagement.",
+  },
   "safe-mind": {
     name: "Safe Mind",
     role: "AI Engineer | Full-stack Developer",

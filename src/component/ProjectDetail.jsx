@@ -180,53 +180,55 @@ export const ProjectDetail = () => {
       </section>
 
       {/* Engine Room: Database Design */}
-      <section className="py-32 bg-slate-900 relative overflow-hidden">
-        <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-blue-600/10 rounded-full blur-[120px]"></div>
-        <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-indigo-600/10 rounded-full blur-[120px]"></div>
+      {project.erdImage && (
+        <section className="py-32 bg-slate-900 relative overflow-hidden">
+          <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-blue-600/10 rounded-full blur-[120px]"></div>
+          <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-indigo-600/10 rounded-full blur-[120px]"></div>
 
-        <div className="max-w-7xl mx-auto px-6 relative z-10">
-          <div className="text-center mb-20" data-aos="fade-up">
-            <div className="inline-flex items-center gap-3 text-blue-400 mb-6 bg-blue-400/10 px-6 py-2 rounded-full border border-blue-400/20">
-              <FaDatabase />
-              <span className="text-xs font-black uppercase tracking-widest">
-                The Engine Room
-              </span>
-            </div>
-            <h3 className="text-4xl md:text-7xl font-black text-white mb-6 tracking-tighter">
-              System Architecture
-            </h3>
-            <p className="text-slate-400 text-xl max-w-2xl mx-auto font-medium">
-              A robust backend requires a meticulously designed database
-              structure to handle scalability and data integrity.
-            </p>
-          </div>
-
-          <div data-aos="zoom-in" className="relative max-w-5xl mx-auto group">
-            <div className="bg-slate-800/50 backdrop-blur-xl p-4 rounded-[2.5rem] border border-slate-700 shadow-2xl">
-              <div className="absolute top-8 left-8 flex gap-2">
-                <div className="w-3 h-3 rounded-full bg-red-500"></div>
-                <div className="w-3 h-3 rounded-full bg-yellow-500"></div>
-                <div className="w-3 h-3 rounded-full bg-green-500"></div>
+          <div className="max-w-7xl mx-auto px-6 relative z-10">
+            <div className="text-center mb-20" data-aos="fade-up">
+              <div className="inline-flex items-center gap-3 text-blue-400 mb-6 bg-blue-400/10 px-6 py-2 rounded-full border border-blue-400/20">
+                <FaDatabase />
+                <span className="text-xs font-black uppercase tracking-widest">
+                  The Engine Room
+                </span>
               </div>
-              <img
-                src={project.erdImage}
-                alt="ERD Design"
-                className="w-full h-auto rounded-2xl opacity-90 group-hover:opacity-100 transition-opacity duration-500"
-              />
+              <h3 className="text-4xl md:text-7xl font-black text-white mb-6 tracking-tighter">
+                System Architecture
+              </h3>
+              <p className="text-slate-400 text-xl max-w-2xl mx-auto font-medium">
+                A robust backend requires a meticulously designed database
+                structure to handle scalability and data integrity.
+              </p>
             </div>
-            <div className="mt-8 grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
-              {["Relational", "Scalable", "Optimized", "Secure"].map((prop) => (
-                <div
-                  key={prop}
-                  className="px-4 py-3 bg-slate-800/30 border border-slate-700 rounded-xl text-slate-400 text-xs font-bold uppercase tracking-widest"
-                >
-                  {prop}
+
+            <div data-aos="zoom-in" className="relative max-w-5xl mx-auto group">
+              <div className="bg-slate-800/50 backdrop-blur-xl p-4 rounded-[2.5rem] border border-slate-700 shadow-2xl">
+                <div className="absolute top-8 left-8 flex gap-2">
+                  <div className="w-3 h-3 rounded-full bg-red-500"></div>
+                  <div className="w-3 h-3 rounded-full bg-yellow-500"></div>
+                  <div className="w-3 h-3 rounded-full bg-green-500"></div>
                 </div>
-              ))}
+                <img
+                  src={project.erdImage}
+                  alt="ERD Design"
+                  className="w-full h-auto rounded-2xl opacity-90 group-hover:opacity-100 transition-opacity duration-500"
+                />
+              </div>
+              <div className="mt-8 grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
+                {["Relational", "Scalable", "Optimized", "Secure"].map((prop) => (
+                  <div
+                    key={prop}
+                    className="px-4 py-3 bg-slate-800/30 border border-slate-700 rounded-xl text-slate-400 text-xs font-bold uppercase tracking-widest"
+                  >
+                    {prop}
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
+      )}
 
       {/* Conclusion & Call to Action */}
       <section className="py-40 px-6 bg-white overflow-hidden relative text-center">

@@ -7,8 +7,19 @@ import WGSCuti from '../assets/img/projects/wgs_cuti/ui_wgs_cuti.png';
 import sibening from '../assets/img/projects/sibening/ui_sibening.png';
 import bbmdStore from '../assets/img/projects/bbmd_store/ui_bbmd_store.png';
 import safeMind from '../assets/img/projects/safe-mind/ui_safe-mind.png';
+import palugadaTech from '../assets/img/projects/palugadatech/ui_palugadatech.png';
 
 const services = [
+  {
+    name: "palugada.tech",
+    slug: "palugada-tech",
+    imageUrl: palugadaTech,
+    role: "Front-end Developer",
+    deskripsi: "A professional web development service specializing in creating high-quality, responsive websites for SMEs and local businesses using modern technologies.",
+    teknologi: ["React.js", "Tailwind CSS"],
+    github: "",
+    liveLink: "https://palugadatech.my.id/"
+  },
   {
     name: "Safe Mind",
     slug: "safe-mind",
@@ -75,7 +86,7 @@ export const Project = () => {
     return service.role.includes(filter);
   });
 
-  const filterOptions = ['All', 'Full-stack', 'Back-end', 'AI Engineer'];
+  const filterOptions = ['All', 'Front-end', 'Full-stack', 'Back-end', 'AI Engineer'];
 
   return (
     <section className="py-24 bg-gray-50" id="project">
