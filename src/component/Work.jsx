@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { HiBriefcase, HiVideoCamera, HiExternalLink } from "react-icons/hi";
 import wgs from "../assets/img/wgs.jpeg";
+import logoBrama from "../assets/img/logo_brama.png";
 
 export const Work = () => {
   const [channelData, setChannelData] = useState(null);
@@ -27,12 +28,21 @@ export const Work = () => {
 
   const workExperiences = [
     {
-      role: "Backend Developer Intern",
-      company: "WGS",
-      period: "Juli 2025 - November 2026",
+      role: "Full-stack Developer",
+      company: "Personal Freelance – palugada.tech",
+      period: "Mei 2026 – Sekarang",
+      logo: logoBrama,
+      desc: "Developing website services for SMEs, conducting prospecting with prototypes via WhatsApp, and utilizing AI for social media brand awareness.",
+      tech: ["React.js", "Node.js", "Supabase", "AI Tools"],
+      type: "job",
+    },
+    {
+      role: "Back-End Developer",
+      company: "PT Walden Global Services (WGS)",
+      period: "Juli 2025 – Nov 2025",
       logo: wgs,
-      desc: "Developed 'WGS Cuti', a corporate leave management application. Focused on building robust backend logic, database schema design, and creating RESTful APIs for frontend integration.",
-      tech: ["Node.js", "Express.js", "PostgreeSQL"],
+      desc: "Created REST APIs for 'WGS Cuti' using Node.js, Express, and PostgreSQL. Automated leave workflows and presented progress in bi-weekly Agile sprints to stakeholders.",
+      tech: ["Node.js", "Express.js", "PostgreSQL", "Agile"],
       type: "job",
     },
   ];
